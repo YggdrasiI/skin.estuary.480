@@ -3,7 +3,7 @@
 	<include name="View_50_List">
 		<control type="group">
 			<include>OpenClose_Right</include>
-			<left>596</left>
+			<left>{{ScaleX('596')}}</left>
 			<visible>Control.IsVisible(50)</visible>
 			<include>Visible_Right</include>
 			<include content="ListContainer">
@@ -14,8 +14,8 @@
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<control type="group">
-					<right>-20</right>
-					<width>634</width>
+					<right>{{ScaleX('-20')}}</right>
+					<width>{{ScaleX('634')}}</width>
 					<include content="ContentPanel">
 						<param name="left" value="0" />
 						<param name="top" value="-20" />
@@ -26,9 +26,9 @@
 						<param name="list_id" value="50" />
 					</include>
 					<control type="scrollbar" id="50600">
-						<left>20</left>
-						<top>list_top_offset</top>
-						<width>12</width>
+						<left>{{ScaleX('20')}}</left>
+						<top>{{ScaleY('list_top_offset')}}</top>
+						<width>{{ScaleX('12')}}</width>
 						<bottom>list_bottom_offset</bottom>
 						<onleft>50</onleft>
 						<onright>50</onright>
@@ -43,7 +43,7 @@
 		<control type="group">
 			<depth>DepthContentPanel</depth>
 			<control type="group">
-				<right>-32</right>
+				<right>{{ScaleX('-32')}}</right>
 				<include content="ContentPanel">
 					<param name="left" value="0" />
 					<param name="top" value="-20" />
@@ -54,18 +54,18 @@
 					<visible>!Container.Content(songs)</visible>
 					<control type="image">
 						<depth>DepthContentPopout</depth>
-						<left>48</left>
-						<top>120</top>
-						<width>540</width>
-						<height>850</height>
+						<left>{{ScaleX('48')}}</left>
+						<top>{{ScaleY('120')}}</top>
+						<width>{{ScaleX('540')}}</width>
+						<height>{{ScaleY('850')}}</height>
 						<bottom>124</bottom>
 						<fadetime>200</fadetime>
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar]</texture>
 					</control>
 					<control type="group">
-						<left>291</left>
-						<top>950</top>
+						<left>{{ScaleX('291')}}</left>
+						<top>{{ScaleY('950')}}</top>
 						<include content="RatingCircle">
 							<param name="animation" value="True" />
 						</include>
@@ -74,17 +74,17 @@
 				<control type="group">
 					<visible>Control.IsVisible(503) + Window.IsActive(musicplaylist)</visible>
 					<control type="image">
-						<left>58</left>
-						<top>110</top>
-						<width>540</width>
-						<height>470</height>
+						<left>{{ScaleX('58')}}</left>
+						<top>{{ScaleY('110')}}</top>
+						<width>{{ScaleX('540')}}</width>
+						<height>{{ScaleY('470')}}</height>
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<fadetime>300</fadetime>
 						<texture fallback="DefaultAudio.png" background="true">$INFO[Player.Icon]</texture>
 					</control>
 					<control type="group">
-						<left>301</left>
-						<top>560</top>
+						<left>{{ScaleX('301')}}</left>
+						<top>{{ScaleY('560')}}</top>
 						<control type="group">
 							<animation effect="fade" time="0" condition="$PARAM[animation]">VisibleChange</animation>
 							<include content="UserRatingContent" condition="Skin.HasSetting(circle_userrating)">
@@ -97,18 +97,18 @@
 					</control>
 					<control type="textbox" id="15599">
 						<visible>Player.HasAudio + Window.IsActive(musicplaylist)</visible>
-						<left>58</left>
-						<top>600</top>
-						<width>540</width>
+						<left>{{ScaleX('58')}}</left>
+						<top>{{ScaleY('600')}}</top>
+						<width>{{ScaleX('540')}}</width>
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>[COLOR button_focus][B]$LOCALIZE[31000]: [/COLOR]$INFO[musicplayer.Playlistposition,]$INFO[musicplayer.Playlistlength,/][/B][CR]$VAR[NowPlayingInfoVar]</label>
 					</control>
 					<control type="textbox" id="15599">
 						<visible>!Player.HasAudio + Window.IsActive(musicplaylist)</visible>
-						<left>58</left>
-						<top>640</top>
-						<width>540</width>
+						<left>{{ScaleX('58')}}</left>
+						<top>{{ScaleY('640')}}</top>
+						<width>{{ScaleX('540')}}</width>
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>[COLOR button_focus][B]$LOCALIZE[31000]: [/COLOR]$LOCALIZE[36623][/B]</label>
@@ -124,7 +124,7 @@
 			<control type="fixedlist" id="$PARAM[list_id]">
 				<left>$PARAM[left]</left>
 				<right>$PARAM[right]</right>
-				<top>list_top_offset</top>
+				<top>{{ScaleY('list_top_offset')}}</top>
 				<bottom>list_bottom_offset</bottom>
 				<movement>6</movement>
 				<focusposition>5</focusposition>
@@ -137,19 +137,19 @@
 				<ondown>$PARAM[list_id]</ondown>
 				<viewtype label="$PARAM[viewtype_label]">list</viewtype>
 				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(games) | Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist)</visible>
-				<focusedlayout height="list_item_height">
+				<focusedlayout height="{{ScaleY('list_item_height')}}">
 					<control type="image">
-						<left>0</left>
-						<right>0</right>
-						<top>0</top>
+						<left>{{ScaleX('0')}}</left>
+						<right>{{ScaleX('0')}}</right>
+						<top>{{ScaleY('0')}}</top>
 						<bottom>0</bottom>
 						<texture colordiffuse="button_focus">lists/focus.png</texture>
 						<visible>Control.HasFocus($PARAM[list_id])</visible>
 					</control>
 					<control type="label">
-						<left>70</left>
-						<right>70</right>
-						<top>0</top>
+						<left>{{ScaleX('70')}}</left>
+						<right>{{ScaleX('70')}}</right>
+						<top>{{ScaleY('0')}}</top>
 						<bottom>0</bottom>
 						<aligny>center</aligny>
 						<scroll>true</scroll>
@@ -158,10 +158,10 @@
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 					<control type="label">
-						<top>0</top>
+						<top>{{ScaleY('0')}}</top>
 						<bottom>0</bottom>
-						<left>100</left>
-						<right>20</right>
+						<left>{{ScaleX('100')}}</left>
+						<right>{{ScaleX('20')}}</right>
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>font12</font>
@@ -170,29 +170,29 @@
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 					<control type="image">
-						<left>21</left>
+						<left>{{ScaleX('21')}}</left>
 						<centertop>50%</centertop>
-						<width>32</width>
-						<height>32</height>
+						<width>{{ScaleX('32')}}</width>
+						<height>{{ScaleY('32')}}</height>
 						<texture>$VAR[ListWatchedIconVar]</texture>
 						<animation effect="fade" start="30" end="100" time="300" reversible="false">Focus</animation>
 					</control>
 					<control type="image">
-						<left>21</left>
+						<left>{{ScaleX('21')}}</left>
 						<centertop>50%</centertop>
-						<width>32</width>
-						<height>32</height>
+						<width>{{ScaleX('32')}}</width>
+						<height>{{ScaleY('32')}}</height>
 						<texture colordiffuse="button_focus">$VAR[ListWatchedIconVar]</texture>
 						<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
 						<animation effect="fade" time="150">VisibleChange</animation>
 						<visible>!Control.HasFocus($PARAM[list_id])</visible>
 					</control>
 				</focusedlayout>
-				<itemlayout height="list_item_height">
+				<itemlayout height="{{ScaleY('list_item_height')}}">
 					<control type="label">
-						<left>70</left>
-						<right>70</right>
-						<top>0</top>
+						<left>{{ScaleX('70')}}</left>
+						<right>{{ScaleX('70')}}</right>
+						<top>{{ScaleY('0')}}</top>
 						<bottom>0</bottom>
 						<aligny>center</aligny>
 						<font>font27</font>
@@ -200,9 +200,9 @@
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 					<control type="label">
-						<left>20</left>
-						<right>20</right>
-						<top>0</top>
+						<left>{{ScaleX('20')}}</left>
+						<right>{{ScaleX('20')}}</right>
+						<top>{{ScaleY('0')}}</top>
 						<bottom>0</bottom>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -212,10 +212,10 @@
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 					<control type="image">
-						<left>21</left>
+						<left>{{ScaleX('21')}}</left>
 						<centertop>50%</centertop>
-						<width>32</width>
-						<height>32</height>
+						<width>{{ScaleX('32')}}</width>
+						<height>{{ScaleY('32')}}</height>
 						<texture colordiffuse="grey">$VAR[ListWatchedIconVar]</texture>
 					</control>
 				</itemlayout>
@@ -233,63 +233,63 @@
 					<param name="flipx" value="$PARAM[flip_bg]" />
 				</include>
 				<control type="image">
-					<left>30</left>
-					<top>110</top>
-					<width>540</width>
-					<height>470</height>
+					<left>{{ScaleX('30')}}</left>
+					<top>{{ScaleY('110')}}</top>
+					<width>{{ScaleX('540')}}</width>
+					<height>{{ScaleY('470')}}</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>300</fadetime>
 					<texture fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
 					<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song)</visible>
 				</control>
 				<control type="image">
-					<left>30</left>
-					<top>110</top>
-					<width>540</width>
-					<height>330</height>
+					<left>{{ScaleX('30')}}</left>
+					<top>{{ScaleY('110')}}</top>
+					<width>{{ScaleX('540')}}</width>
+					<height>{{ScaleY('330')}}</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>300</fadetime>
 					<texture background="true">$VAR[ShiftThumbVar]</texture>
 					<visible>String.IsEqual(ListItem.DbType,episode)</visible>
 				</control>
 				<control type="image">
-					<left>30</left>
-					<top>110</top>
-					<width>540</width>
-					<height>470</height>
+					<left>{{ScaleX('30')}}</left>
+					<top>{{ScaleY('110')}}</top>
+					<width>{{ScaleX('540')}}</width>
+					<height>{{ScaleY('470')}}</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>300</fadetime>
 					<texture fallback="DefaultAudio.png" background="true">$VAR[IconWallThumbVar]</texture>
 					<visible>String.IsEqual(ListItem.DBType,song)</visible>
 				</control>
 				<control type="group">
-					<left>273</left>
-					<top>560</top>
+					<left>{{ScaleX('273')}}</left>
+					<top>{{ScaleY('560')}}</top>
 					<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
-					<animation effect="slide" end="0,-140" time="0" condition="String.IsEqual(ListItem.DbType,episode)">conditional</animation>
+					<animation effect="slide" end="{{ScaleBorder2('0,-140')}}" time="0" condition="String.IsEqual(ListItem.DbType,episode)">conditional</animation>
 				</control>
 				<control type="group">
 					<visible>!Container.Content() | !String.isempty(ListItem.Plot)</visible>
-					<left>30</left>
+					<left>{{ScaleX('30')}}</left>
 					<control type="textbox" id="15500">
-						<top>600</top>
-						<width>540</width>
+						<top>{{ScaleY('600')}}</top>
+						<width>{{ScaleX('540')}}</width>
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[ListBoxInfoVar]</label>
 						<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song)</visible>
 					</control>
 					<control type="textbox" id="15501">
-						<top>465</top>
-						<width>540</width>
+						<top>{{ScaleY('465')}}</top>
+						<width>{{ScaleX('540')}}</width>
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$INFO[ListItem.Plot]</label>
 						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
 					</control>
 					<control type="textbox" id="15502">
-						<top>600</top>
-						<width>540</width>
+						<top>{{ScaleY('600')}}</top>
+						<width>{{ScaleX('540')}}</width>
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="3000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[ListBoxInfoVar]</label>
@@ -297,8 +297,8 @@
 					</control>
 				</control>
 				<control type="group">
-					<left>20</left>
-					<top>640</top>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('640')}}</top>
 					<visible>ListItem.IsCollection + String.IsEmpty(ListItem.Plot)</visible>
 					<include content="InfoList">
 						<param name="bottom" value="100" />
@@ -311,10 +311,10 @@
 				<control type="group">
 					<visible>!ListItem.IsCollection + String.IsEmpty(Control.GetLabel(15500)) + Control.IsVisible(15500)</visible>
 					<control type="textbox">
-						<left>30</left>
-						<top>460</top>
-						<width>540</width>
-						<height>413</height>
+						<left>{{ScaleX('30')}}</left>
+						<top>{{ScaleY('460')}}</top>
+						<width>{{ScaleX('540')}}</width>
+						<height>{{ScaleY('413')}}</height>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font27</font>
@@ -325,8 +325,8 @@
 						<visible>!Container.Content() | !String.isempty(ListItem.Plot)</visible>
 					</control>
 					<control type="group">
-						<left>20</left>
-						<top>640</top>
+						<left>{{ScaleX('20')}}</left>
+						<top>{{ScaleY('640')}}</top>
 						<visible>!String.IsEmpty(ListItem.DBID)</visible>
 						<include content="InfoList">
 							<param name="list_id" value="42000" />

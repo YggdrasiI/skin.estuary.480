@@ -7,18 +7,18 @@
 	<controls>
 		<control type="group">
 			<centertop>50%</centertop>
-			<height>1080</height>
+			<height>{{ScaleY('1080')}}</height>
 			<centerleft>50%</centerleft>
-			<width>1920</width>
+			<width>{{ScaleX('1920')}}</width>
 			<control type="group">
 				<include>OpenClose_Right</include>
 				<control type="button" id="5000">
-					<left>605</left>
-					<top>400</top>
-					<width>755</width>
-					<height>435</height>
+					<left>{{ScaleX('605')}}</left>
+					<top>{{ScaleY('400')}}</top>
+					<width>{{ScaleX('755')}}</width>
+					<height>{{ScaleY('435')}}</height>
 					<label></label>
-					<texturenofocus border="21">dialogs/dialog-bg.png</texturenofocus>
+					<texturenofocus border="{{ScaleBorder('21')}}">dialogs/dialog-bg.png</texturenofocus>
 					<onup>50</onup>
 					<ondown>9000</ondown>
 					<onclick>SetProperty(TextViewer_Header,$LOCALIZE[31141] $INFO[ListItem.AddonVersion],home)</onclick>
@@ -27,38 +27,38 @@
 					<enable>!String.IsEmpty(ListItem.AddonNews)</enable>
 				</control>
 				<control type="textbox">
-					<left>650</left>
-					<top>430</top>
-					<width>665</width>
-					<height>375</height>
+					<left>{{ScaleX('650')}}</left>
+					<top>{{ScaleY('430')}}</top>
+					<width>{{ScaleX('665')}}</width>
+					<height>{{ScaleY('375')}}</height>
 					<label>$INFO[ListItem.AddonSummary,[B],[/B][CR]]$INFO[ListItem.AddonDescription][CR]$VAR[AddonNewsVar,[I][CR][CR],[/I]]</label>
 					<autoscroll delay="5000" repeat="7500" time="5000">true</autoscroll>
 				</control>
 				<control type="group">
-					<left>606</left>
-					<top>160</top>
+					<left>{{ScaleX('606')}}</left>
+					<top>{{ScaleY('160')}}</top>
 					<visible>Integer.IsEqual(Container(50).NumItems,0)</visible>
 					<control type="image">
-						<width>425</width>
-						<height>260</height>
+						<width>{{ScaleX('425')}}</width>
+						<height>{{ScaleY('260')}}</height>
 						<texture background="true">DefaultNoPreview.png</texture>
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
 					</control>
 					<control type="image">
-						<left>405</left>
-						<width>425</width>
-						<height>260</height>
+						<left>{{ScaleX('405')}}</left>
+						<width>{{ScaleX('425')}}</width>
+						<height>{{ScaleY('260')}}</height>
 						<texture background="true">DefaultNoPreview.png</texture>
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
 					</control>
 					<control type="image">
-						<left>810</left>
-						<width>425</width>
-						<height>260</height>
+						<left>{{ScaleX('810')}}</left>
+						<width>{{ScaleX('425')}}</width>
+						<height>{{ScaleY('260')}}</height>
 						<texture background="true">DefaultNoPreview.png</texture>
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
@@ -66,58 +66,58 @@
 					</control>
 				</control>
 				<control type="panel" id="50">
-					<left>618</left>
-					<top>160</top>
-					<width>1215</width>
-					<height>273</height>
+					<left>{{ScaleX('618')}}</left>
+					<top>{{ScaleY('160')}}</top>
+					<width>{{ScaleX('1215')}}</width>
+					<height>{{ScaleY('273')}}</height>
 					<ondown>5000</ondown>
 					<onup>9000</onup>
 					<orientation>horizontal</orientation>
-					<itemlayout height="225" width="405">
+					<itemlayout height="{{ScaleY('225')}}" width="{{ScaleX('405')}}">
 						<control type="image">
-							<left>-12</left>
-							<width>425</width>
-							<height>260</height>
+							<left>{{ScaleX('-12')}}</left>
+							<width>{{ScaleX('425')}}</width>
+							<height>{{ScaleY('260')}}</height>
 							<texture background="true">DefaultNoPreview.png</texture>
 							<aspectratio>scale</aspectratio>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
-							<left>-12</left>
-							<width>425</width>
-							<height>260</height>
+							<left>{{ScaleX('-12')}}</left>
+							<width>{{ScaleX('425')}}</width>
+							<height>{{ScaleY('260')}}</height>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio>scale</aspectratio>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
 					</itemlayout>
-					<focusedlayout height="225" width="405">
+					<focusedlayout height="{{ScaleY('225')}}" width="{{ScaleX('405')}}">
 						<control type="image">
-							<left>-12</left>
-							<width>425</width>
-							<height>260</height>
+							<left>{{ScaleX('-12')}}</left>
+							<width>{{ScaleX('425')}}</width>
+							<height>{{ScaleY('260')}}</height>
 							<texture background="true">DefaultNoPreview.png</texture>
 							<aspectratio>scale</aspectratio>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
-							<left>-12</left>
-							<width>425</width>
-							<height>260</height>
+							<left>{{ScaleX('-12')}}</left>
+							<width>{{ScaleX('425')}}</width>
+							<height>{{ScaleY('260')}}</height>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio>scale</aspectratio>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
-							<left>4</left>
-							<top>16</top>
-							<width>393</width>
-							<height>228</height>
-							<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+							<left>{{ScaleX('4')}}</left>
+							<top>{{ScaleY('16')}}</top>
+							<width>{{ScaleX('393')}}</width>
+							<height>{{ScaleY('228')}}</height>
+							<texture border="{{ScaleBorder('8')}}" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
 						</control>
 					</focusedlayout>
 				</control>
@@ -130,71 +130,71 @@
 				</include>
 				<control type="group">
 					<control type="image">
-						<left>1370</left>
-						<top>420</top>
-						<width>450</width>
-						<height>396</height>
+						<left>{{ScaleX('1370')}}</left>
+						<top>{{ScaleY('420')}}</top>
+						<width>{{ScaleX('450')}}</width>
+						<height>{{ScaleY('396')}}</height>
 						<aspectratio>scale</aspectratio>
 						<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
 					</control>
 					<control type="group">
-						<left>1340</left>
-						<top>430</top>
+						<left>{{ScaleX('1340')}}</left>
+						<top>{{ScaleY('430')}}</top>
 						<control type="list">
-							<left>42</left>
-							<top>0</top>
-							<width>446</width>
-							<height>385</height>
+							<left>{{ScaleX('42')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<width>{{ScaleX('446')}}</width>
+							<height>{{ScaleY('385')}}</height>
 							<pagecontrol/>
-							<itemlayout height="75">
+							<itemlayout height="{{ScaleY('75')}}">
 								<control type="label">
-									<left>10</left>
-									<top>0</top>
-									<width>410</width>
-									<height>30</height>
+									<left>{{ScaleX('10')}}</left>
+									<top>{{ScaleY('0')}}</top>
+									<width>{{ScaleX('410')}}</width>
+									<height>{{ScaleY('30')}}</height>
 									<font>font27_narrow</font>
 									<label>$INFO[ListItem.Label,[COLOR button_focus],[/COLOR]]</label>
 								</control>
 								<control type="label">
-									<left>10</left>
-									<top>30</top>
-									<width>380</width>
-									<height>30</height>
+									<left>{{ScaleX('10')}}</left>
+									<top>{{ScaleY('30')}}</top>
+									<width>{{ScaleX('380')}}</width>
+									<height>{{ScaleY('30')}}</height>
 									<font>font27_narrow</font>
 									<label>$INFO[ListItem.Label2]</label>
 								</control>
 								<control type="image">
-									<right>25</right>
-									<top>35</top>
-									<width>32</width>
-									<height>32</height>
+									<right>{{ScaleX('25')}}</right>
+									<top>{{ScaleY('35')}}</top>
+									<width>{{ScaleX('32')}}</width>
+									<height>{{ScaleY('32')}}</height>
 									<texture>$INFO[ListItem.Icon]</texture>
 								</control>
 							</itemlayout>
-							<focusedlayout height="75">
+							<focusedlayout height="{{ScaleY('75')}}">
 								<control type="label">
-									<left>10</left>
-									<top>0</top>
-									<width>410</width>
-									<height>30</height>
+									<left>{{ScaleX('10')}}</left>
+									<top>{{ScaleY('0')}}</top>
+									<width>{{ScaleX('410')}}</width>
+									<height>{{ScaleY('30')}}</height>
 									<font>font27_narrow</font>
 									<label>$INFO[ListItem.Label,[COLOR button_focus],[/COLOR]]</label>
 									<scroll>false</scroll>
 								</control>
 								<control type="label">
-									<left>10</left>
-									<top>30</top>
-									<width>380</width>
-									<height>30</height>
+									<left>{{ScaleX('10')}}</left>
+									<top>{{ScaleY('30')}}</top>
+									<width>{{ScaleX('380')}}</width>
+									<height>{{ScaleY('30')}}</height>
 									<font>font27_narrow</font>
 									<label>$INFO[ListItem.Label2]</label>
 									<scroll>false</scroll>
 								</control>
 								<control type="image">
-									<right>25</right>
-									<top>35</top>
-									<width>32</width>
-									<height>32</height>
+									<right>{{ScaleX('25')}}</right>
+									<top>{{ScaleY('35')}}</top>
+									<width>{{ScaleX('32')}}</width>
+									<height>{{ScaleY('32')}}</height>
 									<texture>$INFO[ListItem.Icon]</texture>
 								</control>
 							</focusedlayout>
@@ -230,10 +230,10 @@
 					</control>
 				</control>
 				<control type="grouplist" id="9000">
-					<left>90</left>
-					<top>840</top>
-					<width>1740</width>
-					<height>300</height>
+					<left>{{ScaleX('90')}}</left>
+					<top>{{ScaleY('840')}}</top>
+					<width>{{ScaleX('1740')}}</width>
+					<height>{{ScaleY('300')}}</height>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<onup>5000</onup>
@@ -252,13 +252,13 @@
 						<param name="label" value="$LOCALIZE[24020]" />
 					</include>
 					<control type="radiobutton" id="13">
-						<width>262</width>
-						<height>140</height>
+						<width>{{ScaleX('262')}}</width>
+						<height>{{ScaleY('140')}}</height>
 						<align>center</align>
 						<aligny>top</aligny>
-						<textoffsetx>35</textoffsetx>
-						<textoffsety>76</textoffsety>
-						<radioposx>81</radioposx>
+						<textoffsetx>{{ScaleX('35')}}</textoffsetx>
+						<textoffsety>{{ScaleY('76')}}</textoffsety>
+						<radioposx>{{ScaleX('81')}}</radioposx>
 						<radioposy>17</radioposy>
 						<radiowidth>100</radiowidth>
 						<font>font12</font>
@@ -297,23 +297,23 @@
 			</control>
 			<control type="group">
 				<include>OpenClose_Left</include>
-				<top>158</top>
-				<left>80</left>
+				<top>{{ScaleY('158')}}</top>
+				<left>{{ScaleX('80')}}</left>
 				<control type="image">
-					<left>-6</left>
-					<top>4</top>
-					<width>540</width>
-					<height>540</height>
+					<left>{{ScaleX('-6')}}</left>
+					<top>{{ScaleY('4')}}</top>
+					<width>{{ScaleX('540')}}</width>
+					<height>{{ScaleY('540')}}</height>
 					<aspectratio>scale</aspectratio>
 					<texture>dialogs/dialog-bg-nobo.png</texture>
 					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
 				<control type="image">
-					<left>14</left>
-					<top>24</top>
-					<width>500</width>
-					<height>500</height>
+					<left>{{ScaleX('14')}}</left>
+					<top>{{ScaleY('24')}}</top>
+					<width>{{ScaleX('500')}}</width>
+					<height>{{ScaleY('500')}}</height>
 					<aspectratio aligny="top">scale</aspectratio>
 					<fadetime>300</fadetime>
 					<texture fallback="DefaultAddon.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
@@ -321,17 +321,17 @@
 				<control type="group">
 					<visible>String.IsEqual(ListItem.AddonLifecycleType,$LOCALIZE[24170]) | String.IsEqual(ListItem.AddonLifecycleType,$LOCALIZE[24171])</visible>
 					<control type="image">
-						<left>14</left>
-						<top>24</top>
-						<width>500</width>
-						<height>500</height>
+						<left>{{ScaleX('14')}}</left>
+						<top>{{ScaleY('24')}}</top>
+						<width>{{ScaleX('500')}}</width>
+						<height>{{ScaleY('500')}}</height>
 						<texture colordiffuse="AAFFFFFF">colors/black.png</texture>
 					</control>
 					<control type="textbox">
-						<left>25</left>
-						<top>24</top>
-						<width>478</width>
-						<height>500</height>
+						<left>{{ScaleX('25')}}</left>
+						<top>{{ScaleY('24')}}</top>
+						<width>{{ScaleX('478')}}</width>
+						<height>{{ScaleY('500')}}</height>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$VAR[AddonLifecycleType]</label>
@@ -340,10 +340,10 @@
 				</control>
 			</control>
 			<control type="textbox">
-				<left>150</left>
-				<top>980</top>
-				<width>1620</width>
-				<height>82</height>
+				<left>{{ScaleX('150')}}</left>
+				<top>{{ScaleY('980')}}</top>
+				<width>{{ScaleX('1620')}}</width>
+				<height>{{ScaleY('82')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>

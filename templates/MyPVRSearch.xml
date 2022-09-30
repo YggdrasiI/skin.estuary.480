@@ -13,9 +13,9 @@
 				<include>OpenClose_Left</include>
 				<include>Visible_Left</include>
 				<control type="fixedlist" id="50">
-					<left>0</left>
-					<top>list_top_offset</top>
-					<right>918</right>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('list_top_offset')}}</top>
+					<right>{{ScaleX('918')}}</right>
 					<bottom>list_bottom_offset</bottom>
 					<onleft>9000</onleft>
 					<onright>73</onright>
@@ -36,8 +36,8 @@
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Right</include>
-				<width>870</width>
-				<right>0</right>
+				<width>{{ScaleX('870')}}</width>
+				<right>{{ScaleX('0')}}</right>
 				<include content="ContentPanel">
 					<param name="left" value="-72" />
 					<param name="width" value="970" />
@@ -45,9 +45,9 @@
 					<param name="flipx" value="true" />
 				</include>
 				<control type="scrollbar" id="73">
-					<left>-50</left>
-					<top>list_top_offset</top>
-					<width>12</width>
+					<left>{{ScaleX('-50')}}</left>
+					<top>{{ScaleY('list_top_offset')}}</top>
+					<width>{{ScaleX('12')}}</width>
 					<bottom>list_bottom_offset</bottom>
 					<onleft>50</onleft>
 					<onright>50</onright>

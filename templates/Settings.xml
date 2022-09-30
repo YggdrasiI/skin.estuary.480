@@ -17,24 +17,24 @@
 		</control>
 		<control type="group">
 			<centerleft>50%</centerleft>
-			<width>1600</width>
-			<top>0</top>
+			<width>{{ScaleX('1600')}}</width>
+			<top>{{ScaleY('0')}}</top>
 			<bottom>0</bottom>
 			<include>OpenClose_Right</include>
 			<control type="label">
-				<left>0</left>
-				<right>0</right>
-				<top>420</top>
-				<height>400</height>
+				<left>{{ScaleX('0')}}</left>
+				<right>{{ScaleX('0')}}</right>
+				<top>{{ScaleY('420')}}</top>
+				<height>{{ScaleY('400')}}</height>
 				<label>$LOCALIZE[5]</label>
 				<align>center</align>
 				<font>font37</font>
 			</control>
 			<control type="panel" id="9000">
-				<left>0</left>
-				<width>100%</width>
-				<top>120</top>
-				<height>300</height>
+				<left>{{ScaleX('0')}}</left>
+				<width>{{ScaleX('100%')}}</width>
+				<top>{{ScaleY('120')}}</top>
+				<height>{{ScaleY('300')}}</height>
 				<onup>noop</onup>
 				<ondown>Control.SetFocus(9001,$INFO[Container(9000).Position],absolute)</ondown>
 				<include>SettingsPanel</include>
@@ -62,9 +62,9 @@
 				</content>
 			</control>
 			<control type="panel" id="9001">
-				<left>0</left>
-				<right>0</right>
-				<top>470</top>
+				<left>{{ScaleX('0')}}</left>
+				<right>{{ScaleX('0')}}</right>
+				<top>{{ScaleY('470')}}</top>
 				<bottom>0</bottom>
 				<onup>Control.SetFocus(9000,$INFO[Container(9001).Position],absolute)</onup>
 				<ondown>noop</ondown>

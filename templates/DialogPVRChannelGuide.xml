@@ -18,9 +18,9 @@
 					<param name="width" value="840" />
 				</include>
 				<control type="fixedlist" id="11">
-					<left>0</left>
-					<top>list_top_offset</top>
-					<width>1900</width>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('list_top_offset')}}</top>
+					<width>{{ScaleX('1900')}}</width>
 					<bottom>list_bottom</bottom>
 					<onleft>60</onleft>
 					<onright>60</onright>
@@ -30,43 +30,43 @@
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<movement>4</movement>
 					<focusposition>4</focusposition>
-					<itemlayout height="90" width="1900">
+					<itemlayout height="{{ScaleY('90')}}" width="{{ScaleX('1900')}}">
 						<control type="label">
-							<left>20</left>
-							<width>150</width>
+							<left>{{ScaleX('20')}}</left>
+							<width>{{ScaleX('150')}}</width>
 							<bottom>0</bottom>
 							<aligny>center</aligny>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.StartTime]</label>
 						</control>
 						<control type="label">
-							<left>150</left>
-							<width>610</width>
+							<left>{{ScaleX('150')}}</left>
+							<width>{{ScaleX('610')}}</width>
 							<bottom>0</bottom>
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$VAR[PVRListItemSubLabel]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="90" width="1900">
+					<focusedlayout height="{{ScaleY('90')}}" width="{{ScaleX('1900')}}">
 						<control type="image">
-							<left>0</left>
-							<width>780</width>
+							<left>{{ScaleX('0')}}</left>
+							<width>{{ScaleX('780')}}</width>
 							<bottom>0</bottom>
 							<texture colordiffuse="button_focus">lists/focus.png</texture>
 							<visible>Control.HasFocus(11)</visible>
 							<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
 						</control>
 						<control type="label">
-							<left>20</left>
-							<width>150</width>
+							<left>{{ScaleX('20')}}</left>
+							<width>{{ScaleX('150')}}</width>
 							<bottom>0</bottom>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.StartTime]</label>
 						</control>
 						<control type="label">
-							<left>150</left>
-							<width>610</width>
+							<left>{{ScaleX('150')}}</left>
+							<width>{{ScaleX('610')}}</width>
 							<bottom>0</bottom>
 							<align>right</align>
 							<aligny>center</aligny>
@@ -77,25 +77,25 @@
 							<visible>!String.IsEmpty(ListItem.Plot) + Control.HasFocus(11)</visible>
 							<animation effect="fade" start="0" end="100" time="200">Focus</animation>
 							<control type="image">
-								<left>772</left>
-								<top>-100</top>
-								<width>1210</width>
-								<height>350</height>
-								<texture border="40">buttons/dialogbutton-nofo.png</texture>
+								<left>{{ScaleX('772')}}</left>
+								<top>{{ScaleY('-100')}}</top>
+								<width>{{ScaleX('1210')}}</width>
+								<height>{{ScaleY('350')}}</height>
+								<texture border="{{ScaleBorder('40')}}">buttons/dialogbutton-nofo.png</texture>
 							</control>
 							<control type="image">
-								<left>805</left>
-								<top>-65</top>
-								<width>320</width>
-								<height>280</height>
+								<left>{{ScaleX('805')}}</left>
+								<top>{{ScaleY('-65')}}</top>
+								<width>{{ScaleX('320')}}</width>
+								<height>{{ScaleY('280')}}</height>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 								<texture fallback="DefaultTVShows.png" >$INFO[Listitem.Icon]</texture>
 							</control>
 							<control type="textbox">
-								<left>1135</left>
-								<top>-70</top>
-								<width>760</width>
-								<height>290</height>
+								<left>{{ScaleX('1135')}}</left>
+								<top>{{ScaleY('-70')}}</top>
+								<width>{{ScaleX('760')}}</width>
+								<height>{{ScaleY('290')}}</height>
 								<label>$INFO[ListItem.Plot]</label>
 								<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 							</control>
@@ -103,9 +103,9 @@
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="60">
-					<left>768</left>
-					<top>list_top_offset</top>
-					<width>12</width>
+					<left>{{ScaleX('768')}}</left>
+					<top>{{ScaleY('list_top_offset')}}</top>
+					<width>{{ScaleX('12')}}</width>
 					<bottom>list_bottom</bottom>
 					<onleft>11</onleft>
 					<onright>11</onright>
@@ -114,25 +114,25 @@
 				</control>
 			</control>
 			<control type="image">
-				<left>0</left>
+				<left>{{ScaleX('0')}}</left>
 				<bottom>0</bottom>
-				<width>100%</width>
-				<height>115</height>
+				<width>{{ScaleX('100%')}}</width>
+				<height>{{ScaleY('115')}}</height>
 				<texture flipy="true">frame/InfoBar.png</texture>
 			</control>
 			<control type="group">
 				<include>Animation_TopSlide</include>
 				<control type="image">
-					<left>0</left>
-					<width>780</width>
-					<height>110</height>
+					<left>{{ScaleX('0')}}</left>
+					<width>{{ScaleX('780')}}</width>
+					<height>{{ScaleY('110')}}</height>
 					<texture>frame/InfoBar.png</texture>
 				</control>
 				<control type="label" id="2">
 					<description>header label</description>
-					<textoffsetx>40</textoffsetx>
-					<width>1300</width>
-					<height>70</height>
+					<textoffsetx>{{ScaleX('40')}}</textoffsetx>
+					<width>{{ScaleX('1300')}}</width>
+					<height>{{ScaleY('70')}}</height>
 					<font>font45</font>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[19069]$INFO[Container(11).ListItem.StartDate, - ]</label>

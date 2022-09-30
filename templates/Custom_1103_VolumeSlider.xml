@@ -6,9 +6,9 @@
 	<controls>
 		<control type="button">
 			<description>background close area</description>
-			<left>0</left>
-			<top>0</top>
-			<width>100%</width>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('0')}}</top>
+			<width>{{ScaleX('100%')}}</width>
 			<bottom>0</bottom>
 			<texturefocus />
 			<texturenofocus />
@@ -16,32 +16,32 @@
 		</control>
 		<control type="group">
 			<bottom>0</bottom>
-			<height>250</height>
-			<left>30</left>
-			<width>840</width>
+			<height>{{ScaleY('250')}}</height>
+			<left>{{ScaleX('30')}}</left>
+			<width>{{ScaleX('840')}}</width>
 			<control type="image">
-				<left>-20</left>
-				<top>0</top>
-				<width>525</width>
-				<height>152</height>
+				<left>{{ScaleX('-20')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('525')}}</width>
+				<height>{{ScaleY('152')}}</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 			</control>
 			<control type="progress">
-				<left>40</left>
-				<top>20</top>
-				<width>400</width>
-				<height>112</height>
+				<left>{{ScaleX('40')}}</left>
+				<top>{{ScaleY('20')}}</top>
+				<width>{{ScaleX('400')}}</width>
+				<height>{{ScaleY('112')}}</height>
 				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
 				<midtexture colordiffuse="button_focus">colors/white.png</midtexture>
 				<info>Player.Volume</info>
 			</control>
 			<control type="slider">
-				<left>40</left>
-				<top>55</top>
-				<width>400</width>
-				<height>40</height>
+				<left>{{ScaleX('40')}}</left>
+				<top>{{ScaleY('55')}}</top>
+				<width>{{ScaleX('400')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<texturesliderbar></texturesliderbar>
 				<textureslidernib></textureslidernib>
 				<textureslidernibfocus></textureslidernibfocus>
@@ -49,10 +49,10 @@
 				<action>Volume</action>
 			</control>
 			<control type="button">
-				<left>0</left>
-				<top>65</top>
-				<width>28</width>
-				<height>28</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('65')}}</top>
+				<width>{{ScaleX('28')}}</width>
+				<height>{{ScaleY('28')}}</height>
 				<texturefocus flipx="true" colordiffuse="button_focus">overlays/arrowright.png</texturefocus>
 				<texturenofocus flipx="true" colordiffuse="button_focus">overlays/arrowright.png</texturenofocus>
 				<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
@@ -61,10 +61,10 @@
 				<onclick>Action(VolumeDown)</onclick>
 			</control>
 			<control type="button">
-				<left>455</left>
-				<top>65</top>
-				<width>28</width>
-				<height>28</height>
+				<left>{{ScaleX('455')}}</left>
+				<top>{{ScaleY('65')}}</top>
+				<width>{{ScaleX('28')}}</width>
+				<height>{{ScaleY('28')}}</height>
 				<texturefocus colordiffuse="button_focus">overlays/arrowright.png</texturefocus>
 				<texturenofocus colordiffuse="button_focus">overlays/arrowright.png</texturenofocus>
 				<animation effect="zoom" start="0,100" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>

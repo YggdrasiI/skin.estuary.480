@@ -33,14 +33,14 @@
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<control type="group" id="2000">
-				<left>462</left>
+				<left>{{ScaleX('462')}}</left>
 				<animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
-					<effect type="slide" end="0,20" time="60" tween="sine" />
-					<effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
+					<effect type="slide" end="{{ScaleBorder2('0,20')}}" time="60" tween="sine" />
+					<effect type="slide" end="{{ScaleBorder2('0,-20')}}" time="180" tween="sine" delay="80" />
 				</animation>
 				<animation type="Conditional" condition="Control.IsVisible(20001)" reversible="false">
-					<effect type="slide" end="0,-20" time="60" tween="sine" />
-					<effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
+					<effect type="slide" end="{{ScaleBorder2('0,-20')}}" time="60" tween="sine" />
+					<effect type="slide" end="{{ScaleBorder2('0,20')}}" time="180" tween="sine" delay="80" />
 				</animation>
 				<include>OpenClose_Right</include>
 				<control type="group" id="5000">
@@ -504,9 +504,9 @@
 						<param name="id" value="favorites"/>
 					</include>
 					<control type="panel" id="14100">
-						<left>65</left>
-						<top>0</top>
-						<right>0</right>
+						<left>{{ScaleX('65')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<right>{{ScaleX('0')}}</right>
 						<bottom>0</bottom>
 						<onleft>9000</onleft>
 						<onright>9000</onright>
@@ -517,19 +517,19 @@
 						<orientation>vertical</orientation>
 						<pagecontrol>14010</pagecontrol>
 						<visible>Integer.IsGreater(Container(14100).NumItems,0) | Container(14100).IsUpdating</visible>
-						<itemlayout width="330" height="401">
+						<itemlayout width="{{ScaleX('330')}}" height="{{ScaleY('401')}}">
 							<control type="group">
-								<top>130</top>
+								<top>{{ScaleY('130')}}</top>
 								<include content="InfoWallMusicLayout">
 									<param name="fallback_image" value="DefaultFavourites.png" />
 									<param name="focused" value="false" />
 								</include>
 							</control>
 						</itemlayout>
-						<focusedlayout width="330" height="401">
+						<focusedlayout width="{{ScaleX('330')}}" height="{{ScaleY('401')}}">
 							<control type="group">
 								<depth>DepthContentPopout</depth>
-								<top>130</top>
+								<top>{{ScaleY('130')}}</top>
 								<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="170,320">Focus</animation>
 								<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="170,320">UnFocus</animation>
 								<include content="InfoWallMusicLayout">
@@ -563,50 +563,50 @@
 						<pagecontrol>15010</pagecontrol>
 						<control type="group" id="16678">
 							<description>Weather info</description>
-							<left>68</left>
-							<right>70</right>
-							<top>102</top>
-							<height>360</height>
+							<left>{{ScaleX('68')}}</left>
+							<right>{{ScaleX('70')}}</right>
+							<top>{{ScaleY('102')}}</top>
+							<height>{{ScaleY('360')}}</height>
 							<visible>!String.IsEmpty(Weather.plugin)</visible>
 							<control type="image">
 								<bottom>90</bottom>
-								<width>100%</width>
-								<texture border="21">dialogs/dialog-bg.png</texture>
+								<width>{{ScaleX('100%')}}</width>
+								<texture border="{{ScaleBorder('21')}}">dialogs/dialog-bg.png</texture>
 							</control>
 							<control type="label">
-								<left>840</left>
-								<top>60</top>
+								<left>{{ScaleX('840')}}</left>
+								<top>{{ScaleY('60')}}</top>
 								<aligny>center</aligny>
-								<height>24</height>
-								<right>60</right>
+								<height>{{ScaleY('24')}}</height>
+								<right>{{ScaleX('60')}}</right>
 								<align>right</align>
 								<font>font30_title</font>
 								<label>$INFO[Weather.Location]</label>
 							</control>
 							<control type="label">
-								<left>840</left>
-								<top>120</top>
+								<left>{{ScaleX('840')}}</left>
+								<top>{{ScaleY('120')}}</top>
 								<aligny>center</aligny>
-								<height>24</height>
-								<right>60</right>
+								<height>{{ScaleY('24')}}</height>
+								<right>{{ScaleX('60')}}</right>
 								<align>right</align>
 								<font>font14</font>
 								<label>$INFO[Weather.Conditions]</label>
 							</control>
 							<control type="label">
-								<left>840</left>
-								<top>180</top>
+								<left>{{ScaleX('840')}}</left>
+								<top>{{ScaleY('180')}}</top>
 								<aligny>center</aligny>
-								<height>24</height>
-								<right>60</right>
+								<height>{{ScaleY('24')}}</height>
+								<right>{{ScaleX('60')}}</right>
 								<align>right</align>
 								<font>font14</font>
 								<label>$INFO[Weather.Temperature]</label>
 							</control>
 							<control type="grouplist">
-								<top>50</top>
-								<left>50</left>
-								<right>20</right>
+								<top>{{ScaleY('50')}}</top>
+								<left>{{ScaleX('50')}}</left>
+								<right>{{ScaleX('20')}}</right>
 								<orientation>horizontal</orientation>
 								<align>left</align>
 								<itemgap>-110</itemgap>
@@ -825,9 +825,9 @@
 					<param name="width" value="522" />
 				</include>
 				<control type="fixedlist" id="9000">
-					<left>0</left>
-					<top>240</top>
-					<width>462</width>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('240')}}</top>
+					<width>{{ScaleX('462')}}</width>
 					<bottom>-10</bottom>
 					<movement>7</movement>
 					<focusposition>0</focusposition>
@@ -836,65 +836,65 @@
 					<onup>700</onup>
 					<ondown>700</ondown>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
-					<focusedlayout height="95">
+					<focusedlayout height="{{ScaleY('95')}}">
 						<control type="group">
 							<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
 							<control type="image">
-								<left>0</left>
-								<top>0</top>
-								<width>462</width>
-								<height>95</height>
+								<left>{{ScaleX('0')}}</left>
+								<top>{{ScaleY('0')}}</top>
+								<width>{{ScaleX('462')}}</width>
+								<height>{{ScaleY('95')}}</height>
 								<texture colordiffuse="button_focus">lists/focus.png</texture>
 								<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasActiveModalDialog">Conditional</animation>
 							</control>
 							<control type="image">
-								<left>-3</left>
-								<top>1</top>
-								<width>95</width>
-								<height>95</height>
+								<left>{{ScaleX('-3')}}</left>
+								<top>{{ScaleY('1')}}</top>
+								<width>{{ScaleX('95')}}</width>
+								<height>{{ScaleY('95')}}</height>
 								<texture colordiffuse="button_focus">$INFO[ListItem.Art(thumb)]</texture>
 								<animation effect="fade" start="0" end="100" time="300" reversible="false">Focus</animation>
 							</control>
 							<control type="image">
-								<left>0</left>
-								<top>0</top>
-								<width>95</width>
-								<height>95</height>
+								<left>{{ScaleX('0')}}</left>
+								<top>{{ScaleY('0')}}</top>
+								<width>{{ScaleX('95')}}</width>
+								<height>{{ScaleY('95')}}</height>
 								<texture colordiffuse="51FFFFFF">colors/black.png</texture>
 								<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasActiveModalDialog">Conditional</animation>
 							</control>
 						</control>
 						<control type="image">
-							<left>-3</left>
-							<top>1</top>
-							<width>95</width>
-							<height>95</height>
+							<left>{{ScaleX('-3')}}</left>
+							<top>{{ScaleY('1')}}</top>
+							<width>{{ScaleX('95')}}</width>
+							<height>{{ScaleY('95')}}</height>
 							<texture>$INFO[ListItem.Art(thumb)]</texture>
 						</control>
 						<control type="label">
-							<left>104</left>
-							<top>0</top>
-							<height>95</height>
-							<width>560</width>
+							<left>{{ScaleX('104')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<height>{{ScaleY('95')}}</height>
+							<width>{{ScaleX('560')}}</width>
 							<aligny>center</aligny>
 							<font>font37</font>
 							<label>$INFO[ListItem.Label]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</focusedlayout>
-					<itemlayout height="95">
+					<itemlayout height="{{ScaleY('95')}}">
 						<control type="image">
-							<left>-3</left>
-							<top>1</top>
-							<width>95</width>
-							<height>95</height>
+							<left>{{ScaleX('-3')}}</left>
+							<top>{{ScaleY('1')}}</top>
+							<width>{{ScaleX('95')}}</width>
+							<height>{{ScaleY('95')}}</height>
 							<texture colordiffuse="44FFFFFF">$INFO[ListItem.Art(thumb)]</texture>
 						</control>
 						<control type="label">
-							<left>104</left>
-							<top>0</top>
-							<height>95</height>
-							<width>560</width>
+							<left>{{ScaleX('104')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<height>{{ScaleY('95')}}</height>
+							<width>{{ScaleX('560')}}</width>
 							<aligny>center</aligny>
 							<font>font37</font>
 							<label>$INFO[ListItem.Label]</label>
@@ -1018,10 +1018,10 @@
 				<control type="grouplist" id="700">
 					<orientation>horizontal</orientation>
 					<itemgap>0</itemgap>
-					<left>-8</left>
-					<width>480</width>
-					<height>110</height>
-					<top>100</top>
+					<left>{{ScaleX('-8')}}</left>
+					<width>{{ScaleX('480')}}</width>
+					<height>{{ScaleY('110')}}</height>
+					<top>{{ScaleY('100')}}</top>
 					<onup>SetFocus(9000,99,absolute)</onup>
 					<ondown>SetFocus(9000,0,absolute)</ondown>
 					<onright>2000</onright>
@@ -1057,7 +1057,7 @@
 			<control type="group">
 				<depth>DepthBars</depth>
 				<bottom>0</bottom>
-				<height>70</height>
+				<height>{{ScaleY('70')}}</height>
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<include condition="!Skin.HasSetting(hide_mediaflags)" content="MediaFlags">
@@ -1065,11 +1065,11 @@
 					<param name="resolution_var" value="$VAR[ContainerResolutionFlagVar]" />
 				</include>
 				<control type="rss">
-					<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
-					<left>0</left>
+					<animation effect="slide" end="{{ScaleBorder2('0,90')}}" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+					<left>{{ScaleX('0')}}</left>
 					<bottom>0</bottom>
-					<height>39</height>
-					<width>100%</width>
+					<height>{{ScaleY('39')}}</height>
+					<width>{{ScaleX('100%')}}</width>
 					<font>font12</font>
 					<urlset>1</urlset>
 					<hitrect x="-100" y="0" w="1" h="1" />
@@ -1086,17 +1086,17 @@
 			</include>
 			<control type="group">
 				<depth>DepthBars</depth>
-				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+				<animation effect="slide" end="{{ScaleBorder2('0,-90')}}" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-				<top>30</top>
-				<left>90</left>
+				<top>{{ScaleY('30')}}</top>
+				<left>{{ScaleX('90')}}</left>
 				<control type="image">
-					<left>4</left>
-					<top>0</top>
+					<left>{{ScaleX('4')}}</left>
+					<top>{{ScaleY('0')}}</top>
 					<aspectratio>keep</aspectratio>
-					<width>192</width>
-					<height>56</height>
+					<width>{{ScaleX('192')}}</width>
+					<height>{{ScaleY('56')}}</height>
 					<texture>special://xbmc/media/vendor_logo.png</texture>
 				</control>
 			</control>

@@ -4,18 +4,18 @@
 		<param name="focused">false</param>
 		<definition>
 			<control type="image">
-				<top>-10</top>
-				<width>376</width>
-				<height>380</height>
+				<top>{{ScaleY('-10')}}</top>
+				<width>{{ScaleX('376')}}</width>
+				<height>{{ScaleY('380')}}</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
-				<top>-14</top>
-				<left>-4</left>
-				<width>384</width>
-				<height>388</height>
+				<top>{{ScaleY('-14')}}</top>
+				<left>{{ScaleX('-4')}}</left>
+				<width>{{ScaleX('384')}}</width>
+				<height>{{ScaleY('388')}}</height>
 				<texture colordiffuse="button_focus">colors/grey.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
@@ -23,19 +23,19 @@
 				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 			</control>
 			<control type="image">
-				<left>20</left>
-				<top>10</top>
-				<width>336</width>
-				<height>300</height>
-				<texture border="2" background="true">$VAR[InfoWallThumbVar]</texture>
+				<left>{{ScaleX('20')}}</left>
+				<top>{{ScaleY('10')}}</top>
+				<width>{{ScaleX('336')}}</width>
+				<height>{{ScaleY('300')}}</height>
+				<texture border="{{ScaleBorder('2')}}" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="label">
-				<left>20</left>
-				<top>318</top>
-				<width>338</width>
-				<textoffsetx>20</textoffsetx>
-				<height>20</height>
+				<left>{{ScaleX('20')}}</left>
+				<top>{{ScaleY('318')}}</top>
+				<width>{{ScaleX('338')}}</width>
+				<textoffsetx>{{ScaleX('20')}}</textoffsetx>
+				<height>{{ScaleY('20')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12</font>
@@ -51,18 +51,18 @@
 		<param name="focused">false</param>
 		<definition>
 			<control type="image">
-				<top>0</top>
-				<width>316</width>
-				<height>386</height>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('316')}}</width>
+				<height>{{ScaleY('386')}}</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
-				<top>-4</top>
-				<left>-4</left>
-				<width>324</width>
-				<height>394</height>
+				<top>{{ScaleY('-4')}}</top>
+				<left>{{ScaleX('-4')}}</left>
+				<width>{{ScaleX('324')}}</width>
+				<height>{{ScaleY('394')}}</height>
 				<texture colordiffuse="button_focus">colors/grey.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
@@ -70,19 +70,19 @@
 				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 			</control>
 			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>316</width>
-				<height>316</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('316')}}</width>
+				<height>{{ScaleY('316')}}</height>
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>keep</aspectratio>
 				<bordersize>20</bordersize>
 			</control>
 			<control type="textbox">
-				<left>28</left>
-				<top>289</top>
-				<width>262</width>
-				<height>80</height>
+				<left>{{ScaleX('28')}}</left>
+				<top>{{ScaleY('289')}}</top>
+				<width>{{ScaleX('262')}}</width>
+				<height>{{ScaleY('80')}}</height>
 				<font>font12</font>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -92,9 +92,9 @@
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBType,album)</visible>
 				<control type="label">
-					<left>29</left>
-					<top>300</top>
-					<width>260</width>
+					<left>{{ScaleX('29')}}</left>
+					<top>{{ScaleY('300')}}</top>
+					<width>{{ScaleX('260')}}</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font10</font>
 					<shadowcolor>text_shadow</shadowcolor>
@@ -102,9 +102,9 @@
 					<align>center</align>
 				</control>
 				<control type="label">
-					<left>29</left>
-					<top>328</top>
-					<width>260</width>
+					<left>{{ScaleX('29')}}</left>
+					<top>{{ScaleY('328')}}</top>
+					<width>{{ScaleX('260')}}</width>
 					<label>$PARAM[main_label]</label>
 					<font>font12</font>
 					<shadowcolor>text_shadow</shadowcolor>
@@ -113,8 +113,8 @@
 				</control>
 			</control>
 			<control type="group">
-				<left>133</left>
-				<top>2</top>
+				<left>{{ScaleX('133')}}</left>
+				<top>{{ScaleY('2')}}</top>
 				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 			</control>
 		</definition>
@@ -127,18 +127,18 @@
 		<param name="focused">false</param>
 		<definition>
 			<control type="image">
-				<top>10</top>
-				<width>316</width>
-				<height>288</height>
+				<top>{{ScaleY('10')}}</top>
+				<width>{{ScaleX('316')}}</width>
+				<height>{{ScaleY('288')}}</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
-				<top>6</top>
-				<left>-4</left>
-				<width>324</width>
-				<height>296</height>
+				<top>{{ScaleY('6')}}</top>
+				<left>{{ScaleX('-4')}}</left>
+				<width>{{ScaleX('324')}}</width>
+				<height>{{ScaleY('296')}}</height>
 				<texture colordiffuse="button_focus">colors/grey.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
@@ -146,43 +146,43 @@
 				<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 			</control>
 			<control type="image">
-				<left>0</left>
-				<top>10</top>
-				<width>316</width>
-				<height>218</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('10')}}</top>
+				<width>{{ScaleX('316')}}</width>
+				<height>{{ScaleY('218')}}</height>
 				<texture fallback="$PARAM[fallback_image]" background="true">$VAR[InfoWallThumbVar]</texture>
 				<aspectratio>scale</aspectratio>
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
-				<left>20</left>
-				<top>138</top>
-				<width>276</width>
-				<height>70</height>
+				<left>{{ScaleX('20')}}</left>
+				<top>{{ScaleY('138')}}</top>
+				<width>{{ScaleX('276')}}</width>
+				<height>{{ScaleY('70')}}</height>
 				<texture>overlays/overlayfade.png</texture>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="label">
-				<left>31</left>
-				<top>178</top>
-				<width>260</width>
+				<left>{{ScaleX('31')}}</left>
+				<top>{{ScaleY('178')}}</top>
+				<width>{{ScaleX('260')}}</width>
 				<label>$PARAM[thumb_label]</label>
 				<font>font20_title</font>
 				<shadowcolor>text_shadow</shadowcolor>
 				<align>right</align>
 			</control>
 			<control type="image">
-				<left>20</left>
-				<top>175</top>
-				<width>32</width>
-				<height>32</height>
+				<left>{{ScaleX('20')}}</left>
+				<top>{{ScaleY('175')}}</top>
+				<width>{{ScaleX('32')}}</width>
+				<height>{{ScaleY('32')}}</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
 			</control>
 			<control type="textbox">
-				<left>28</left>
-				<top>202</top>
-				<width>262</width>
-				<height>80</height>
+				<left>{{ScaleX('28')}}</left>
+				<top>{{ScaleY('202')}}</top>
+				<width>{{ScaleX('262')}}</width>
+				<height>{{ScaleY('80')}}</height>
 				<font>font12</font>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -192,9 +192,9 @@
 			<control type="group">
 				<visible>!Window.IsActive(videos)</visible>
 				<control type="label">
-					<left>29</left>
-					<top>210</top>
-					<width>260</width>
+					<left>{{ScaleX('29')}}</left>
+					<top>{{ScaleY('210')}}</top>
+					<width>{{ScaleX('260')}}</width>
 					<label>$PARAM[sub_label]</label>
 					<font>font12</font>
 					<shadowcolor>text_shadow</shadowcolor>
@@ -202,9 +202,9 @@
 					<align>center</align>
 				</control>
 				<control type="label">
-					<left>29</left>
-					<top>240</top>
-					<width>260</width>
+					<left>{{ScaleX('29')}}</left>
+					<top>{{ScaleY('240')}}</top>
+					<width>{{ScaleX('260')}}</width>
 					<label>$PARAM[main_label]</label>
 					<font>font10</font>
 					<shadowcolor>text_shadow</shadowcolor>
@@ -213,18 +213,18 @@
 				</control>
 			</control>
 			<control type="progress">
-				<left>20</left>
-				<top>258</top>
-				<width>276</width>
-				<height>1</height>
+				<left>{{ScaleX('20')}}</left>
+				<top>{{ScaleY('258')}}</top>
+				<width>{{ScaleX('276')}}</width>
+				<height>{{ScaleY('1')}}</height>
 				<texturebg></texturebg>
 				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 			</control>
 			<control type="group">
-				<left>134</left>
-				<top>8</top>
+				<left>{{ScaleX('134')}}</left>
+				<top>{{ScaleY('8')}}</top>
 				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 			</control>
 		</definition>
@@ -235,29 +235,29 @@
 			<control type="group">
 				<visible>String.IsEmpty(ListItem.Art(poster))</visible>
 				<control type="image">
-					<left>15</left>
-					<top>-10</top>
-					<width>290</width>
-					<height>400</height>
+					<left>{{ScaleX('15')}}</left>
+					<top>{{ScaleY('-10')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('400')}}</height>
 					<texture>dialogs/dialog-bg-nobo.png</texture>
 					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
 				<control type="image">
-					<left>15</left>
-					<top>-10</top>
-					<width>290</width>
-					<height>400</height>
+					<left>{{ScaleX('15')}}</left>
+					<top>{{ScaleY('-10')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('400')}}</height>
 					<texture colordiffuse="button_focus">colors/grey.png</texture>
 					<bordersize>20</bordersize>
 					<visible>$PARAM[focused]</visible>
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
 				<control type="textbox">
-					<left>40</left>
-					<top>244</top>
-					<width>242</width>
-					<height>120</height>
+					<left>{{ScaleX('40')}}</left>
+					<top>{{ScaleY('244')}}</top>
+					<width>{{ScaleX('242')}}</width>
+					<height>{{ScaleY('120')}}</height>
 					<font>font27</font>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -266,10 +266,10 @@
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="image">
-					<left>24</left>
-					<top>-1</top>
-					<width>272</width>
-					<height>270</height>
+					<left>{{ScaleX('24')}}</left>
+					<top>{{ScaleY('-1')}}</top>
+					<width>{{ScaleX('272')}}</width>
+					<height>{{ScaleY('270')}}</height>
 					<texture fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>scale</aspectratio>
 					<bordersize>20</bordersize>
@@ -278,10 +278,10 @@
 			<control type="group">
 				<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 				<control type="image">
-					<left>11</left>
-					<top>-14</top>
-					<width>298</width>
-					<height>408</height>
+					<left>{{ScaleX('11')}}</left>
+					<top>{{ScaleY('-14')}}</top>
+					<width>{{ScaleX('298')}}</width>
+					<height>{{ScaleY('408')}}</height>
 					<texture colordiffuse="button_focus">colors/grey.png</texture>
 					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
@@ -289,20 +289,20 @@
 					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
 				</control>
 				<control type="image">
-					<left>15</left>
-					<top>-10</top>
-					<width>290</width>
-					<height>400</height>
+					<left>{{ScaleX('15')}}</left>
+					<top>{{ScaleY('-10')}}</top>
+					<width>{{ScaleX('290')}}</width>
+					<height>{{ScaleY('400')}}</height>
 					<texture background="true">$INFO[ListItem.Art(poster)]</texture>
 					<aspectratio>scale</aspectratio>
 					<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
 				<control type="image">
-					<left>35</left>
-					<top>290</top>
-					<width>80</width>
-					<height>80</height>
+					<left>{{ScaleX('35')}}</left>
+					<top>{{ScaleY('290')}}</top>
+					<width>{{ScaleX('80')}}</width>
+					<height>{{ScaleY('80')}}</height>
 					<texture>overlays/overlay-bg.png</texture>
 					<visible>Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
 				</control>
@@ -310,47 +310,47 @@
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
 				<control type="image">
-					<left>35</left>
-					<top>320</top>
-					<width>250</width>
-					<height>50</height>
+					<left>{{ScaleX('35')}}</left>
+					<top>{{ScaleY('320')}}</top>
+					<width>{{ScaleX('250')}}</width>
+					<height>{{ScaleY('50')}}</height>
 					<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
 					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<top>340</top>
-					<width>244</width>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('340')}}</top>
+					<width>{{ScaleX('244')}}</width>
 					<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
 					<font>font20_title</font>
 					<shadowcolor>text_shadow</shadowcolor>
 					<align>right</align>
 				</control>
 				<control type="image">
-					<left>254</left>
-					<top>343</top>
-					<width>24</width>
-					<height>24</height>
+					<left>{{ScaleX('254')}}</left>
+					<top>{{ScaleY('343')}}</top>
+					<width>{{ScaleX('24')}}</width>
+					<height>{{ScaleY('24')}}</height>
 					<texture>lists/played-total.png</texture>
 				</control>
 			</control>
 			<control type="image">
-				<left>35</left>
-				<top>338</top>
-				<width>32</width>
-				<height>32</height>
+				<left>{{ScaleX('35')}}</left>
+				<top>{{ScaleY('338')}}</top>
+				<width>{{ScaleX('32')}}</width>
+				<height>{{ScaleY('32')}}</height>
 				<texture>$VAR[WallWatchedIconVar]</texture>
 			</control>
 			<control type="group">
-				<left>135</left>
-				<top>-8</top>
+				<left>{{ScaleX('135')}}</left>
+				<top>{{ScaleY('-8')}}</top>
 				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 			</control>
 			<control type="progress">
-				<left>35</left>
-				<top>350</top>
-				<width>250</width>
-				<height>1</height>
+				<left>{{ScaleX('35')}}</left>
+				<top>{{ScaleY('350')}}</top>
+				<width>{{ScaleX('250')}}</width>
+				<height>{{ScaleY('1')}}</height>
 				<texturebg></texturebg>
 				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
@@ -361,15 +361,15 @@
 	<include name="View_54_InfoWall">
 		<control type="group">
 			<include>OpenClose_Right</include>
-			<left>100</left>
-			<top>0</top>
+			<left>{{ScaleX('100')}}</left>
+			<top>{{ScaleY('0')}}</top>
 			<visible>Control.IsVisible(54)</visible>
 			<include>Visible_Right</include>
 			<control type="panel" id="54">
-				<left>490</left>
-				<top>0</top>
-				<right>15</right>
-				<height>100%</height>
+				<left>{{ScaleX('490')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<right>{{ScaleX('15')}}</right>
+				<height>{{ScaleY('100%')}}</height>
 				<onleft>9000</onleft>
 				<onright>531</onright>
 				<onup condition="Integer.IsGreater(Container.NumPages,1)">54</onup>
@@ -380,79 +380,79 @@
 				<pagecontrol>531</pagecontrol>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(images) | Container.Content(videos) | Container.Content(games)</visible>
-				<itemlayout height="445" width="320" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
+				<itemlayout height="{{ScaleY('445')}}" width="{{ScaleX('320')}}" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
-						<left>30</left>
-						<top>120</top>
+						<left>{{ScaleX('30')}}</left>
+						<top>{{ScaleY('120')}}</top>
 						<include>InfoWallMovieLayout</include>
 					</control>
 				</itemlayout>
-				<focusedlayout height="445" width="320" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
+				<focusedlayout height="{{ScaleY('445')}}" width="{{ScaleX('320')}}" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(musicvideos) + Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<left>30</left>
+						<left>{{ScaleX('30')}}</left>
 						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="190,300">Focus</animation>
 						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="190,300">UnFocus</animation>
-						<top>120</top>
+						<top>{{ScaleY('120')}}</top>
 						<include content="InfoWallMovieLayout">
 							<param name="focused" value="true" />
 						</include>
 					</control>
 				</focusedlayout>
-				<itemlayout height="301" width="300" condition="Container.Content(episodes) | Container.Content(videos) | [Container.Content(musicvideos) + !Skin.HasSetting(show_musicvideoposter)]">
+				<itemlayout height="{{ScaleY('301')}}" width="{{ScaleX('300')}}" condition="Container.Content(episodes) | Container.Content(videos) | [Container.Content(musicvideos) + !Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
-						<left>64</left>
-						<top>110</top>
+						<left>{{ScaleX('64')}}</left>
+						<top>{{ScaleY('110')}}</top>
 						<include content="InfoWallEpisodeLayout">
 							<param name="focused" value="false" />
 							<param name="thumb_label" value="$INFO[ListItem.Label2]" />
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout height="301" width="300" condition="Container.Content(episodes) | Container.Content(videos) | [Container.Content(musicvideos) + !Skin.HasSetting(show_musicvideoposter)]">
+				<focusedlayout height="{{ScaleY('301')}}" width="{{ScaleX('300')}}" condition="Container.Content(episodes) | Container.Content(videos) | [Container.Content(musicvideos) + !Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="220,250">Focus</animation>
 						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="220,250">UnFocus</animation>
-						<left>64</left>
-						<top>110</top>
+						<left>{{ScaleX('64')}}</left>
+						<top>{{ScaleY('110')}}</top>
 						<include content="InfoWallEpisodeLayout">
 							<param name="focused" value="true" />
 							<param name="thumb_label" value="$INFO[ListItem.Label2]" />
 						</include>
 					</control>
 				</focusedlayout>
-				<itemlayout height="410" width="310" condition="Container.Content(artists) | Container.Content(albums)">
+				<itemlayout height="{{ScaleY('410')}}" width="{{ScaleX('310')}}" condition="Container.Content(artists) | Container.Content(albums)">
 					<control type="group">
-						<top>150</top>
-						<left>40</left>
+						<top>{{ScaleY('150')}}</top>
+						<left>{{ScaleX('40')}}</left>
 						<include>InfoWallMusicLayout</include>
 					</control>
 				</itemlayout>
-				<focusedlayout height="410" width="310" condition="Container.Content(artists) | Container.Content(albums)">
+				<focusedlayout height="{{ScaleY('410')}}" width="{{ScaleX('310')}}" condition="Container.Content(artists) | Container.Content(albums)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<animation effect="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="200,350">Focus</animation>
 						<animation effect="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="200,350">UnFocus</animation>
-						<top>150</top>
-						<left>40</left>
+						<top>{{ScaleY('150')}}</top>
+						<left>{{ScaleX('40')}}</left>
 						<include content="InfoWallMusicLayout">
 							<param name="focused" value="true" />
 						</include>
 					</control>
 				</focusedlayout>
-				<itemlayout height="401" width="378" condition="Container.Content(images)">
+				<itemlayout height="{{ScaleY('401')}}" width="{{ScaleX('378')}}" condition="Container.Content(images)">
 					<control type="group">
-						<left>0</left>
-						<top>150</top>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('150')}}</top>
 						<include>InfoWallPictureLayout</include>
 					</control>
 				</itemlayout>
-				<focusedlayout height="401" width="378" condition="Container.Content(images)">
+				<focusedlayout height="{{ScaleY('401')}}" width="{{ScaleX('378')}}" condition="Container.Content(images)">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
-						<left>0</left>
-						<top>150</top>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('150')}}</top>
 						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="180,330">Focus</animation>
 						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="180,330">UnFocus</animation>
 						<include content="InfoWallPictureLayout">

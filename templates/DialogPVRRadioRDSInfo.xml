@@ -11,31 +11,31 @@
 		</control>
 		<control type="group">
 			<centertop>50%</centertop>
-			<height>1080</height>
+			<height>{{ScaleY('1080')}}</height>
 			<centerleft>50%</centerleft>
-			<width>1920</width>
+			<width>{{ScaleX('1920')}}</width>
 
 			<control type="image">
-				<left>120</left>
-				<top>160</top>
-				<width>840</width>
-				<height>405</height>
-				<texture border="21">dialogs/dialog-bg.png</texture>
+				<left>{{ScaleX('120')}}</left>
+				<top>{{ScaleY('160')}}</top>
+				<width>{{ScaleX('840')}}</width>
+				<height>{{ScaleY('405')}}</height>
+				<texture border="{{ScaleBorder('21')}}">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="label">
-				<left>150</left>
-				<top>180</top>
-				<width>780</width>
-				<height>25</height>
+				<left>{{ScaleX('150')}}</left>
+				<top>{{ScaleY('180')}}</top>
+				<width>{{ScaleX('780')}}</width>
+				<height>{{ScaleY('25')}}</height>
 				<textcolor>button_focus</textcolor>
 				<font>font36_title</font>
 				<label>$LOCALIZE[179]</label>
 			</control>
 			<control type="grouplist">
-				<left>150</left>
-				<top>230</top>
-				<width>780</width>
-				<height>315</height>
+				<left>{{ScaleX('150')}}</left>
+				<top>{{ScaleY('230')}}</top>
+				<width>{{ScaleX('780')}}</width>
+				<height>{{ScaleY('315')}}</height>
 				<orientation>vertical</orientation>
 				<include content="RDSInfoLine">
 					<param name="label" value="$LOCALIZE[29901]"/>
@@ -68,26 +68,26 @@
 			</control>
 
 			<control type="image">
-				<left>120</left>
-				<top>575</top>
-				<width>840</width>
-				<height>225</height>
-				<texture border="21">dialogs/dialog-bg.png</texture>
+				<left>{{ScaleX('120')}}</left>
+				<top>{{ScaleY('575')}}</top>
+				<width>{{ScaleX('840')}}</width>
+				<height>{{ScaleY('225')}}</height>
+				<texture border="{{ScaleBorder('21')}}">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="label">
-				<left>150</left>
-				<top>595</top>
-				<width>780</width>
-				<height>25</height>
+				<left>{{ScaleX('150')}}</left>
+				<top>{{ScaleY('595')}}</top>
+				<width>{{ScaleX('780')}}</width>
+				<height>{{ScaleY('25')}}</height>
 				<textcolor>button_focus</textcolor>
 				<font>font36_title</font>
 				<label>$LOCALIZE[29909]</label>
 			</control>
 			<control type="grouplist">
-				<left>150</left>
-				<top>645</top>
-				<width>780</width>
-				<height>135</height>
+				<left>{{ScaleX('150')}}</left>
+				<top>{{ScaleY('645')}}</top>
+				<width>{{ScaleX('780')}}</width>
+				<height>{{ScaleY('135')}}</height>
 				<orientation>vertical</orientation>
 				<include content="RDSInfoLine">
 					<param name="label" value="$LOCALIZE[29910]"/>
@@ -104,26 +104,26 @@
 			</control>
 
 			<control type="image">
-				<left>970</left>
-				<top>160</top>
-				<width>840</width>
-				<height>405</height>
-				<texture border="21">dialogs/dialog-bg.png</texture>
+				<left>{{ScaleX('970')}}</left>
+				<top>{{ScaleY('160')}}</top>
+				<width>{{ScaleX('840')}}</width>
+				<height>{{ScaleY('405')}}</height>
+				<texture border="{{ScaleBorder('21')}}">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="label">
-				<left>1000</left>
-				<top>180</top>
-				<width>780</width>
-				<height>25</height>
+				<left>{{ScaleX('1000')}}</left>
+				<top>{{ScaleY('180')}}</top>
+				<width>{{ScaleX('780')}}</width>
+				<height>{{ScaleY('25')}}</height>
 				<textcolor>button_focus</textcolor>
 				<font>font36_title</font>
 				<label>$LOCALIZE[29908]</label>
 			</control>
 			<control type="grouplist">
-				<left>1000</left>
-				<top>230</top>
-				<width>780</width>
-				<height>315</height>
+				<left>{{ScaleX('1000')}}</left>
+				<top>{{ScaleY('230')}}</top>
+				<width>{{ScaleX('780')}}</width>
+				<height>{{ScaleY('315')}}</height>
 				<orientation>vertical</orientation>
 				<include content="RDSInfoLine">
 					<param name="label" value="$LOCALIZE[19030]"/>
@@ -156,26 +156,26 @@
 			</control>
 
 			<control type="image">
-				<left>970</left>
-				<top>575</top>
-				<width>840</width>
-				<height>225</height>
-				<texture border="21">dialogs/dialog-bg.png</texture>
+				<left>{{ScaleX('970')}}</left>
+				<top>{{ScaleY('575')}}</top>
+				<width>{{ScaleX('840')}}</width>
+				<height>{{ScaleY('225')}}</height>
+				<texture border="{{ScaleBorder('21')}}">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="label">
-				<left>1000</left>
-				<top>595</top>
-				<width>780</width>
-				<height>25</height>
+				<left>{{ScaleX('1000')}}</left>
+				<top>{{ScaleY('595')}}</top>
+				<width>{{ScaleX('780')}}</width>
+				<height>{{ScaleY('25')}}</height>
 				<textcolor>button_focus</textcolor>
 				<font>font36_title</font>
 				<label>$LOCALIZE[29913]</label>
 			</control>
 			<control type="grouplist">
-				<left>1000</left>
-				<top>645</top>
-				<width>780</width>
-				<height>135</height>
+				<left>{{ScaleX('1000')}}</left>
+				<top>{{ScaleY('645')}}</top>
+				<width>{{ScaleX('780')}}</width>
+				<height>{{ScaleY('135')}}</height>
 				<orientation>vertical</orientation>
 				<include content="RDSInfoLine">
 					<param name="label" value="$LOCALIZE[29910]"/>
@@ -188,26 +188,26 @@
 			</control>
 
 			<control type="image">
-				<left>120</left>
-				<top>810</top>
-				<width>840</width>
-				<height>260</height>
-				<texture border="21">dialogs/dialog-bg.png</texture>
+				<left>{{ScaleX('120')}}</left>
+				<top>{{ScaleY('810')}}</top>
+				<width>{{ScaleX('840')}}</width>
+				<height>{{ScaleY('260')}}</height>
+				<texture border="{{ScaleBorder('21')}}">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="group">
-				<left>150</left>
-				<top>830</top>
+				<left>{{ScaleX('150')}}</left>
+				<top>{{ScaleY('830')}}</top>
 				<control type="label">
-					<width>780</width>
-					<height>25</height>
+					<width>{{ScaleX('780')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<textcolor>button_focus</textcolor>
 					<font>font36_title</font>
 					<label>$LOCALIZE[29915]</label>
 				</control>
 				<control type="textbox">
-					<top>50</top>
-					<width>780</width>
-					<height>170</height>
+					<top>{{ScaleY('50')}}</top>
+					<width>{{ScaleX('780')}}</width>
+					<height>{{ScaleY('170')}}</height>
 					<align>justify</align>
 					<label>$INFO[RDS.InfoNews,[COLOR button_focus]$LOCALIZE[29916]:[/COLOR] ,[CR]]$INFO[RDS.InfoNewsLocal,[COLOR button_focus]$LOCALIZE[29917]:[/COLOR] ,[CR]]$INFO[RDS.InfoStock,[COLOR button_focus]$LOCALIZE[29920]:[/COLOR] ,[CR]]$INFO[RDS.InfoSport,[COLOR button_focus]$LOCALIZE[29918]:[/COLOR] ,[CR]]$INFO[RDS.Infolottery,[COLOR button_focus]$LOCALIZE[29919]:[/COLOR] ,[CR]]$INFO[RDS.InfoWeather,[COLOR button_focus]$LOCALIZE[400]:[/COLOR] ,[CR]]$INFO[RDS.InfoCinema,$[COLOR button_focus]LOCALIZE[19602]:[/COLOR] ,[CR]]$INFO[RDS.InfoHoroscope,[COLOR button_focus]$LOCALIZE[29922]:[/COLOR] ,[CR]]$INFO[RDS.InfoOther,[COLOR button_focus]$LOCALIZE[29921]:[/COLOR] ,[CR]]</label>
 					<autoscroll delay="5000" time="3000" repeat="10000">true</autoscroll>
@@ -215,50 +215,50 @@
 			</control>
 
 			<control type="image">
-				<left>970</left>
-				<top>810</top>
-				<width>840</width>
-				<height>260</height>
-				<texture border="21">dialogs/dialog-bg.png</texture>
+				<left>{{ScaleX('970')}}</left>
+				<top>{{ScaleY('810')}}</top>
+				<width>{{ScaleX('840')}}</width>
+				<height>{{ScaleY('260')}}</height>
+				<texture border="{{ScaleBorder('21')}}">dialogs/dialog-bg.png</texture>
 			</control>
 			<control type="group">
-				<left>1000</left>
-				<top>830</top>
+				<left>{{ScaleX('1000')}}</left>
+				<top>{{ScaleY('830')}}</top>
 				<control type="label">
-					<width>780</width>
-					<height>25</height>
+					<width>{{ScaleX('780')}}</width>
+					<height>{{ScaleY('25')}}</height>
 					<textcolor>button_focus</textcolor>
 					<font>font36_title</font>
 					<label>$LOCALIZE[14304]</label>
 				</control>
 				<control type="label">
-					<top>50</top>
-					<width>780</width>
-					<height>40</height>
+					<top>{{ScaleY('50')}}</top>
+					<width>{{ScaleX('780')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<aligny>center</aligny>
 					<label>$INFO[RDS.GetLine(3)]</label>
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
-					<top>90</top>
-					<width>780</width>
-					<height>40</height>
+					<top>{{ScaleY('90')}}</top>
+					<width>{{ScaleX('780')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<aligny>center</aligny>
 					<label>$INFO[RDS.GetLine(2)]</label>
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
-					<top>130</top>
-					<width>780</width>
-					<height>40</height>
+					<top>{{ScaleY('130')}}</top>
+					<width>{{ScaleX('780')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<aligny>center</aligny>
 					<label>$INFO[RDS.GetLine(1)]</label>
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
-					<top>170</top>
-					<width>780</width>
-					<height>40</height>
+					<top>{{ScaleY('170')}}</top>
+					<width>{{ScaleX('780')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<aligny>center</aligny>
 					<label>$INFO[RDS.GetLine(0)]</label>
 					<scroll>true</scroll>

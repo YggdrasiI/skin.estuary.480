@@ -7,14 +7,14 @@
 			<description>Dialog Header image</description>
 			<centerleft>50%</centerleft>
 			<centertop>50%</centertop>
-			<width>68</width>
-			<height>68</height>
+			<width>{{ScaleX('68')}}</width>
+			<height>{{ScaleY('68')}}</height>
 			<texture colordiffuse="button_focus" border="2">icons/file-manager/left-right.png</texture>
 			<animation effect="fade" start="0" end="100" time="300" delay="100">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="160">WindowClose</animation>
 		</control>
 		<control type="group">
-			<left>0</left>
+			<left>{{ScaleX('0')}}</left>
 			<include>OpenClose_Left</include>
 			<include content="ContentPanel">
 				<param name="width" value="872" />
@@ -27,9 +27,9 @@
 				<param name="width" value="812" />
 			</include>
 			<control type="scrollbar" id="60">
-				<top>list_top_offset</top>
-				<left>0</left>
-				<width>12</width>
+				<top>{{ScaleY('list_top_offset')}}</top>
+				<left>{{ScaleX('0')}}</left>
+				<width>{{ScaleX('12')}}</width>
 				<bottom>list_bottom_offset</bottom>
 				<onleft>20</onleft>
 				<onright>20</onright>
@@ -39,8 +39,8 @@
 			</control>
 		</control>
 		<control type="group">
-			<width>818</width>
-			<right>0</right>
+			<width>{{ScaleX('818')}}</width>
+			<right>{{ScaleX('0')}}</right>
 			<include>OpenClose_Right</include>
 			<include content="ContentPanel">
 				<param name="width" value="878" />
@@ -55,10 +55,10 @@
 				<param name="width" value="817" />
 			</include>
 			<control type="scrollbar" id="61">
-				<left>800</left>
-				<animation effect="slide" end="5,0" time="0" condition="true">Conditional</animation>
-				<top>list_top_offset</top>
-				<width>12</width>
+				<left>{{ScaleX('800')}}</left>
+				<animation effect="slide" end="{{ScaleBorder2('5,0')}}" time="0" condition="true">Conditional</animation>
+				<top>{{ScaleY('list_top_offset')}}</top>
+				<width>{{ScaleX('12')}}</width>
 				<bottom>list_bottom_offset</bottom>
 				<onleft>21</onleft>
 				<onright>21</onright>
@@ -73,22 +73,22 @@
 		<include>BottomBar</include>
 		<control type="group">
 			<bottom>0</bottom>
-			<height>65</height>
+			<height>{{ScaleY('65')}}</height>
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<control type="label">
-				<right>730</right>
-				<width>400</width>
-				<height>48</height>
+				<right>{{ScaleX('730')}}</right>
+				<width>{{ScaleX('400')}}</width>
+				<height>{{ScaleY('48')}}</height>
 				<aligny>center</aligny>
 				<align>right</align>
 				<shadowcolor>text_shadow</shadowcolor>
 				<label>$INFO[Container(21).CurrentItem,, / ]$INFO[Container(21).NumItems]</label>
 			</control>
 			<control type="label" id="102">
-				<right>40</right>
-				<width>600</width>
-				<height>48</height>
+				<right>{{ScaleX('40')}}</right>
+				<width>{{ScaleX('600')}}</width>
+				<height>{{ScaleY('48')}}</height>
 				<font>font30_title</font>
 				<align>right</align>
 				<aligny>center</aligny>
@@ -97,17 +97,17 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="label">
-				<left>730</left>
-				<width>400</width>
-				<height>48</height>
+				<left>{{ScaleX('730')}}</left>
+				<width>{{ScaleX('400')}}</width>
+				<height>{{ScaleY('48')}}</height>
 				<aligny>center</aligny>
 				<shadowcolor>text_shadow</shadowcolor>
 				<label>$INFO[Container(20).CurrentItem,, / ]$INFO[Container(20).NumItems]</label>
 			</control>
 			<control type="label" id="101">
-				<left>40</left>
-				<width>600</width>
-				<height>48</height>
+				<left>{{ScaleX('40')}}</left>
+				<width>{{ScaleX('600')}}</width>
+				<height>{{ScaleY('48')}}</height>
 				<font>font30_title</font>
 				<aligny>center</aligny>
 				<label>$PARAM[header_label]</label>

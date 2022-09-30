@@ -3,10 +3,10 @@
 	<defaultcontrol always="true">999</defaultcontrol>
 	<controls>
 		<control type="button" id="999">
-			<left>0</left>
-			<top>0</top>
-			<width>100%</width>
-			<height>100%</height>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('0')}}</top>
+			<width>{{ScaleX('100%')}}</width>
+			<height>{{ScaleY('100%')}}</height>
 			<texturefocus />
 			<texturenofocus />
 			<onright>StepForward</onright>

@@ -18,61 +18,61 @@
 		</control>
 		<control type="group" id="9100">
 			<include>OpenClose_Right</include>
-			<left>472</left>
+			<left>{{ScaleX('472')}}</left>
 			<control type="image">
-				<top>130</top>
-				<right>0</right>
-				<height>3</height>
+				<top>{{ScaleY('130')}}</top>
+				<right>{{ScaleX('0')}}</right>
+				<height>{{ScaleY('3')}}</height>
 				<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
 			</control>
 			<control type="image">
 				<bottom>134</bottom>
-				<right>0</right>
-				<height>3</height>
+				<right>{{ScaleX('0')}}</right>
+				<height>{{ScaleY('3')}}</height>
 				<texture colordiffuse="button_focus" border="2">dialogs/separator-grey.png</texture>
 			</control>
 			<control type="panel" id="2">
-				<top>148</top>
-				<left>30</left>
+				<top>{{ScaleY('148')}}</top>
+				<left>{{ScaleX('30')}}</left>
 				<visible>Container(9000).Hasfocus(2)</visible>
-				<right>0</right>
+				<right>{{ScaleX('0')}}</right>
 				<bottom>137</bottom>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<onup>2</onup>
 				<ondown>2</ondown>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="390" width="354">
+				<itemlayout height="{{ScaleY('390')}}" width="{{ScaleX('354')}}">
 					<control type="image">
-						<top>5</top>
-						<width>320</width>
-						<height>380</height>
+						<top>{{ScaleY('5')}}</top>
+						<width>{{ScaleX('320')}}</width>
+						<height>{{ScaleY('380')}}</height>
 						<texture>dialogs/dialog-bg-nobo.png</texture>
 						<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
 					</control>
 					<control type="image">
-						<left>51</left>
-						<top>38</top>
-						<width>215</width>
-						<height>215</height>
+						<left>{{ScaleX('51')}}</left>
+						<top>{{ScaleY('38')}}</top>
+						<width>{{ScaleX('215')}}</width>
+						<height>{{ScaleY('215')}}</height>
 						<aspectratio>scale</aspectratio>
 						<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
 					</control>
 					<control type="label">
-						<left>10</left>
-						<top>255</top>
-						<width>305</width>
-						<height>100</height>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('255')}}</top>
+						<width>{{ScaleX('305')}}</width>
+						<height>{{ScaleY('100')}}</height>
 						<align>center</align>
 						<aligny>top</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<left>10</left>
-						<top>290</top>
-						<width>305</width>
-						<height>100</height>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('290')}}</top>
+						<width>{{ScaleX('305')}}</width>
+						<height>{{ScaleY('100')}}</height>
 						<font>font10</font>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -80,10 +80,10 @@
 						<visible>!String.IsEqual(Listitem.Label,$LOCALIZE[20058])</visible>
 					</control>
 					<control type="label">
-						<left>10</left>
-						<top>321</top>
-						<width>305</width>
-						<height>100</height>
+						<left>{{ScaleX('10')}}</left>
+						<top>{{ScaleY('321')}}</top>
+						<width>{{ScaleX('305')}}</width>
+						<height>{{ScaleY('100')}}</height>
 						<font>font10</font>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -91,48 +91,48 @@
 						<visible>!String.Contains(Listitem.Label,$LOCALIZE[20058])</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="390" width="354">
+				<focusedlayout height="{{ScaleY('390')}}" width="{{ScaleX('354')}}">
 					<control type="group">
 						<animation effect="zoom" start="100" end="105" time="200" tween="sine" easing="inout" center="160,190">Focus</animation>
 						<animation effect="zoom" start="105" end="100" time="200" tween="sine" easing="inout" center="160,190">UnFocus</animation>
 						<control type="image">
-							<top>5</top>
-							<width>320</width>
-							<height>380</height>
+							<top>{{ScaleY('5')}}</top>
+							<width>{{ScaleX('320')}}</width>
+							<height>{{ScaleY('380')}}</height>
 							<texture>dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
-							<top>5</top>
-							<width>320</width>
-							<height>380</height>
+							<top>{{ScaleY('5')}}</top>
+							<width>{{ScaleX('320')}}</width>
+							<height>{{ScaleY('380')}}</height>
 							<texture colordiffuse="button_focus">colors/grey.png</texture>
 							<bordersize>20</bordersize>
 							<include>Animation_FocusTextureFade</include>
 						</control>
 						<control type="image">
-							<left>51</left>
-							<top>38</top>
-							<width>215</width>
-							<height>215</height>
+							<left>{{ScaleX('51')}}</left>
+							<top>{{ScaleY('38')}}</top>
+							<width>{{ScaleX('215')}}</width>
+							<height>{{ScaleY('215')}}</height>
 							<aspectratio>scale</aspectratio>
 							<texture fallback="DefaultUser.png">$INFO[Listitem.Icon]</texture>
 						</control>
 						<control type="label">
-							<left>10</left>
-							<top>255</top>
-							<width>305</width>
-							<height>100</height>
+							<left>{{ScaleX('10')}}</left>
+							<top>{{ScaleY('255')}}</top>
+							<width>{{ScaleX('305')}}</width>
+							<height>{{ScaleY('100')}}</height>
 							<align>center</align>
 							<aligny>top</aligny>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<left>10</left>
-							<top>290</top>
-							<width>305</width>
-							<height>100</height>
+							<left>{{ScaleX('10')}}</left>
+							<top>{{ScaleY('290')}}</top>
+							<width>{{ScaleX('305')}}</width>
+							<height>{{ScaleY('100')}}</height>
 							<font>font10</font>
 							<align>center</align>
 							<aligny>top</aligny>
@@ -140,10 +140,10 @@
 							<visible>!String.Contains(Listitem.Label,$LOCALIZE[20058])</visible>
 						</control>
 						<control type="label">
-							<left>10</left>
-							<top>321</top>
-							<width>305</width>
-							<height>100</height>
+							<left>{{ScaleX('10')}}</left>
+							<top>{{ScaleY('321')}}</top>
+							<width>{{ScaleX('305')}}</width>
+							<height>{{ScaleY('100')}}</height>
 							<font>font10</font>
 							<align>center</align>
 							<aligny>top</aligny>
@@ -155,9 +155,9 @@
 			</control>
 			<control type="grouplist" id="9001">
 				<visible>Container(9000).Hasfocus(1)</visible>
-				<right>0</right>
-				<height>735</height>
-				<top>163</top>
+				<right>{{ScaleX('0')}}</right>
+				<height>{{ScaleY('735')}}</height>
+				<top>{{ScaleY('163')}}</top>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<onup>9001</onup>
@@ -181,35 +181,35 @@
 				<param name="width" value="530" />
 			</include>
 			<control type="list" id="9000">
-				<left>0</left>
-				<top>130</top>
-				<width>470</width>
-				<height>567</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('130')}}</top>
+				<width>{{ScaleX('470')}}</width>
+				<height>{{ScaleY('567')}}</height>
 				<onleft>9100</onleft>
 				<onright>9100</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<scrolltime>300</scrolltime>
-				<itemlayout height="85" width="470">
+				<itemlayout height="{{ScaleY('85')}}" width="{{ScaleX('470')}}">
 					<control type="label">
-						<left>30</left>
-						<right>30</right>
+						<left>{{ScaleX('30')}}</left>
+						<right>{{ScaleX('30')}}</right>
 						<bottom>0</bottom>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font37</font>
 						<aligny>center</aligny>
 					</control>
 				</itemlayout>
-				<focusedlayout height="85" width="470">
+				<focusedlayout height="{{ScaleY('85')}}" width="{{ScaleX('470')}}">
 					<control type="image">
-						<right>0</right>
+						<right>{{ScaleX('0')}}</right>
 						<bottom>0</bottom>
 						<texture colordiffuse="button_focus">lists/focus.png</texture>
 						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
 					</control>
 					<control type="label">
-						<left>30</left>
-						<right>30</right>
+						<left>{{ScaleX('30')}}</left>
+						<right>{{ScaleX('30')}}</right>
 						<bottom>0</bottom>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font37</font>

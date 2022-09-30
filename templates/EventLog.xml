@@ -11,9 +11,9 @@
 				<visible>Control.IsVisible(50)</visible>
 				<include>OpenClose_Right</include>
 				<control type="fixedlist" id="50">
-					<left>490</left>
-					<top>list_top_offset</top>
-					<right>0</right>
+					<left>{{ScaleX('490')}}</left>
+					<top>{{ScaleY('list_top_offset')}}</top>
+					<right>{{ScaleX('0')}}</right>
 					<bottom>list_bottom</bottom>
 					<onleft>9000</onleft>
 					<onright>60</onright>
@@ -24,86 +24,86 @@
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
-					<itemlayout height="141">
+					<itemlayout height="{{ScaleY('141')}}">
 						<control type="image">
-							<left>10</left>
-							<top>10</top>
-							<width>120</width>
-							<height>120</height>
+							<left>{{ScaleX('10')}}</left>
+							<top>{{ScaleY('10')}}</top>
+							<width>{{ScaleX('120')}}</width>
+							<height>{{ScaleY('120')}}</height>
 							<texture fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
 							<aspectratio>scale</aspectratio>
 							<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 							<bordersize>4</bordersize>
 						</control>
 						<control type="label">
-							<left>160</left>
-							<right>400</right>
-							<top>10</top>
-							<height>35</height>
+							<left>{{ScaleX('160')}}</left>
+							<right>{{ScaleX('400')}}</right>
+							<top>{{ScaleY('10')}}</top>
+							<height>{{ScaleY('35')}}</height>
 							<aligny>center</aligny>
 							<font>font37</font>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="textbox">
-							<left>160</left>
-							<top>45</top>
-							<right>20</right>
-							<height>80</height>
+							<left>{{ScaleX('160')}}</left>
+							<top>{{ScaleY('45')}}</top>
+							<right>{{ScaleX('20')}}</right>
+							<height>{{ScaleY('80')}}</height>
 							<aligny>top</aligny>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Property(Event.Description)]</label>
 						</control>
 						<control type="label">
-							<left>0</left>
-							<right>30</right>
-							<top>10</top>
-							<height>35</height>
+							<left>{{ScaleX('0')}}</left>
+							<right>{{ScaleX('30')}}</right>
+							<top>{{ScaleY('10')}}</top>
+							<height>{{ScaleY('35')}}</height>
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="141">
+					<focusedlayout height="{{ScaleY('141')}}">
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<right>0</right>
+							<left>{{ScaleX('0')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<right>{{ScaleX('0')}}</right>
 							<bottom>0</bottom>
 							<texture colordiffuse="button_focus">lists/focus.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 						</control>
 						<control type="image">
-							<left>10</left>
-							<top>10</top>
-							<width>120</width>
-							<height>120</height>
+							<left>{{ScaleX('10')}}</left>
+							<top>{{ScaleY('10')}}</top>
+							<width>{{ScaleX('120')}}</width>
+							<height>{{ScaleY('120')}}</height>
 							<texture fallback="DefaultAddon.png">$INFO[Listitem.Icon]</texture>
 							<aspectratio>scale</aspectratio>
 							<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 							<bordersize>4</bordersize>
 						</control>
 						<control type="label">
-							<left>160</left>
-							<right>400</right>
-							<top>10</top>
-							<height>35</height>
+							<left>{{ScaleX('160')}}</left>
+							<right>{{ScaleX('400')}}</right>
+							<top>{{ScaleY('10')}}</top>
+							<height>{{ScaleY('35')}}</height>
 							<aligny>center</aligny>
 							<font>font37</font>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="textbox">
-							<left>160</left>
-							<top>45</top>
-							<right>20</right>
-							<height>80</height>
+							<left>{{ScaleX('160')}}</left>
+							<top>{{ScaleY('45')}}</top>
+							<right>{{ScaleX('20')}}</right>
+							<height>{{ScaleY('80')}}</height>
 							<aligny>top</aligny>
 							<label>$INFO[ListItem.Property(Event.Description)]</label>
 						</control>
 						<control type="label">
-							<left>0</left>
-							<right>30</right>
-							<top>10</top>
-							<height>35</height>
+							<left>{{ScaleX('0')}}</left>
+							<right>{{ScaleX('30')}}</right>
+							<top>{{ScaleY('10')}}</top>
+							<height>{{ScaleY('35')}}</height>
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label2]</label>
@@ -120,23 +120,23 @@
 				<control type="grouplist" id="9000">
 					<orientation>vertical</orientation>
 					<itemgap>-8.5</itemgap>
-					<left>0</left>
-					<top>120</top>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('120')}}</top>
 					<onup>9000</onup>
 					<ondown>9000</ondown>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<usecontrolcoords>true</usecontrolcoords>
-					<width>490</width>
+					<width>{{ScaleX('490')}}</width>
 					<control type="togglebutton" id="4">
-						<height>110</height>
+						<height>{{ScaleY('110')}}</height>
 						<aligny>top</aligny>
-						<textoffsetx>40</textoffsetx>
+						<textoffsetx>{{ScaleX('40')}}</textoffsetx>
 						<texturenofocus />
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
 						<alttexturenofocus></alttexturenofocus>
 						<alttexturefocus colordiffuse="button_focus">lists/focus.png</alttexturefocus>
-						<textoffsety>35</textoffsety>
+						<textoffsety>{{ScaleY('35')}}</textoffsety>
 						<label>$LOCALIZE[31032]: $LOCALIZE[584]</label>
 						<altlabel>$LOCALIZE[31032]: $LOCALIZE[585]</altlabel>
 					</control>
@@ -146,12 +146,12 @@
 						<param name="label" value="" />
 					</include>
 					<control type="radiobutton" id="22">
-						<height>110</height>
+						<height>{{ScaleY('110')}}</height>
 						<aligny>top</aligny>
 						<texturenofocus />
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-						<textoffsetx>40</textoffsetx>
-						<textoffsety>35</textoffsety>
+						<textoffsetx>{{ScaleX('40')}}</textoffsetx>
+						<textoffsety>{{ScaleY('35')}}</textoffsety>
 					</control>
 					<include content="PlaylistWindowButton">
 						<param name="control_id" value="20" />
@@ -165,10 +165,10 @@
 					</include>
 				</control>
 				<control type="image">
-					<left>70</left>
+					<left>{{ScaleX('70')}}</left>
 					<bottom>90</bottom>
-					<width>300</width>
-					<height>300</height>
+					<width>{{ScaleX('300')}}</width>
+					<height>{{ScaleY('300')}}</height>
 					<fadetime>300</fadetime>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
@@ -177,14 +177,14 @@
 				</control>
 			</control>
 			<control type="scrollbar" id="60">
-				<right>0</right>
-				<top>list_top_offset</top>
-				<width>12</width>
+				<right>{{ScaleX('0')}}</right>
+				<top>{{ScaleY('list_top_offset')}}</top>
+				<width>{{ScaleX('12')}}</width>
 				<bottom>list_bottom</bottom>
 				<onleft>50</onleft>
 				<onright>9000</onright>
 				<orientation>vertical</orientation>
-				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
+				<animation effect="slide" end="{{ScaleBorder2('6,0')}}" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
 				<visible>Control.IsVisible(50)</visible>
 			</control>
 		</control>

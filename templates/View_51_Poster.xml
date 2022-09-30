@@ -12,12 +12,12 @@
 		<control type="group">
 			<description>Poster Viewtype</description>
 			<centertop>50%</centertop>
-			<height>720</height>
+			<height>{{ScaleY('720')}}</height>
 			<control type="image">
-				<left>0</left>
-				<top>4</top>
-				<width>100%</width>
-				<height>410</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('4')}}</top>
+				<width>{{ScaleX('100%')}}</width>
+				<height>{{ScaleY('410')}}</height>
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 				<animation effect="fade" time="200">VisibleChange</animation>
@@ -29,10 +29,10 @@
 				<include>Visible_Right</include>
 				<include>OpenClose_Right</include>
 				<control type="fixedlist" id="51">
-					<left>0</left>
-					<top>0</top>
-					<width>110%</width>
-					<height>704</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('110%')}}</width>
+					<height>{{ScaleY('704')}}</height>
 					<focusposition>1</focusposition>
 					<movement>0</movement>
 					<pagecontrol>5199</pagecontrol>
@@ -46,26 +46,26 @@
 					<visible>Container.Content(movies) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(games)</visible>
 					<preloaditems>1</preloaditems>
 					<viewtype label="20021">icon</viewtype>
-					<itemlayout width="317">
+					<itemlayout width="{{ScaleX('317')}}">
 						<control type="group">
-							<left>-220</left>
-							<top>18</top>
+							<left>{{ScaleX('-220')}}</left>
+							<top>{{ScaleY('18')}}</top>
 							<include>InfoWallMovieLayout</include>
 						</control>
 					</itemlayout>
-					<focusedlayout width="490">
+					<focusedlayout width="{{ScaleX('490')}}">
 						<control type="group">
 							<control type="group">
-								<left>-220</left>
-								<top>18</top>
+								<left>{{ScaleX('-220')}}</left>
+								<top>{{ScaleY('18')}}</top>
 								<visible>Container.OnScrollPrevious</visible>
 								<visible>Control.IsVisible(20000)</visible>
 								<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
 								<include>InfoWallMovieLayout</include>
 							</control>
 							<control type="group">
-								<left>-40</left>
-								<top>18</top>
+								<left>{{ScaleX('-40')}}</left>
+								<top>{{ScaleY('18')}}</top>
 								<visible>Container.OnScrollNext</visible>
 								<visible>Control.IsVisible(20000)</visible>
 								<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
@@ -75,11 +75,11 @@
 					</focusedlayout>
 				</control>
 				<control type="group">
-					<top>25</top>
+					<top>{{ScaleY('25')}}</top>
 					<control type="group">
-						<left>635</left>
-						<top>480</top>
-						<height>245</height>
+						<left>{{ScaleX('635')}}</left>
+						<top>{{ScaleY('480')}}</top>
+						<height>{{ScaleY('245')}}</height>
 						<visible>ListItem.IsCollection + String.IsEmpty(ListItem.PlotOutline) + String.IsEmpty(ListItem.Plot)</visible>
 						<include content="InfoList">
 							<param name="bottom" value="0" />
@@ -89,26 +89,26 @@
 						</include>
 					</control>
 					<control type="image">
-						<left>645</left>
-						<top>415</top>
-						<width>32</width>
-						<height>32</height>
+						<left>{{ScaleX('645')}}</left>
+						<top>{{ScaleY('415')}}</top>
+						<width>{{ScaleX('32')}}</width>
+						<height>{{ScaleY('32')}}</height>
 						<texture>$VAR[ListWatchedIconVar]</texture>
 					</control>
 					<control type="label">
-						<left>695</left>
-						<top>400</top>
-						<right>50</right>
-						<height>40</height>
+						<left>{{ScaleX('695')}}</left>
+						<top>{{ScaleY('400')}}</top>
+						<right>{{ScaleX('50')}}</right>
+						<height>{{ScaleY('40')}}</height>
 						<label>$INFO[ListItem.Label]$VAR[ListSubLabelVar]</label>
 						<font>font45_title</font>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
 					<control type="textbox">
-						<left>645</left>
-						<top>480</top>
-						<height>250</height>
-						<right>115</right>
+						<left>{{ScaleX('645')}}</left>
+						<top>{{ScaleY('480')}}</top>
+						<height>{{ScaleY('250')}}</height>
+						<right>{{ScaleX('115')}}</right>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[PlotTextBoxVar]</label>
 						<shadowcolor>text_shadow</shadowcolor>
@@ -119,26 +119,26 @@
 		</control>
 		<control type="group">
 			<centertop>50%</centertop>
-			<height>670</height>
-			<left>101</left>
+			<height>{{ScaleY('670')}}</height>
+			<left>{{ScaleX('101')}}</left>
 			<depth>DepthContentPopout</depth>
 			<visible>Control.IsVisible(51)</visible>
 			<include>OpenClose_Left</include>
 			<include>Visible_Left</include>
 			<control type="image">
-				<top>-16</top>
-				<left>-16</left>
-				<width>516</width>
-				<height>756</height>
+				<top>{{ScaleY('-16')}}</top>
+				<left>{{ScaleX('-16')}}</left>
+				<width>{{ScaleX('516')}}</width>
+				<height>{{ScaleY('756')}}</height>
 				<texture>colors/black.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 			</control>
 			<control type="image">
-				<left>4</left>
-				<top>4</top>
-				<width>476</width>
-				<height>716</height>
+				<left>{{ScaleX('4')}}</left>
+				<top>{{ScaleY('4')}}</top>
+				<width>{{ScaleX('476')}}</width>
+				<height>{{ScaleY('716')}}</height>
 				<fadetime>200</fadetime>
 				<aspectratio>scale</aspectratio>
 				<texture fallback="DefaultMovies.png" background="true">$VAR[PosterThumbVar]</texture>
@@ -146,18 +146,18 @@
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
 				<control type="image">
-					<left>4</left>
-					<top>670</top>
-					<width>476</width>
-					<height>50</height>
+					<left>{{ScaleX('4')}}</left>
+					<top>{{ScaleY('670')}}</top>
+					<width>{{ScaleX('476')}}</width>
+					<height>{{ScaleY('50')}}</height>
 					<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
 					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<top>690</top>
-					<width>435</width>
-					<height>24</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('690')}}</top>
+					<width>{{ScaleX('435')}}</width>
+					<height>{{ScaleY('24')}}</height>
 					<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
 					<font>font20_title</font>
 					<shadowcolor>text_shadow</shadowcolor>
@@ -165,37 +165,37 @@
 					<aligny>center</aligny>
 				</control>
 				<control type="image">
-					<left>445</left>
-					<top>690</top>
-					<width>24</width>
-					<height>24</height>
+					<left>{{ScaleX('445')}}</left>
+					<top>{{ScaleY('690')}}</top>
+					<width>{{ScaleX('24')}}</width>
+					<height>{{ScaleY('24')}}</height>
 					<texture>lists/played-total.png</texture>
 					<align>right</align>
 					<aligny>center</aligny>
 				</control>
 			</control>
 			<control type="progress">
-				<left>4</left>
-				<top>702</top>
-				<width>476</width>
-				<height>1</height>
+				<left>{{ScaleX('4')}}</left>
+				<top>{{ScaleY('702')}}</top>
+				<width>{{ScaleX('476')}}</width>
+				<height>{{ScaleY('1')}}</height>
 				<texturebg></texturebg>
 				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
 				<info>ListItem.PercentPlayed</info>
 				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 			</control>
 			<control type="image">
-				<left>1</left>
-				<top>1</top>
-				<width>482</width>
-				<height>721</height>
+				<left>{{ScaleX('1')}}</left>
+				<top>{{ScaleY('1')}}</top>
+				<width>{{ScaleX('482')}}</width>
+				<height>{{ScaleY('721')}}</height>
 				<visible>Control.HasFocus(51)</visible>
 				<animation effect="fade" time="100">VisibleChange</animation>
-				<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+				<texture border="{{ScaleBorder('8')}}" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
 			</control>
 			<control type="group">
-				<left>216</left>
-				<top>-18</top>
+				<left>{{ScaleX('216')}}</left>
+				<top>{{ScaleY('-18')}}</top>
 				<include content="RatingCircle">
 					<param name="animation" value="True" />
 				</include>

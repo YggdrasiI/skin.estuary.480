@@ -11,9 +11,9 @@
 					<param name="width" value="1042" />
 				</include>
 				<control type="fixedlist" id="11">
-					<left>0</left>
-					<top>list_top_offset</top>
-					<width>970</width>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('list_top_offset')}}</top>
+					<width>{{ScaleX('970')}}</width>
 					<bottom>list_bottom</bottom>
 					<onleft>PreviousChannelGroup</onleft>
 					<onright>60</onright>
@@ -31,9 +31,9 @@
 					</include>
 				</control>
 				<control type="scrollbar" id="60">
-					<left>970</left>
-					<top>list_top_offset</top>
-					<width>12</width>
+					<left>{{ScaleX('970')}}</left>
+					<top>{{ScaleY('list_top_offset')}}</top>
+					<width>{{ScaleX('12')}}</width>
 					<bottom>list_bottom</bottom>
 					<onleft>11</onleft>
 					<onright>NextChannelGroup</onright>
@@ -41,10 +41,10 @@
 					<animation effect="zoom" start="100,100" end="50,100" center="982,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
 				</control>
 				<control type="image">
-					<left>0</left>
+					<left>{{ScaleX('0')}}</left>
 					<bottom>0</bottom>
-					<width>970</width>
-					<height>115</height>
+					<width>{{ScaleX('970')}}</width>
+					<height>{{ScaleY('115')}}</height>
 					<texture flipy="true">frame/InfoBar.png</texture>
 				</control>
 			</control>
@@ -52,16 +52,16 @@
 				<depth>DepthOSD</depth>
 				<include>Animation_TopSlide</include>
 				<control type="image">
-					<left>0</left>
-					<width>970</width>
-					<height>110</height>
+					<left>{{ScaleX('0')}}</left>
+					<width>{{ScaleX('970')}}</width>
+					<height>{{ScaleY('110')}}</height>
 					<texture>frame/InfoBar.png</texture>
 				</control>
 				<control type="label" id="2">
 					<description>header label</description>
-					<textoffsetx>40</textoffsetx>
-					<width>970</width>
-					<height>70</height>
+					<textoffsetx>{{ScaleX('40')}}</textoffsetx>
+					<width>{{ScaleX('970')}}</width>
+					<height>{{ScaleY('70')}}</height>
 					<font>font45</font>
 					<aligny>center</aligny>
 					<label>$VAR[BreadcrumbsPVRChannelsOSDVar]</label>

@@ -5,9 +5,9 @@
 	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
 		<control type="group">
-			<top>335</top>
+			<top>{{ScaleY('335')}}</top>
 			<centerleft>50%</centerleft>
-			<width>1115</width>
+			<width>{{ScaleX('1115')}}</width>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1115" />
 				<param name="height" value="380" />
@@ -15,12 +15,12 @@
 				<param name="header_id" value="" />
 			</include>
 			<control type="group">
-				<left>20</left>
-				<top>70</top>
+				<left>{{ScaleX('20')}}</left>
+				<top>{{ScaleY('70')}}</top>
 				<control type="label">
-					<top>0</top>
-					<width>780</width>
-					<height>40</height>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('780')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<label>$VAR[PlayerLabel1]</label>
 					<font>font45</font>
 					<shadowcolor>black</shadowcolor>
@@ -28,9 +28,9 @@
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
-					<top>56</top>
-					<width>780</width>
-					<height>40</height>
+					<top>{{ScaleY('56')}}</top>
+					<width>{{ScaleX('780')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<label>$VAR[PlayerLabel2]</label>
 					<font>font37</font>
 					<shadowcolor>black</shadowcolor>
@@ -38,9 +38,9 @@
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
-					<top>100</top>
-					<width>780</width>
-					<height>40</height>
+					<top>{{ScaleY('100')}}</top>
+					<width>{{ScaleX('780')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<label>$VAR[PlayerLabel3]</label>
 					<font>font37</font>
 					<shadowcolor>black</shadowcolor>
@@ -49,12 +49,12 @@
 				</control>
 			</control>
 			<control type="group">
-				<top>255</top>
+				<top>{{ScaleY('255')}}</top>
 				<control type="label">
-					<left>800</left>
-					<top>70</top>
-					<width>315</width>
-					<height>75</height>
+					<left>{{ScaleX('800')}}</left>
+					<top>{{ScaleY('70')}}</top>
+					<width>{{ScaleX('315')}}</width>
+					<height>{{ScaleY('75')}}</height>
 					<align>center</align>
 					<aligny>bottom</aligny>
 					<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
@@ -67,10 +67,10 @@
 				</include>
 			</control>
 			<control type="grouplist" id="201">
-				<left>20</left>
-				<top>290</top>
-				<width>1920</width>
-				<height>135</height>
+				<left>{{ScaleX('20')}}</left>
+				<top>{{ScaleY('290')}}</top>
+				<width>{{ScaleX('1920')}}</width>
+				<height>{{ScaleY('135')}}</height>
 				<itemgap>20</itemgap>
 				<scrolltime tween="sine">200</scrolltime>
 				<orientation>horizontal</orientation>
@@ -88,14 +88,14 @@
 					<textureradioofffocus colordiffuse="white">osd/fullscreen/buttons/pause.png</textureradioofffocus>
 					<textureradiooffnofocus>osd/fullscreen/buttons/pause.png</textureradiooffnofocus>
 					<texturefocus colordiffuse="button_focus">osd/fullscreen/buttons/button-fo.png</texturefocus>
-					<width>76</width>
+					<width>{{ScaleX('76')}}</width>
 					<animation center="38,38" effect="zoom" end="100" reversible="false" start="95" time="480" tween="back">Focus</animation>
-					<height>76</height>
+					<height>{{ScaleY('76')}}</height>
 					<radiowidth>74</radiowidth>
 					<radioheight>74</radioheight>
 					<font></font>
 					<texturenofocus />
-					<radioposx>1</radioposx>
+					<radioposx>{{ScaleX('1')}}</radioposx>
 					<radioposy>0</radioposy>
 					<selected>Player.Paused</selected>
 					<onclick>PlayerControl(Play)</onclick>
@@ -115,14 +115,14 @@
 					<visible>!VideoPlayer.Content(livetv) + [Integer.IsGreater(Playlist.Length(video),1) | Integer.IsGreater(Playlist.Length(music),1)]</visible>
 				</control>
 				<control type="group" id="699">
-					<width>125</width>
-					<height>125</height>
+					<width>{{ScaleX('125')}}</width>
+					<height>{{ScaleY('125')}}</height>
 					<visible>Player.HasAudio + !MusicPlayer.Content(LiveTV)</visible>
 					<control type="button" id="704">
-						<left>0</left>
-						<top>0</top>
-						<width>74</width>
-						<height>74</height>
+						<left>{{ScaleX('0')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<width>{{ScaleX('74')}}</width>
+						<height>{{ScaleY('74')}}</height>
 						<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
 						<font></font>
 						<texturefocus />
@@ -134,10 +134,10 @@
 						<onclick>PlayerControl(Repeat)</onclick>
 					</control>
 					<control type="image">
-						<left>40</left>
-						<top>25</top>
-						<width>74</width>
-						<height>74</height>
+						<left>{{ScaleX('40')}}</left>
+						<top>{{ScaleY('25')}}</top>
+						<width>{{ScaleX('74')}}</width>
+						<height>{{ScaleY('74')}}</height>
 						<animation center="37,37" effect="zoom" end="100" reversible="false" start="95" time="480" tween="back" condition="Control.HasFocus(704)">Conditional</animation>
 						<texture colordiffuse="$VAR[RepeatButtonColordiffuseVar]">$VAR[PlayerControlsRepeatImageVar]</texture>
 					</control>
@@ -150,13 +150,13 @@
 					<textureradioondisabled colordiffuse="disabled">osd/fullscreen/buttons/random-on.png</textureradioondisabled>
 					<textureradiooffdisabled colordiffuse="disabled">osd/fullscreen/buttons/random-off.png</textureradiooffdisabled>
 					<texturefocus />
-					<width>125</width>
-					<height>123</height>
+					<width>{{ScaleX('125')}}</width>
+					<height>{{ScaleY('123')}}</height>
 					<radiowidth>74</radiowidth>
 					<radioheight>74</radioheight>
 					<font></font>
 					<texturenofocus />
-					<radioposx>0</radioposx>
+					<radioposx>{{ScaleX('0')}}</radioposx>
 					<radioposy>0</radioposy>
 					<label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
 					<animation center="62,62" effect="zoom" end="100" reversible="false" start="95" time="480" tween="back">Focus</animation>
@@ -166,10 +166,10 @@
 				</control>
 			</control>
 			<control type="image">
-				<left>833</left>
-				<top>75</top>
-				<width>250</width>
-				<height>250</height>
+				<left>{{ScaleX('833')}}</left>
+				<top>{{ScaleY('75')}}</top>
+				<width>{{ScaleX('250')}}</width>
+				<height>{{ScaleY('250')}}</height>
 				<fadetime>400</fadetime>
 				<aspectratio>keep</aspectratio>
 				<texture fallback="DefaultAlbumCover.png" border="2">$INFO[Player.Art(thumb)]</texture>

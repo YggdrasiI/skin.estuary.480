@@ -3,7 +3,7 @@
 	<include name="View_503_NowPlaying">
 		<control type="group">
 			<include>OpenClose_Right</include>
-			<left>596</left>
+			<left>{{ScaleX('596')}}</left>
 			<visible>Control.IsVisible(503)</visible>
 			<include>Visible_Right</include>
 			<include content="ListContainer">
@@ -14,8 +14,8 @@
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<control type="group">
-					<right>-20</right>
-					<width>634</width>
+					<right>{{ScaleX('-20')}}</right>
+					<width>{{ScaleX('634')}}</width>
 					<include content="ContentPanel">
 						<param name="left" value="0" />
 						<param name="top" value="-20" />
@@ -26,9 +26,9 @@
 						<param name="list_id" value="503" />
 					</include>
 					<control type="scrollbar" id="503600">
-						<left>20</left>
-						<top>list_top_offset</top>
-						<width>12</width>
+						<left>{{ScaleX('20')}}</left>
+						<top>{{ScaleY('list_top_offset')}}</top>
+						<width>{{ScaleX('12')}}</width>
 						<bottom>list_bottom_offset</bottom>
 						<onleft>503</onleft>
 						<onright>503</onright>

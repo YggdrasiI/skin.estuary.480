@@ -6,22 +6,22 @@
 	</include>
 	<include name="Animation_DialogPopupOpenClose">
 		<animation type="WindowOpen" reversible="false">
-			<effect type="zoom" start="80" end="100" center="50%,50%" delay="160" tween="back" time="240" />
+			<effect type="zoom" start="80" end="100" center="{{ScaleBorder2('50%,50%')}}" delay="160" tween="back" time="240" />
 			<effect type="fade" delay="160" end="100" time="240" />
 		</animation>
 		<animation type="WindowClose" reversible="false">
-			<effect type="zoom" start="100" end="80" center="50%,50%" easing="in" tween="back" time="240" />
+			<effect type="zoom" start="100" end="80" center="{{ScaleBorder2('50%,50%')}}" easing="in" tween="back" time="240" />
 			<effect type="fade" start="100" end="0" time="240" />
 		</animation>
 		<depth>DepthDialog</depth>
 	</include>
 	<include name="Animation_DialogPopupVisible">
 		<animation type="Visible" reversible="false">
-			<effect type="zoom" start="80" end="100" center="50%,50%" delay="160" tween="back" time="240" />
+			<effect type="zoom" start="80" end="100" center="{{ScaleBorder2('50%,50%')}}" delay="160" tween="back" time="240" />
 			<effect type="fade" delay="160" end="100" time="240" />
 		</animation>
 		<animation type="Hidden" reversible="false">
-			<effect type="zoom" start="100" end="80" center="50%,50%" easing="in" tween="back" time="240" />
+			<effect type="zoom" start="100" end="80" center="{{ScaleBorder2('50%,50%')}}" easing="in" tween="back" time="240" />
 			<effect type="fade" start="100" end="0" time="240" />
 		</animation>
 	</include>
@@ -42,11 +42,11 @@
 	<include name="Vis_FadeSlide_Right_Delayed">
 		<animation type="Conditional" condition="String.IsEqual(Container(9000).ListItem.Property(id),$PARAM[id])">
 			<effect type="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="out" />
-			<effect type="slide" start="320" end="0" time="400" delay="300" tween="cubic" easing="out" />
+			<effect type="slide" start="{{ScaleBorder2('320')}}" end="{{ScaleBorder2('0')}}" time="400" delay="300" tween="cubic" easing="out" />
 		</animation>
 		<animation type="Hidden">
 			<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-			<effect type="slide" start="0" end="320" time="300" tween="cubic" easing="out" />
+			<effect type="slide" start="{{ScaleBorder2('0')}}" end="{{ScaleBorder2('320')}}" time="300" tween="cubic" easing="out" />
 		</animation>
 	</include>
 	<include name="Visible_Right">
@@ -56,31 +56,31 @@
 	<include name="Animation_TopSlide">
 		<animation type="WindowOpen" reversible="False">
 			<effect type="fade" start="0" end="100" time="300"/>
-			<effect type="slide" start="0,-200" end="0,0" time="300" tween="cubic" easing="out" />
+			<effect type="slide" start="{{ScaleBorder2('0,-200')}}" end="{{ScaleBorder2('0,0')}}" time="300" tween="cubic" easing="out" />
 		</animation>
 		<animation type="WindowClose" reversible="False">
 			<effect type="fade" start="100" end="0" time="300"/>
-			<effect type="slide" start="0,0" end="0,-200" time="300" tween="cubic" easing="out" />
+			<effect type="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,-200')}}" time="300" tween="cubic" easing="out" />
 		</animation>
 	</include>
 	<include name="Animation_BottomSlide">
 		<animation type="WindowOpen" reversible="False">
 			<effect type="fade" start="0" end="100" time="300"/>
-			<effect type="slide" start="0,200" end="0,0" time="300" tween="cubic" easing="out" />
+			<effect type="slide" start="{{ScaleBorder2('0,200')}}" end="{{ScaleBorder2('0,0')}}" time="300" tween="cubic" easing="out" />
 		</animation>
 		<animation type="WindowClose" reversible="False">
 			<effect type="fade" start="100" end="0" time="300"/>
-			<effect type="slide" start="0,0" end="0,200" time="300" tween="cubic" easing="out" />
+			<effect type="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,200')}}" time="300" tween="cubic" easing="out" />
 		</animation>
 	</include>
 	<include name="Vis_FadeSlide_Right">
 		<animation type="Visible" reversible="False">
 			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out"/>
-			<effect type="slide" start="320" end="0" time="400" tween="cubic" easing="out" />
+			<effect type="slide" start="{{ScaleBorder2('320')}}" end="{{ScaleBorder2('0')}}" time="400" tween="cubic" easing="out" />
 		</animation>
 		<animation type="Hidden" reversible="False">
 			<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-			<effect type="slide" start="0" end="320" time="300" tween="cubic" easing="out" />
+			<effect type="slide" start="{{ScaleBorder2('0')}}" end="{{ScaleBorder2('320')}}" time="300" tween="cubic" easing="out" />
 		</animation>
 	</include>
 	<include name="Visible_Left">
@@ -90,11 +90,11 @@
 	<include name="Vis_FadeSlide_Left">
 		<animation type="Visible" reversible="False">
 			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
-			<effect type="slide" start="-320" end="0" time="400" tween="cubic" easing="out" />
+			<effect type="slide" start="{{ScaleBorder2('-320')}}" end="{{ScaleBorder2('0')}}" time="400" tween="cubic" easing="out" />
 		</animation>
 		<animation type="Hidden" reversible="False">
 			<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-			<effect type="slide" start="0" end="-320" time="300" tween="cubic" easing="out" />
+			<effect type="slide" start="{{ScaleBorder2('0')}}" end="{{ScaleBorder2('-320')}}" time="300" tween="cubic" easing="out" />
 		</animation>
 	</include>
 	<include name="OpenClose_Left">
@@ -104,11 +104,11 @@
 	<include name="OpenClose_FadeSlide_Left">
 		<animation type="WindowOpen">
 			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
-			<effect type="slide" start="-320" end="0" time="400" tween="cubic" easing="out" />
+			<effect type="slide" start="{{ScaleBorder2('-320')}}" end="{{ScaleBorder2('0')}}" time="400" tween="cubic" easing="out" />
 		</animation>
 		<animation type="WindowClose">
 			<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-			<effect type="slide" start="0" end="-320" time="300" tween="cubic" easing="out" />
+			<effect type="slide" start="{{ScaleBorder2('0')}}" end="{{ScaleBorder2('-320')}}" time="300" tween="cubic" easing="out" />
 		</animation>
 	</include>
 	<include name="OpenClose_Right">
@@ -118,21 +118,21 @@
 	<include name="OpenClose_FadeSlide_Right">
 		<animation type="WindowOpen">
 			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
-			<effect type="slide" start="320" end="0" time="400" tween="cubic" easing="out" />
+			<effect type="slide" start="{{ScaleBorder2('320')}}" end="{{ScaleBorder2('0')}}" time="400" tween="cubic" easing="out" />
 		</animation>
 		<animation type="WindowClose">
 			<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-			<effect type="slide" start="0" end="320" time="300" tween="cubic" easing="out" />
+			<effect type="slide" start="{{ScaleBorder2('0')}}" end="{{ScaleBorder2('320')}}" time="300" tween="cubic" easing="out" />
 		</animation>
 	</include>
 	<include name="Keyboard_Slide_Up">
 		<animation type="WindowOpen">
 			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
-			<effect type="slide" start="0,1080" end="0,0" time="400" tween="cubic" easing="out" />
+			<effect type="slide" start="{{ScaleBorder2('0,1080')}}" end="{{ScaleBorder2('0,0')}}" time="400" tween="cubic" easing="out" />
 		</animation>
 		<animation type="WindowClose">
 			<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-			<effect type="slide" start="0,0" end="0,1080" time="400" tween="cubic" easing="out" />
+			<effect type="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,1080')}}" time="400" tween="cubic" easing="out" />
 		</animation>
 	</include>
 </includes>

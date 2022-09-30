@@ -52,54 +52,54 @@
 		</control>
 		<control type="grouplist" id="2000">
 			<orientation>vertical</orientation>
-			<top>0</top>
-			<height>100%</height>
-			<left>0</left>
+			<top>{{ScaleY('0')}}</top>
+			<height>{{ScaleY('100%')}}</height>
+			<left>{{ScaleX('0')}}</left>
 			<ondown>20001</ondown>
 			<usecontrolcoords>true</usecontrolcoords>
 			<animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
-				<effect type="slide" end="0,20" time="60" tween="sine" />
-				<effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
+				<effect type="slide" end="{{ScaleBorder2('0,20')}}" time="60" tween="sine" />
+				<effect type="slide" end="{{ScaleBorder2('0,-20')}}" time="180" tween="sine" delay="80" />
 			</animation>
 			<animation type="Conditional" condition="Control.IsVisible(20001)" reversible="false">
-				<effect type="slide" end="0,-20" time="60" tween="sine" />
-				<effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
+				<effect type="slide" end="{{ScaleBorder2('0,-20')}}" time="60" tween="sine" />
+				<effect type="slide" end="{{ScaleBorder2('0,20')}}" time="180" tween="sine" delay="80" />
 			</animation>
 			<scrolltime tween="cubic" easing="out">500</scrolltime>
 			<include>OpenClose_Right</include>
 			<itemgap>-160</itemgap>
 			<control type="group" id="567">
 				<description>Weather info</description>
-				<height>410</height>
-				<left>22</left>
+				<height>{{ScaleY('410')}}</height>
+				<left>{{ScaleX('22')}}</left>
 				<control type="image">
-					<left>2.5%</left>
-					<top>100</top>
-					<width>95%</width>
-					<height>220</height>
-					<texture border="21">dialogs/dialog-bg.png</texture>
+					<left>{{ScaleX('2.5%')}}</left>
+					<top>{{ScaleY('100')}}</top>
+					<width>{{ScaleX('95%')}}</width>
+					<height>{{ScaleY('220')}}</height>
+					<texture border="{{ScaleBorder('21')}}">dialogs/dialog-bg.png</texture>
 				</control>
 				<control type="label">
-					<top>310</top>
-					<left>10%</left>
-					<width>80%</width>
+					<top>{{ScaleY('310')}}</top>
+					<left>{{ScaleX('10%')}}</left>
+					<width>{{ScaleX('80%')}}</width>
 					<align>center</align>
-					<height>44</height>
+					<height>{{ScaleY('44')}}</height>
 					<shadowcolor>text_shadow</shadowcolor>
 					<label>$LOCALIZE[31154]</label>
 					<visible>Control.HasFocus(20)</visible>
 					<animation effect="fade" time="400">VisibleChange</animation>
 				</control>
 				<control type="button" id="20">
-					<left>2.5%</left>
-					<top>100</top>
-					<width>95%</width>
-					<height>220</height>
+					<left>{{ScaleX('2.5%')}}</left>
+					<top>{{ScaleY('100')}}</top>
+					<width>{{ScaleX('95%')}}</width>
+					<height>{{ScaleY('220')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textoffsetx>40</textoffsetx>
-					<textoffsety>0</textoffsety>
-					<texturefocus border="40" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+					<textoffsetx>{{ScaleX('40')}}</textoffsetx>
+					<textoffsety>{{ScaleY('0')}}</textoffsety>
+					<texturefocus border="{{ScaleBorder('40')}}" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
 					<texturenofocus />
 					<onup>20000</onup>
 					<ondown>15100</ondown>
@@ -108,27 +108,27 @@
 					<label></label>
 				</control>
 				<control type="label">
-					<right>100</right>
-					<top>194</top>
+					<right>{{ScaleX('100')}}</right>
+					<top>{{ScaleY('194')}}</top>
 					<aligny>center</aligny>
-					<height>24</height>
-					<width>500</width>
+					<height>{{ScaleY('24')}}</height>
+					<width>{{ScaleX('500')}}</width>
 					<align>right</align>
 					<font>WeatherTemp</font>
 					<label>$INFO[Weather.Temperature]</label>
 				</control>
 				<control type="label">
-					<right>400</right>
-					<top>164</top>
+					<right>{{ScaleX('400')}}</right>
+					<top>{{ScaleY('164')}}</top>
 					<align>right</align>
 					<label>[I]$LOCALIZE[402]: $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/I][CR]$INFO[Weather.Conditions]</label>
 					<font>font14</font>
-					<width>630</width>
+					<width>{{ScaleX('630')}}</width>
 				</control>
 				<control type="grouplist">
-					<top>154</top>
-					<left>90</left>
-					<right>800</right>
+					<top>{{ScaleY('154')}}</top>
+					<left>{{ScaleX('90')}}</left>
+					<right>{{ScaleX('800')}}</right>
 					<align>justify</align>
 					<orientation>horizontal</orientation>
 					<include content="WeatherIconMyWeather">

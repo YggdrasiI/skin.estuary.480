@@ -4,9 +4,9 @@
 	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
 		<control type="group">
-			<left>13%</left>
+			<left>{{ScaleX('13%')}}</left>
 			<centertop>50%</centertop>
-			<height>770</height>
+			<height>{{ScaleY('770')}}</height>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="84%" />
 				<param name="height" value="770" />
@@ -14,10 +14,10 @@
 				<param name="header_id" value="1" />
 			</include>
 			<control type="textbox" id="2000">
-				<left>1%</left>
-				<top>85</top>
-				<width>82%</width>
-				<height>675</height>
+				<left>{{ScaleX('1%')}}</left>
+				<top>{{ScaleY('85')}}</top>
+				<width>{{ScaleX('82%')}}</width>
+				<height>{{ScaleY('675')}}</height>
 				<shadowcolor>black</shadowcolor>
 				<pagecontrol>3000</pagecontrol>
 				<font>font37</font>
@@ -37,9 +37,9 @@
 		</control>
 		<control type="button">
 			<centerleft>50%</centerleft>
-			<top>113</top>
-			<width>48</width>
-			<height>20</height>
+			<top>{{ScaleY('113')}}</top>
+			<width>{{ScaleX('48')}}</width>
+			<height>{{ScaleY('20')}}</height>
 			<onclick>SetFocus(3000)</onclick>
 			<onclick>Up</onclick>
 			<texturefocus colordiffuse="button_focus" flipy="true">overlays/arrowdown.png</texturefocus>
@@ -49,9 +49,9 @@
 		</control>
 		<control type="button">
 			<centerleft>50%</centerleft>
-			<top>940</top>
-			<width>48</width>
-			<height>20</height>
+			<top>{{ScaleY('940')}}</top>
+			<width>{{ScaleX('48')}}</width>
+			<height>{{ScaleY('20')}}</height>
 			<onclick>SetFocus(3000)</onclick>
 			<onclick>Down</onclick>
 			<texturefocus colordiffuse="button_focus">overlays/arrowdown.png</texturefocus>

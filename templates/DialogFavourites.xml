@@ -6,8 +6,8 @@
 		<control type="group">
 			<centertop>50%</centertop>
 			<centerleft>50%</centerleft>
-			<width>1540</width>
-			<height>858</height>
+			<width>{{ScaleX('1540')}}</width>
+			<height>{{ScaleY('858')}}</height>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1540" />
 				<param name="height" value="858" />
@@ -21,18 +21,18 @@
 				<param name="down_posy" value="876" />
 			</include>
 			<control type="scrollbar" id="60">
-				<right>0</right>
-				<top>70</top>
-				<width>12</width>
+				<right>{{ScaleX('0')}}</right>
+				<top>{{ScaleY('70')}}</top>
+				<width>{{ScaleX('12')}}</width>
 				<bottom>0</bottom>
 				<onleft>450</onleft>
 				<onright>450</onright>
 				<orientation>vertical</orientation>
 			</control>
 			<control type="panel" id="450">
-				<left>10</left>
-				<top>70</top>
-				<width>1600</width>
+				<left>{{ScaleX('10')}}</left>
+				<top>{{ScaleY('70')}}</top>
+				<width>{{ScaleX('1600')}}</width>
 				<bottom>0</bottom>
 				<onleft>60</onleft>
 				<onright>60</onright>
@@ -42,17 +42,17 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime tween="sine">200</scrolltime>
 				<orientation>vertical</orientation>
-				<itemlayout width="300" height="380">
+				<itemlayout width="{{ScaleX('300')}}" height="{{ScaleY('380')}}">
 					<control type="group">
-						<top>10</top>
+						<top>{{ScaleY('10')}}</top>
 						<include content="InfoWallMusicLayout">
 							<param name="fallback_image" value="DefaultFavourites.png" />
 						</include>
 					</control>
 				</itemlayout>
-				<focusedlayout width="300">
+				<focusedlayout width="{{ScaleX('300')}}">
 					<control type="group">
-						<top>10</top>
+						<top>{{ScaleY('10')}}</top>
 						<include content="InfoWallMusicLayout">
 							<param name="fallback_image" value="DefaultFavourites.png" />
 							<param name="focused" value="true" />
@@ -61,9 +61,9 @@
 				</focusedlayout>
 			</control>
 			<control type="textbox">
-				<left>300</left>
-				<top>90</top>
-				<width>900</width>
+				<left>{{ScaleX('300')}}</left>
+				<top>{{ScaleY('90')}}</top>
+				<width>{{ScaleX('900')}}</width>
 				<bottom>0</bottom>
 				<aligny>center</aligny>
 				<align>center</align>

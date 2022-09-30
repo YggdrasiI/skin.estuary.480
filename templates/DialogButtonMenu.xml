@@ -5,9 +5,9 @@
 	<controls>
 		<control type="group">
 			<centerleft>50%</centerleft>
-			<width>600</width>
+			<width>{{ScaleX('600')}}</width>
 			<centertop>50%</centertop>
-			<height>700</height>
+			<height>{{ScaleY('700')}}</height>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="600" />
 				<param name="height" value="80" />

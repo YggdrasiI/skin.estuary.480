@@ -5,9 +5,9 @@
 	<controls>
 		<control type="group">
 		<centertop>50%</centertop>
-		<height>750</height>
+		<height>{{ScaleY('750')}}</height>
 		<centerleft>50%</centerleft>
-		<width>1200</width>
+		<width>{{ScaleX('1200')}}</width>
 		<include content="DialogBackgroundCommons">
 			<param name="width" value="1200" />
 			<param name="height" value="750" />
@@ -16,75 +16,75 @@
 		</include>
 		<control type="label">
 			<description>path label</description>
-			<left>30</left>
-			<top>90</top>
-			<width>1140</width>
-			<height>30</height>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('90')}}</top>
+			<width>{{ScaleX('1140')}}</width>
+			<height>{{ScaleY('30')}}</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font12</font>
 			<label>$LOCALIZE[1021]</label>
 		</control>
 		<control type="image">
-			<left>25</left>
-			<top>145</top>
-			<width>860</width>
-			<height>285</height>
-			<texture border="40">buttons/dialogbutton-nofo.png</texture>
+			<left>{{ScaleX('25')}}</left>
+			<top>{{ScaleY('145')}}</top>
+			<width>{{ScaleX('860')}}</width>
+			<height>{{ScaleY('285')}}</height>
+			<texture border="{{ScaleBorder('40')}}">buttons/dialogbutton-nofo.png</texture>
 		</control>
 		<control type="list" id="10">
-			<left>45</left>
-			<top>165</top>
-			<width>820</width>
-			<height>245</height>
+			<left>{{ScaleX('45')}}</left>
+			<top>{{ScaleY('165')}}</top>
+			<width>{{ScaleX('820')}}</width>
+			<height>{{ScaleY('245')}}</height>
 			<onup>9001</onup>
 			<onleft>9000</onleft>
 			<onright>60</onright>
 			<ondown>12</ondown>
 			<pagecontrol>60</pagecontrol>
 			<scrolltime>200</scrolltime>
-			<itemlayout height="70" width="820">
+			<itemlayout height="{{ScaleY('70')}}" width="{{ScaleX('820')}}">
 				<control type="label">
-					<left>10</left>
-					<right>10</right>
-					<top>0</top>
+					<left>{{ScaleX('10')}}</left>
+					<right>{{ScaleX('10')}}</right>
+					<top>{{ScaleY('0')}}</top>
 					<bottom>0</bottom>
 					<aligny>center</aligny>
 					<textcolor>grey</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</itemlayout>
-			<focusedlayout height="70" width="820">
+			<focusedlayout height="{{ScaleY('70')}}" width="{{ScaleX('820')}}">
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
 					<bottom>0</bottom>
-					<right>0</right>
+					<right>{{ScaleX('0')}}</right>
 					<visible>Control.HasFocus(10)</visible>
 					<texture colordiffuse="button_focus">lists/focus.png</texture>
 				</control>
 				<control type="label">
-					<left>10</left>
-					<top>0</top>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('0')}}</top>
 					<bottom>0</bottom>
-					<right>10</right>
+					<right>{{ScaleX('10')}}</right>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</focusedlayout>
 		</control>
 		<control type="scrollbar" id="60">
-			<left>870</left>
-			<top>166</top>
-			<width>12</width>
-			<height>243</height>
+			<left>{{ScaleX('870')}}</left>
+			<top>{{ScaleY('166')}}</top>
+			<width>{{ScaleX('12')}}</width>
+			<height>{{ScaleY('243')}}</height>
 			<onleft>10</onleft>
 			<onright>9000</onright>
 			<orientation>vertical</orientation>
 		</control>
 		<control type="grouplist" id="9000">
-			<left>880</left>
-			<top>147</top>
+			<left>{{ScaleX('880')}}</left>
+			<top>{{ScaleY('147')}}</top>
 			<orientation>vertical</orientation>
 			<onleft>10</onleft>
 			<onright>10</onright>
@@ -105,10 +105,10 @@
 		</control>
 		<control type="label">
 			<description>Name label</description>
-			<left>30</left>
-			<top>460</top>
-			<width>1140</width>
-			<height>30</height>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('460')}}</top>
+			<width>{{ScaleX('1140')}}</width>
+			<height>{{ScaleY('30')}}</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font12</font>
@@ -116,10 +116,10 @@
 		</control>
 		<control type="edit" id="12">
 			<description>Name Button</description>
-			<left>30</left>
-			<top>500</top>
-			<width>1140</width>
-			<height>90</height>
+			<left>{{ScaleX('30')}}</left>
+			<top>{{ScaleY('500')}}</top>
+			<width>{{ScaleX('1140')}}</width>
+			<height>{{ScaleY('90')}}</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<label></label>
@@ -127,10 +127,10 @@
 			<ondown>9001</ondown>
 		</control>
 		<control type="grouplist" id="9001">
-			<left>0</left>
+			<left>{{ScaleX('0')}}</left>
 			<bottom>40</bottom>
-			<height>100</height>
-			<width>1200</width>
+			<height>{{ScaleY('100')}}</height>
+			<width>{{ScaleX('1200')}}</width>
 			<align>center</align>
 			<orientation>horizontal</orientation>
 			<onup>12</onup>

@@ -11,9 +11,9 @@
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<control type="fixedlist" id="50">
-					<left>0</left>
-					<top>list_top_offset</top>
-					<right>918</right>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('list_top_offset')}}</top>
+					<right>{{ScaleX('918')}}</right>
 					<bottom>list_bottom_offset</bottom>
 					<onleft>9000</onleft>
 					<onright>73</onright>
@@ -35,8 +35,8 @@
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Right</include>
-				<width>870</width>
-				<right>0</right>
+				<width>{{ScaleX('870')}}</width>
+				<right>{{ScaleX('0')}}</right>
 				<include content="ContentPanel">
 					<param name="left" value="-72" />
 					<param name="width" value="970" />
@@ -44,9 +44,9 @@
 					<param name="flipx" value="true" />
 				</include>
 				<control type="scrollbar" id="73">
-					<left>-50</left>
-					<top>list_top_offset</top>
-					<width>12</width>
+					<left>{{ScaleX('-50')}}</left>
+					<top>{{ScaleY('list_top_offset')}}</top>
+					<width>{{ScaleX('12')}}</width>
 					<bottom>list_bottom_offset</bottom>
 					<onleft>50</onleft>
 					<onright>50</onright>
@@ -65,15 +65,15 @@
 			</include>
 			<control type="group">
 				<depth>DepthBars</depth>
-				<right>20</right>
-				<width>850</width>
+				<right>{{ScaleX('20')}}</right>
+				<width>{{ScaleX('850')}}</width>
 				<include>OpenClose_Right</include>
 				<bottom>0</bottom>
-				<height>60</height>
+				<height>{{ScaleY('60')}}</height>
 				<control type="label">
-					<right>220</right>
-					<width>610</width>
-					<height>20</height>
+					<right>{{ScaleX('220')}}</right>
+					<width>{{ScaleX('610')}}</width>
+					<height>{{ScaleY('20')}}</height>
 					<label>$INFO[PVR.backenddiskspace]</label>
 					<shadowcolor>black</shadowcolor>
 					<align>right</align>
@@ -81,10 +81,10 @@
 					<visible>!Integer.IsGreater(PVR.backenddiskspaceprogr,100)</visible>
 				</control>
 				<control type="progress">
-					<right>0</right>
-					<top>17</top>
-					<width>200</width>
-					<height>12</height>
+					<right>{{ScaleX('0')}}</right>
+					<top>{{ScaleY('17')}}</top>
+					<width>{{ScaleX('200')}}</width>
+					<height>{{ScaleY('12')}}</height>
 					<info>PVR.backenddiskspaceprogr</info>
 					<visible>!Integer.IsGreater(PVR.backenddiskspaceprogr,100)</visible>
 				</control>

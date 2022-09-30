@@ -3,15 +3,15 @@
 	<include name="View_501_Banner">
 		<control type="group">
 			<include>OpenClose_Right</include>
-			<left>80</left>
-			<top>0</top>
+			<left>{{ScaleX('80')}}</left>
+			<top>{{ScaleY('0')}}</top>
 			<visible>Control.IsVisible(501)</visible>
 			<include>Visible_Right</include>
 			<control type="panel" id="501">
-				<right>20</right>
-				<top>0</top>
-				<width>1840</width>
-				<height>100%</height>
+				<right>{{ScaleX('20')}}</right>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('1840')}}</width>
+				<height>{{ScaleY('100%')}}</height>
 				<onleft>9000</onleft>
 				<onright>531</onright>
 				<onup>501</onup>
@@ -21,24 +21,24 @@
 				<pagecontrol>531</pagecontrol>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<visible>Container.Content(tvshows)</visible>
-				<itemlayout height="220" width="900">
+				<itemlayout height="{{ScaleY('220')}}" width="{{ScaleX('900')}}">
 					<control type="group">
-						<top>100</top>
+						<top>{{ScaleY('100')}}</top>
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>860</width>
-							<height>195</height>
+							<left>{{ScaleX('0')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<width>{{ScaleX('860')}}</width>
+							<height>{{ScaleY('195')}}</height>
 							<texture fallback="dialogs/dialog-bg-nobo.png" background="true">$VAR[BannerArtVar]</texture>
 							<aspectratio aligny="center">scale</aspectratio>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="label">
-							<left>70</left>
-							<top>20</top>
-							<width>700</width>
-							<height>145</height>
+							<left>{{ScaleX('70')}}</left>
+							<top>{{ScaleY('20')}}</top>
+							<width>{{ScaleX('700')}}</width>
+							<height>{{ScaleY('145')}}</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font52_title</font>
 							<shadowcolor>text_shadow</shadowcolor>
@@ -46,36 +46,36 @@
 							<visible>String.IsEmpty(ListItem.Art(banner)) + !Listitem.IsParentFolder</visible>
 						</control>
 						<control type="group">
-							<left>405</left>
+							<left>{{ScaleX('405')}}</left>
 							<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout height="220" width="900">
+				<focusedlayout height="{{ScaleY('220')}}" width="{{ScaleX('900')}}">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<animation type="Focus">
-							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="450,180" />
+							<effect type="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="{{ScaleBorder2('450,180')}}" />
 						</animation>
 						<animation type="Unfocus">
-							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="450,180" />
+							<effect type="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="{{ScaleBorder2('450,180')}}" />
 						</animation>
-						<top>100</top>
+						<top>{{ScaleY('100')}}</top>
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>860</width>
-							<height>195</height>
+							<left>{{ScaleX('0')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<width>{{ScaleX('860')}}</width>
+							<height>{{ScaleY('195')}}</height>
 							<texture fallback="dialogs/dialog-bg-nobo.png" background="true">$VAR[BannerArtVar]</texture>
 							<aspectratio aligny="center">scale</aspectratio>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="label">
-							<left>70</left>
-							<top>20</top>
-							<width>700</width>
-							<height>145</height>
+							<left>{{ScaleX('70')}}</left>
+							<top>{{ScaleY('20')}}</top>
+							<width>{{ScaleX('700')}}</width>
+							<height>{{ScaleY('145')}}</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font52_title</font>
 							<shadowcolor>text_shadow</shadowcolor>
@@ -85,51 +85,51 @@
 						<control type="group">
 							<include>Animation_FocusTextureFade</include>
 							<control type="image">
-								<left>18</left>
-								<top>18</top>
-								<width>824</width>
-								<height>160</height>
-								<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+								<left>{{ScaleX('18')}}</left>
+								<top>{{ScaleY('18')}}</top>
+								<width>{{ScaleX('824')}}</width>
+								<height>{{ScaleY('160')}}</height>
+								<texture border="{{ScaleBorder('8')}}" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
 							</control>
 							<control type="image">
-								<left>22</left>
-								<top>115</top>
-								<width>816</width>
-								<height>60</height>
+								<left>{{ScaleX('22')}}</left>
+								<top>{{ScaleY('115')}}</top>
+								<width>{{ScaleX('816')}}</width>
+								<height>{{ScaleY('60')}}</height>
 								<texture>overlays/overlayfade.png</texture>
 								<animation effect="fade" start="0" end="80" time="50">Focus</animation>
 								<visible>!Listitem.IsParentFolder</visible>
 							</control>
 							<control type="image">
-								<left>35</left>
-								<top>138</top>
-								<width>32</width>
-								<height>32</height>
+								<left>{{ScaleX('35')}}</left>
+								<top>{{ScaleY('138')}}</top>
+								<width>{{ScaleX('32')}}</width>
+								<height>{{ScaleY('32')}}</height>
 								<texture>$VAR[ListWatchedIconVar]</texture>
 							</control>
 							<control type="label">
-								<left>80</left>
-								<top>142</top>
-								<width>800</width>
-								<height>20</height>
+								<left>{{ScaleX('80')}}</left>
+								<top>{{ScaleY('142')}}</top>
+								<width>{{ScaleX('800')}}</width>
+								<height>{{ScaleY('20')}}</height>
 								<font>font12</font>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Label]</label>
 								<visible>!Listitem.IsParentFolder</visible>
 							</control>
 							<control type="image">
-								<right>220</right>
-								<top>143</top>
-								<width>22</width>
-								<height>22</height>
+								<right>{{ScaleX('220')}}</right>
+								<top>{{ScaleY('143')}}</top>
+								<width>{{ScaleX('22')}}</width>
+								<height>{{ScaleY('22')}}</height>
 								<texture>lists/rating.png</texture>
 								<visible>!String.IsEmpty(ListItem.Rating)</visible>
 							</control>
 							<control type="label">
-								<right>258</right>
-								<top>144</top>
-								<width>800</width>
-								<height>20</height>
+								<right>{{ScaleX('258')}}</right>
+								<top>{{ScaleY('144')}}</top>
+								<width>{{ScaleX('800')}}</width>
+								<height>{{ScaleY('20')}}</height>
 								<font>font12</font>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -137,18 +137,18 @@
 								<visible>!String.IsEmpty(ListItem.Rating)</visible>
 							</control>
 							<control type="image">
-								<right>73</right>
-								<top>143</top>
-								<width>22</width>
-								<height>22</height>
+								<right>{{ScaleX('73')}}</right>
+								<top>{{ScaleY('143')}}</top>
+								<width>{{ScaleX('22')}}</width>
+								<height>{{ScaleY('22')}}</height>
 								<texture>lists/played-total.png</texture>
 								<visible>String.IsEqual(Listitem.dbtype,tvshow) + !String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 							</control>
 							<control type="label">
-								<right>103</right>
-								<top>144</top>
-								<width>800</width>
-								<height>20</height>
+								<right>{{ScaleX('103')}}</right>
+								<top>{{ScaleY('144')}}</top>
+								<width>{{ScaleX('800')}}</width>
+								<height>{{ScaleY('20')}}</height>
 								<font>font12</font>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -156,7 +156,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<left>405</left>
+							<left>{{ScaleX('405')}}</left>
 							<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 						</control>
 					</control>

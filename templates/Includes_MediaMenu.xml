@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<include name="MediaMenuItemsCommon">
-		<width>470</width>
-		<textoffsetx>20</textoffsetx>
-		<top>0</top>
-		<height>80</height>
-		<radioposx>370</radioposx>
+		<width>{{ScaleX('470')}}</width>
+		<textoffsetx>{{ScaleX('20')}}</textoffsetx>
+		<top>{{ScaleY('0')}}</top>
+		<height>{{ScaleY('80')}}</height>
+		<radioposx>{{ScaleX('370')}}</radioposx>
 		<aligny>center</aligny>
 		<invalidcolor>invalid</invalidcolor>
 		<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
@@ -17,14 +17,14 @@
 		<param name="height">110</param>
 		<definition>
 			<control type="radiobutton" id="$PARAM[control_id]">
-				<width>92</width>
-				<height>92</height>
+				<width>{{ScaleX('92')}}</width>
+				<height>{{ScaleY('92')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font></font>
 				<texturefocus colordiffuse="button_focus">buttons/roundbutton-fo.png</texturefocus>
 				<texturenofocus />
-				<radioposx>26</radioposx>
+				<radioposx>{{ScaleX('26')}}</radioposx>
 				<radioposy>0</radioposy>
 				<radiowidth>40</radiowidth>
 				<radioheight>40</radioheight>
@@ -47,26 +47,26 @@
 				<include>HiddenObject</include>
 			</control>
 			<control type="grouplist" id="9000">
-				<top>50</top>
-				<left>0</left>
-				<width>470</width>
-				<height>100%</height>
+				<top>{{ScaleY('50')}}</top>
+				<left>{{ScaleX('0')}}</left>
+				<width>{{ScaleX('470')}}</width>
+				<height>{{ScaleY('100%')}}</height>
 				<onleft>9000</onleft>
 				<onup>9000</onup>
 				<onright>50</onright>
 				<ondown>14100</ondown>
 				<onback>50</onback>
 				<control type="group" id="60520">
-					<height>50</height>
+					<height>{{ScaleY('50')}}</height>
 					<control type="label">
 						<include>MediaMenuLabelCommon</include>
 						<label>$LOCALIZE[31148]</label>
 					</control>
 					<control type="label">
-						<width>470</width>
-						<textoffsetx>20</textoffsetx>
-						<textoffsety>15</textoffsety>
-						<height>50</height>
+						<width>{{ScaleX('470')}}</width>
+						<textoffsetx>{{ScaleX('20')}}</textoffsetx>
+						<textoffsety>{{ScaleY('15')}}</textoffsety>
+						<height>{{ScaleY('50')}}</height>
 						<font>font12</font>
 						<align>right</align>
 						<aligny>top</aligny>
@@ -75,17 +75,17 @@
 					</control>
 				</control>
 				<control type="group" id="60560">
-					<height>95</height>
+					<height>{{ScaleY('95')}}</height>
 					<control type="grouplist" id="6056">
 						<orientation>horizontal</orientation>
 						<itemgap>-18</itemgap>
-						<left>0</left>
-						<height>120</height>
+						<left>{{ScaleX('0')}}</left>
+						<height>{{ScaleY('120')}}</height>
 						<onleft>6056</onleft>
 						<onright>50</onright>
 						<onup>14100</onup>
 						<ondown>6051</ondown>
-						<width>1000</width>
+						<width>{{ScaleX('1000')}}</width>
 						<include content="PVRQuickNavItemsCommon">
 							<param name="control_id" value="100" />
 							<param name="area" value="Channels" />
@@ -217,7 +217,7 @@
 						<animation effect="fade" time="300">VisibleChange</animation>
 						<orientation>horizontal</orientation>
 						<itemgap>-17</itemgap>
-						<left>5</left>
+						<left>{{ScaleX('5')}}</left>
 						<onleft>14100</onleft>
 						<onup>302</onup>
 						<ondown>6056</ondown>
@@ -251,11 +251,11 @@
 		</definition>
 	</include>
 	<include name="MediaMenuLabelCommon">
-		<width>470</width>
-		<textoffsetx>20</textoffsetx>
-		<textoffsety>15</textoffsety>
-		<height>50</height>
-		<radioposx>300</radioposx>
+		<width>{{ScaleX('470')}}</width>
+		<textoffsetx>{{ScaleX('20')}}</textoffsetx>
+		<textoffsety>{{ScaleY('15')}}</textoffsety>
+		<height>{{ScaleY('50')}}</height>
+		<radioposx>{{ScaleX('300')}}</radioposx>
 		<font>font25_title</font>
 		<aligny>top</aligny>
 		<textcolor>button_focus</textcolor>
@@ -263,30 +263,30 @@
 	<include name="MediaMenuCommon">
 		<include>OpenClose_Left</include>
 		<depth>DepthSideBlade</depth>
-		<left>-520</left>
+		<left>{{ScaleX('-520')}}</left>
 		<animation type="Conditional" condition="$EXP[sidebar_visible]" reversible="true">
-			<effect type="slide" start="0" end="520" time="400" tween="cubic" easing="out" />
+			<effect type="slide" start="{{ScaleBorder2('0')}}" end="{{ScaleBorder2('520')}}" time="400" tween="cubic" easing="out" />
 		</animation>
 		<control type="image">
-			<width>4000</width>
-			<height>100%</height>
+			<width>{{ScaleX('4000')}}</width>
+			<height>{{ScaleY('100%')}}</height>
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="80FFFFFF">colors/black.png</texture>
 			<visible>$EXP[sidebar_visible] + !System.HasActiveModalDialog</visible>
 			<animation effect="fade" time="200">VisibleChange</animation>
 		</control>
 		<control type="image">
-			<left>0</left>
-			<top>0</top>
-			<width>520</width>
-			<height>100%</height>
-			<texture border="0,0,52,0">lists/panel-mediamenu.png</texture>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('0')}}</top>
+			<width>{{ScaleX('520')}}</width>
+			<height>{{ScaleY('100%')}}</height>
+			<texture border="{{ScaleBorder('0,0,52,0')}}">lists/panel-mediamenu.png</texture>
 		</control>
 		<control type="button" id="6131">
-			<left>0</left>
-			<top>0</top>
-			<width>500</width>
-			<height>100%</height>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('0')}}</top>
+			<width>{{ScaleX('500')}}</width>
+			<height>{{ScaleY('100%')}}</height>
 			<label></label>
 			<texturefocus />
 			<texturenofocus />
@@ -307,12 +307,12 @@
 				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 				<animation effect="fade" time="300">VisibleChange</animation>
-				<animation effect="slide" end="-10,0" time="0" condition ="Window.IsActive(MyPlaylist.xml)">Conditional</animation>
+				<animation effect="slide" end="{{ScaleBorder2('-10,0')}}" time="0" condition ="Window.IsActive(MyPlaylist.xml)">Conditional</animation>
 				<orientation>horizontal</orientation>
 				<itemgap>-17</itemgap>
 				<left>$PARAM[left]</left>
 				<onleft>14100</onleft>
-				<width>450</width>
+				<width>{{ScaleX('450')}}</width>
 				<visible>Player.HasMedia + [$EXP[sidebar_visible]]</visible>
 				<visible>!System.HasActiveModalDialog</visible>
 				<include content="BottomMainMenuToggleItem">
@@ -343,10 +343,10 @@
 	</include>
 	<include name="MediaMenuListCommon">
 		<definition>
-			<left>0</left>
-			<top>100</top>
-			<width>470</width>
-			<height>100%</height>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('100')}}</top>
+			<width>{{ScaleX('470')}}</width>
+			<height>{{ScaleY('100%')}}</height>
 			<onleft>9000</onleft>
 			<onup>9000</onup>
 			<onright condition="![Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist)]">50</onright>
@@ -403,10 +403,10 @@
 	<include name="MediaMenuMouseOverlay">
 		<control type="button" id="6130">
 			<label></label>
-			<left>-50</left>
-			<top>200</top>
+			<left>{{ScaleX('-50')}}</left>
+			<top>{{ScaleY('200')}}</top>
 			<bottom>0</bottom>
-			<width>50</width>
+			<width>{{ScaleX('50')}}</width>
 			<texturefocus />
 			<texturenofocus />
 		</control>

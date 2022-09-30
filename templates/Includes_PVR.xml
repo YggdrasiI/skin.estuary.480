@@ -5,9 +5,9 @@
 	<include name="PVRListItemLayout">
 		<definition>
 			<control type="label">
-				<left>30</left>
-				<top>0</top>
-				<right>30</right>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('0')}}</top>
+				<right>{{ScaleX('30')}}</right>
 				<font>font36_title</font>
 				<aligny>center</aligny>
 				<visible>$PARAM[only_label_condition]</visible>
@@ -15,21 +15,21 @@
 			</control>
 			<control type="group">
 				<visible>!$PARAM[only_label_condition]</visible>
-				<animation effect="slide" start="0,0" end="0,16" time="0" condition="!$EXP[listitem_has_epg_event_info]">Conditional</animation>
+				<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('0,16')}}" time="0" condition="!$EXP[listitem_has_epg_event_info]">Conditional</animation>
 				<control type="image">
-					<left>29</left>
-					<top>17</top>
-					<width>32</width>
-					<height>32</height>
+					<left>{{ScaleX('29')}}</left>
+					<top>{{ScaleY('17')}}</top>
+					<width>{{ScaleX('32')}}</width>
+					<height>{{ScaleY('32')}}</height>
 					<aspectratio align="center">keep</aspectratio>
 					<visible>$PARAM[has_info_icon]</visible>
 					<texture>$PARAM[info_icon]</texture>
 				</control>
 				<control type="label">
-					<left>10</left>
-					<top>10</top>
-					<width>90</width>
-					<height>50</height>
+					<left>{{ScaleX('10')}}</left>
+					<top>{{ScaleY('10')}}</top>
+					<width>{{ScaleX('90')}}</width>
+					<height>{{ScaleY('50')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font32_title</font>
@@ -37,18 +37,18 @@
 					<label>$PARAM[label0]</label>
 				</control>
 				<control type="label">
-					<left>105</left>
-					<right>120</right>
-					<top>10</top>
-					<height>30</height>
+					<left>{{ScaleX('105')}}</left>
+					<right>{{ScaleX('120')}}</right>
+					<top>{{ScaleY('10')}}</top>
+					<height>{{ScaleY('30')}}</height>
 					<aligny>top</aligny>
 					<label>$PARAM[label1]</label>
 				</control>
 				<control type="label">
-					<left>105</left>
-					<right>120</right>
-					<top>10</top>
-					<height>30</height>
+					<left>{{ScaleX('105')}}</left>
+					<right>{{ScaleX('120')}}</right>
+					<top>{{ScaleY('10')}}</top>
+					<height>{{ScaleY('30')}}</height>
 					<align>right</align>
 					<aligny>top</aligny>
 					<label>$PARAM[label2]</label>
@@ -57,19 +57,19 @@
 			<control type="group">
 				<visible>!$PARAM[only_label_condition]</visible>
 				<control type="label">
-					<left>105</left>
-					<right>120</right>
-					<top>53</top>
-					<height>30</height>
+					<left>{{ScaleX('105')}}</left>
+					<right>{{ScaleX('120')}}</right>
+					<top>{{ScaleY('53')}}</top>
+					<height>{{ScaleY('30')}}</height>
 					<font>font12</font>
 					<aligny>top</aligny>
 					<label>$PARAM[label3]</label>
 				</control>
 				<control type="label">
-					<left>105</left>
-					<right>120</right>
-					<top>53</top>
-					<height>30</height>
+					<left>{{ScaleX('105')}}</left>
+					<right>{{ScaleX('120')}}</right>
+					<top>{{ScaleY('53')}}</top>
+					<height>{{ScaleY('30')}}</height>
 					<font>font12</font>
 					<align>right</align>
 					<aligny>top</aligny>
@@ -77,18 +77,18 @@
 				</control>
 			</control>
 			<control type="image">
-				<right>110</right>
-				<top>0</top>
-				<width>32</width>
+				<right>{{ScaleX('110')}}</right>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('32')}}</width>
 				<aligny>center</aligny>
 				<aspectratio align="center">keep</aspectratio>
 				<texture>$VAR[PVRStatusImageVar]</texture>
 				<visible>$PARAM[has_status_icon]</visible>
 			</control>
 			<control type="image">
-				<right>20</right>
-				<top>0</top>
-				<width>80</width>
+				<right>{{ScaleX('20')}}</right>
+				<top>{{ScaleY('0')}}</top>
+				<width>{{ScaleX('80')}}</width>
 				<aligny>center</aligny>
 				<aspectratio align="center">keep</aspectratio>
 				<visible>!$PARAM[only_label_condition] | ListItem.IsParentFolder</visible>
@@ -102,12 +102,12 @@
 		<param name="has_status_icon">false</param>
 		<param name="info_update">0</param>
 		<definition>
-			<itemlayout height="100" infoupdate="$PARAM[info_update]">
+			<itemlayout height="{{ScaleY('100')}}" infoupdate="$PARAM[info_update]">
 				<control type="progress">
-					<left>20</left>
-					<top>66</top>
-					<width>70</width>
-					<height>12</height>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('66')}}</top>
+					<width>{{ScaleX('70')}}</width>
+					<height>{{ScaleY('12')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<colordiffuse>88FFFFFF</colordiffuse>
@@ -126,20 +126,20 @@
 					<param name="label4" value="[COLOR grey]$INFO[ListItem.Comment][/COLOR]" />
 				</include>
 			</itemlayout>
-			<focusedlayout height="100" infoupdate="$PARAM[info_update]">
+			<focusedlayout height="{{ScaleY('100')}}" infoupdate="$PARAM[info_update]">
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<right>0</right>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<right>{{ScaleX('0')}}</right>
 					<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
 					<texture colordiffuse="button_focus">lists/focus.png</texture>
 					<visible>Control.HasFocus($PARAM[list_id])</visible>
 				</control>
 				<control type="progress">
-					<left>20</left>
-					<top>66</top>
-					<width>70</width>
-					<height>12</height>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('66')}}</top>
+					<width>{{ScaleX('70')}}</width>
+					<height>{{ScaleY('12')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<midtexture border="3">progress/texturebg_white.png</midtexture>
@@ -163,19 +163,19 @@
 	<include name="ChannelManagerList">
 		<control type="grouplist">
 			<orientation>horizontal</orientation>
-			<left>0</left>
+			<left>{{ScaleX('0')}}</left>
 			<align>center</align>
-			<width>510</width>
+			<width>{{ScaleX('510')}}</width>
 			<control type="label" id="$PARAM[header_id]">
-				<width>auto</width>
-				<height>70</height>
+				<width>{{ScaleX('auto')}}</width>
+				<height>{{ScaleY('70')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>button_focus</textcolor>
 			</control>
 			<control type="label">
-				<width>auto</width>
-				<height>70</height>
+				<width>{{ScaleX('auto')}}</width>
+				<height>{{ScaleY('70')}}</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>button_focus</textcolor>
@@ -183,66 +183,66 @@
 			</control>
 		</control>
 		<control type="image">
-			<left>0</left>
-			<top>55</top>
-			<width>510</width>
-			<height>740</height>
-			<texture border="40">buttons/dialogbutton-nofo.png</texture>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('55')}}</top>
+			<width>{{ScaleX('510')}}</width>
+			<height>{{ScaleY('740')}}</height>
+			<texture border="{{ScaleBorder('40')}}">buttons/dialogbutton-nofo.png</texture>
 		</control>
 		<control type="list" id="$PARAM[list_id]">
-			<left>20</left>
-			<top>75</top>
-			<width>470</width>
-			<height>700</height>
+			<left>{{ScaleX('20')}}</left>
+			<top>{{ScaleY('75')}}</top>
+			<width>{{ScaleX('470')}}</width>
+			<height>{{ScaleY('700')}}</height>
 			<onup>$PARAM[list_id]</onup>
 			<ondown>$PARAM[list_id]</ondown>
 			<onleft>$PARAM[onleft]</onleft>
 			<onright>$PARAM[scrollbar_id]</onright>
 			<pagecontrol>$PARAM[scrollbar_id]</pagecontrol>
 			<scrolltime>200</scrolltime>
-			<itemlayout height="70" width="470">
+			<itemlayout height="{{ScaleY('70')}}" width="{{ScaleX('470')}}">
 				<control type="image">
-					<width>60</width>
-					<height>60</height>
-					<right>5</right>
-					<top>5</top>
+					<width>{{ScaleX('60')}}</width>
+					<height>{{ScaleY('60')}}</height>
+					<right>{{ScaleX('5')}}</right>
+					<top>{{ScaleY('5')}}</top>
 					<texture>$INFO[ListItem.ActualIcon]</texture>
 					<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 					<bordersize>2</bordersize>
 					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="label">
-					<left>20</left>
-					<right>70</right>
-					<height>70</height>
+					<left>{{ScaleX('20')}}</left>
+					<right>{{ScaleX('70')}}</right>
+					<height>{{ScaleY('70')}}</height>
 					<aligny>center</aligny>
 					<font>font27</font>
 					<textcolor>grey</textcolor>
 					<label>$INFO[ListItem.ChannelNumberLabel,[B],[/B] - ]$INFO[ListItem.ChannelName]</label>
 				</control>
 			</itemlayout>
-			<focusedlayout height="70" width="470">
+			<focusedlayout height="{{ScaleY('70')}}" width="{{ScaleX('470')}}">
 				<control type="image">
-					<left>0</left>
-					<right>0</right>
+					<left>{{ScaleX('0')}}</left>
+					<right>{{ScaleX('0')}}</right>
 					<bottom>0</bottom>
 					<texture colordiffuse="button_focus">lists/focus.png</texture>
 					<visible>Control.HasFocus($PARAM[list_id])</visible>
 				</control>
 				<control type="image">
-					<width>60</width>
-					<height>60</height>
-					<right>5</right>
-					<top>5</top>
+					<width>{{ScaleX('60')}}</width>
+					<height>{{ScaleY('60')}}</height>
+					<right>{{ScaleX('5')}}</right>
+					<top>{{ScaleY('5')}}</top>
 					<texture>$INFO[ListItem.ActualIcon]</texture>
 					<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 					<bordersize>2</bordersize>
 					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="label">
-					<left>20</left>
-					<right>70</right>
-					<height>70</height>
+					<left>{{ScaleX('20')}}</left>
+					<right>{{ScaleX('70')}}</right>
+					<height>{{ScaleY('70')}}</height>
 					<font>font27</font>
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.ChannelNumberLabel,[B],[/B] - ]$INFO[ListItem.ChannelName]</label>
@@ -250,10 +250,10 @@
 			</focusedlayout>
 		</control>
 		<control type="scrollbar" id="$PARAM[scrollbar_id]">
-			<left>495</left>
-			<top>75</top>
-			<width>12</width>
-			<height>700</height>
+			<left>{{ScaleX('495')}}</left>
+			<top>{{ScaleY('75')}}</top>
+			<width>{{ScaleX('12')}}</width>
+			<height>{{ScaleY('700')}}</height>
 			<onleft>$PARAM[list_id]</onleft>
 			<onright>$PARAM[onright]</onright>
 			<ondown>$PARAM[scrollbar_id]</ondown>
@@ -269,30 +269,30 @@
 				<visible>Player.SeekEnabled | VideoPlayer.HasEPG</visible>
 				<visible>Player.ShowInfo | Window.IsActive(fullscreeninfo) | Player.ShowTime | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(playerprocessinfo) | !String.IsEmpty(Player.SeekNumeric) | !String.IsEmpty(PVR.ChannelNumberInput) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrchannelguide)</visible>
 				<control type="label">
-					<top>22</top>
-					<right>20</right>
-					<width>400</width>
-					<height>50</height>
+					<top>{{ScaleY('22')}}</top>
+					<right>{{ScaleX('20')}}</right>
+					<width>{{ScaleX('400')}}</width>
+					<height>{{ScaleY('50')}}</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font13</font>
 					<label>$INFO[PVR.TimeshiftProgressEndTime]</label>
 				</control>
 				<control type="label">
-					<top>22</top>
-					<left>20</left>
-					<width>400</width>
-					<height>50</height>
+					<top>{{ScaleY('22')}}</top>
+					<left>{{ScaleX('20')}}</left>
+					<width>{{ScaleX('400')}}</width>
+					<height>{{ScaleY('50')}}</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13</font>
 					<label>$INFO[PVR.TimeshiftProgressStartTime]</label>
 				</control>
 				<control type="label">
-					<top>22</top>
-					<left>20</left>
-					<right>20</right>
-					<height>50</height>
+					<top>{{ScaleY('22')}}</top>
+					<left>{{ScaleX('20')}}</left>
+					<right>{{ScaleX('20')}}</right>
+					<height>{{ScaleY('50')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -303,9 +303,9 @@
 			<control type="group">
 				<visible>VideoPlayer.HasEPG</visible>
 				<control type="progress">
-					<left>0</left>
+					<left>{{ScaleX('0')}}</left>
 					<top>$PARAM[epg_bar_top]</top>
-					<width>100%</width>
+					<width>{{ScaleX('100%')}}</width>
 					<height>$PARAM[epg_bar_height]</height>
 					<info2>PVR.TimeshiftProgressEpgStart</info2>
 					<info>PVR.TimeshiftProgressPlayPos</info>
@@ -313,9 +313,9 @@
 					<midtexture colordiffuse="button_focus">colors/white.png</midtexture>
 				</control>
 				<control type="progress">
-					<left>0</left>
+					<left>{{ScaleX('0')}}</left>
 					<top>$PARAM[epg_bar_top]</top>
-					<width>100%</width>
+					<width>{{ScaleX('100%')}}</width>
 					<height>$PARAM[epg_bar_height]</height>
 					<info2>PVR.TimeshiftProgressPlayPos</info2>
 					<info>PVR.TimeshiftProgressEpgEnd</info>
@@ -324,9 +324,9 @@
 				</control>
 			</control>
 			<control type="progress">
-				<left>0</left>
+				<left>{{ScaleX('0')}}</left>
 				<top>$PARAM[ts_bar_top]</top>
-				<width>100%</width>
+				<width>{{ScaleX('100%')}}</width>
 				<height>$PARAM[ts_bar_height]</height>
 				<info2>PVR.TimeshiftProgressBufferStart</info2>
 				<info>PVR.TimeshiftProgressBufferEnd</info>
@@ -339,10 +339,10 @@
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<visible>Player.ChannelPreviewActive</visible>
 			<control type="progress">
-				<left>0</left>
-				<top>70</top>
-				<width>100%</width>
-				<height>16</height>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('70')}}</top>
+				<width>{{ScaleX('100%')}}</width>
+				<height>{{ScaleY('16')}}</height>
 				<info>PVR.EpgEventProgress</info>
 				<texturebg border="3" colordiffuse="60FFFFFF">colors/white50.png</texturebg>
 				<midtexture colordiffuse="button_focus">colors/white.png</midtexture>
@@ -353,72 +353,72 @@
 		<control type="group">
 			<visible>!ListItem.IsFolder</visible>
 			<control type="image">
-				<top>135</top>
-				<left>630</left>
-				<width>200</width>
-				<height>200</height>
+				<top>{{ScaleY('135')}}</top>
+				<left>{{ScaleX('630')}}</left>
+				<width>{{ScaleX('200')}}</width>
+				<height>{{ScaleY('200')}}</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture fallback="DefaultTVShows.png">$VAR[ChannelListEPGIconVar]</texture>
 				<visible>!String.IsEmpty(ListItem.ChannelName)</visible>
 				<fadetime>200</fadetime>
 			</control>
 			<control type="group">
-				<top>120</top>
-				<left>0</left>
-				<width>600</width>
+				<top>{{ScaleY('120')}}</top>
+				<left>{{ScaleX('0')}}</left>
+				<width>{{ScaleX('600')}}</width>
 				<control type="label">
-					<height>262</height>
+					<height>{{ScaleY('262')}}</height>
 					<font>font45</font>
 					<label>$INFO[ListItem.ChannelName]</label>
 				</control>
 				<control type="label">
-					<top>60</top>
-					<height>200</height>
+					<top>{{ScaleY('60')}}</top>
+					<height>{{ScaleY('200')}}</height>
 					<label>$VAR[PVRInfoPanelDateDurationLabel]</label>
 				</control>
 				<control type="progress">
-					<top>200</top>
-					<height>12</height>
+					<top>{{ScaleY('200')}}</top>
+					<height>{{ScaleY('12')}}</height>
 					<colordiffuse>88FFFFFF</colordiffuse>
 					<info>ListItem.Progress</info>
 					<visible>Integer.IsGreater(ListItem.Progress,0)</visible>
 				</control>
 				<control type="progress">
-					<top>200</top>
-					<height>12</height>
+					<top>{{ScaleY('200')}}</top>
+					<height>{{ScaleY('12')}}</height>
 					<colordiffuse>88FFFFFF</colordiffuse>
 					<info>ListItem.PercentPlayed</info>
 					<visible>Integer.IsGreater(ListItem.PercentPlayed,0)</visible>
 				</control>
 			</control>
 			<control type="label">
-				<top>365</top>
-				<width>830</width>
-				<height>262</height>
+				<top>{{ScaleY('365')}}</top>
+				<width>{{ScaleX('830')}}</width>
+				<height>{{ScaleY('262')}}</height>
 				<font>font36_title</font>
 				<label>$INFO[ListItem.Title] $INFO[ListItem.Year,([COLOR grey],[/COLOR])]</label>
 				<scroll>true</scroll>
 				<visible>!ListItem.HasEpg</visible>
 			</control>
 			<control type="label">
-				<top>365</top>
-				<width>830</width>
-				<height>262</height>
+				<top>{{ScaleY('365')}}</top>
+				<width>{{ScaleX('830')}}</width>
+				<height>{{ScaleY('262')}}</height>
 				<font>font36_title</font>
 				<label>$INFO[ListItem.EpgEventTitle] $INFO[ListItem.Year,([COLOR grey],[/COLOR])]</label>
 				<scroll>true</scroll>
 				<visible>ListItem.HasEpg</visible>
 			</control>
 			<control type="label">
-				<top>410</top>
-				<width>830</width>
-				<height>70</height>
+				<top>{{ScaleY('410')}}</top>
+				<width>{{ScaleX('830')}}</width>
+				<height>{{ScaleY('70')}}</height>
 				<scroll>true</scroll>
 				<label>[I]$VAR[SeasonEpisodeLabel]$INFO[ListItem.EpisodeName][/I]</label>
 			</control>
 			<control type="textbox">
-				<top>465</top>
-				<width>830</width>
+				<top>{{ScaleY('465')}}</top>
+				<width>{{ScaleX('830')}}</width>
 				<bottom>list_bottom_offset</bottom>
 				<label>$VAR[FlagLabel,,[CR]]$INFO[ListItem.Genre,[COLOR grey]$LOCALIZE[515]:[/COLOR] ,[CR]]$INFO[ListItem.TimerType,[COLOR grey]$LOCALIZE[803]:[/COLOR] ,[CR]]$VAR[RecordingSizeLabel]$VAR[ExpirationDateTimeLabel]$INFO[ListItem.Plot,[CR]]</label>
 				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
@@ -426,39 +426,39 @@
 		</control>
 		<control type="group">
 			<visible>ListItem.IsFolder</visible>
-			<top>list_top_offset</top>
+			<top>{{ScaleY('list_top_offset')}}</top>
 			<control type="label">
-				<top>10</top>
-				<width>830</width>
-				<height>262</height>
+				<top>{{ScaleY('10')}}</top>
+				<width>{{ScaleX('830')}}</width>
+				<height>{{ScaleY('262')}}</height>
 				<label>$LOCALIZE[19076] ($INFO[Container(5000).NumItems,[B],[/B] $LOCALIZE[31036]]) $INFO[ListItem.Property(recordingsize),- $LOCALIZE[20161]: [B],[/B]]</label>
 				<font>font37</font>
 				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="group">
-				<left>-10</left>
-				<top>60</top>
+				<left>{{ScaleX('-10')}}</left>
+				<top>{{ScaleY('60')}}</top>
 				<visible>!ListItem.IsParentFolder</visible>
 				<control type="panel" id="5000">
-					<top>20</top>
-					<width>830</width>
+					<top>{{ScaleY('20')}}</top>
+					<width>{{ScaleX('830')}}</width>
 					<bottom>100</bottom>
 					<orientation>vertical</orientation>
-					<focusedlayout height="100" width="780">
+					<focusedlayout height="{{ScaleY('100')}}" width="{{ScaleX('780')}}">
 						<control type="label">
-							<left>10</left>
-							<height>90</height>
-							<width>830</width>
+							<left>{{ScaleX('10')}}</left>
+							<height>{{ScaleY('90')}}</height>
+							<width>{{ScaleX('830')}}</width>
 							<aligny>center</aligny>
 							<label>$VAR[RecordingDateSizeLabel]$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</focusedlayout>
-					<itemlayout height="100" width="780">
+					<itemlayout height="{{ScaleY('100')}}" width="{{ScaleX('780')}}">
 						<control type="label">
-							<left>10</left>
-							<height>90</height>
-							<width>830</width>
+							<left>{{ScaleX('10')}}</left>
+							<height>{{ScaleY('90')}}</height>
+							<width>{{ScaleX('830')}}</width>
 							<aligny>center</aligny>
 							<label>$VAR[RecordingDateSizeLabel]$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 							<shadowcolor>text_shadow</shadowcolor>
@@ -472,19 +472,19 @@
 	<include name="RDSInfoLine">
 		<control type="grouplist">
 			<visible>!String.IsEmpty($PARAM[value])</visible>
-			<height>45</height>
+			<height>{{ScaleY('45')}}</height>
 			<orientation>horizontal</orientation>
 			<itemgap>10</itemgap>
 			<control type="label">
-				<width>auto</width>
-				<height>40</height>
+				<width>{{ScaleX('auto')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<aligny>center</aligny>
 				<label>$PARAM[label]:</label>
 				<textcolor>button_focus</textcolor>
 			</control>
 			<control type="label">
-				<width>auto</width>
-				<height>40</height>
+				<width>{{ScaleX('auto')}}</width>
+				<height>{{ScaleY('40')}}</height>
 				<align>right</align>
 				<aligny>center</aligny>
 				<label>$INFO[$PARAM[value]]</label>
@@ -494,10 +494,10 @@
 	</include>
 	<include name="PVRChannelNumberInput">
 		<control type="label">
-			<left>0</left>
-			<top>0</top>
-			<width>100%</width>
-			<height>100%</height>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('0')}}</top>
+			<width>{{ScaleX('100%')}}</width>
+			<height>{{ScaleY('100%')}}</height>
 			<label>$INFO[PVR.ChannelNumberInput]</label>
 			<shadowcolor>black</shadowcolor>
 			<align>center</align>
@@ -509,9 +509,9 @@
 	<include name="EpgGrid">
 		<definition>
 			<control type="epggrid" id="$PARAM[control_id]">
-				<left>0</left>
+				<left>{{ScaleX('0')}}</left>
 				<top>$PARAM[control_top]</top>
-				<right>20</right>
+				<right>{{ScaleX('20')}}</right>
 				<bottom>333</bottom>
 				<orientation>$PARAM[control_orientation]</orientation>
 				<pagecontrol>60</pagecontrol>
@@ -526,8 +526,8 @@
 				<progresstexture border="$PARAM[progress_texture_border]" colordiffuse="button_focus">$PARAM[progress_texture]</progresstexture>
 				<rulerdatelayout width="1700" height="45" condition="$PARAM[has_rulerdate_layout]">
 					<control type="label">
-						<width>1700</width>
-						<height>45</height>
+						<width>{{ScaleX('1700')}}</width>
+						<height>{{ScaleY('45')}}</height>
 						<font>font13</font>
 						<label>$INFO[ListItem.Label]</label>
 						<textcolor>button_focus</textcolor>
@@ -538,40 +538,40 @@
 				<rulerlayout height="45" width="$PARAM[ruler_width]">
 					<control type="label">
 						<width>$PARAM[ruler_label_width]</width>
-						<height>45</height>
+						<height>{{ScaleY('45')}}</height>
 						<font>font12</font>
 						<label>$INFO[ListItem.Label]</label>
-						<textoffsetx>10</textoffsetx>
+						<textoffsetx>{{ScaleX('10')}}</textoffsetx>
 						<textcolor>button_focus</textcolor>
 					</control>
 				</rulerlayout>
 				<channellayout height="62" width="$PARAM[channel_width]">
 					<control type="label">
-						<left>2</left>
-						<top>-2</top>
-						<width>90</width>
-						<height>60</height>
+						<left>{{ScaleX('2')}}</left>
+						<top>{{ScaleY('-2')}}</top>
+						<width>{{ScaleX('90')}}</width>
+						<height>{{ScaleY('60')}}</height>
 						<font>font32_title</font>
 						<label>$INFO[ListItem.ChannelNumberLabel]</label>
 						<align>center</align>
 						<aligny>center</aligny>
 					</control>
 					<control type="label" id="1">
-						<left>83</left>
-						<top>-2</top>
-						<height>60</height>
+						<left>{{ScaleX('83')}}</left>
+						<top>{{ScaleY('-2')}}</top>
+						<height>{{ScaleY('60')}}</height>
 						<font>font13</font>
 						<label>$INFO[ListItem.ChannelName]</label>
 						<aligny>center</aligny>
-						<textoffsetx>10</textoffsetx>
+						<textoffsetx>{{ScaleX('10')}}</textoffsetx>
 					</control>
 				</channellayout>
 				<focusedchannellayout height="62" width="$PARAM[channel_width]">
 					<control type="label">
-						<left>2</left>
-						<top>-2</top>
-						<width>90</width>
-						<height>60</height>
+						<left>{{ScaleX('2')}}</left>
+						<top>{{ScaleY('-2')}}</top>
+						<width>{{ScaleX('90')}}</width>
+						<height>{{ScaleY('60')}}</height>
 						<font>font32_title</font>
 						<label>$INFO[ListItem.ChannelNumberLabel]</label>
 						<textcolor>button_focus</textcolor>
@@ -579,101 +579,101 @@
 						<aligny>center</aligny>
 					</control>
 					<control type="label" id="1">
-						<left>83</left>
-						<top>-2</top>
-						<height>60</height>
+						<left>{{ScaleX('83')}}</left>
+						<top>{{ScaleY('-2')}}</top>
+						<height>{{ScaleY('60')}}</height>
 						<font>font13</font>
 						<label>$INFO[ListItem.ChannelName]</label>
 						<textcolor>button_focus</textcolor>
 						<aligny>center</aligny>
-						<textoffsetx>10</textoffsetx>
+						<textoffsetx>{{ScaleX('10')}}</textoffsetx>
 						<scroll>true</scroll>
 					</control>
 				</focusedchannellayout>
-				<itemlayout height="62" width="60">
+				<itemlayout height="{{ScaleY('62')}}" width="{{ScaleX('60')}}">
 					<control type="image" id="2">
-						<width>58</width>
-						<height>58</height>
-						<texture border="3" fallback="windows/pvr/epg-genres/0.png">$INFO[ListItem.Property(GenreType),windows/pvr/epg-genres/,.png]</texture>
+						<width>{{ScaleX('58')}}</width>
+						<height>{{ScaleY('58')}}</height>
+						<texture border="{{ScaleBorder('3')}}" fallback="windows/pvr/epg-genres/0.png">$INFO[ListItem.Property(GenreType),windows/pvr/epg-genres/,.png]</texture>
 					</control>
 					<control type="label" id="1">
-						<left>6</left>
-						<top>0</top>
-						<height>36</height>
+						<left>{{ScaleX('6')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<height>{{ScaleY('36')}}</height>
 						<aligny>center</aligny>
 						<font>font13</font>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
 						<visible>ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive</visible>
-						<left>6</left>
-						<top>35</top>
-						<width>16</width>
-						<height>16</height>
+						<left>{{ScaleX('6')}}</left>
+						<top>{{ScaleY('35')}}</top>
+						<width>{{ScaleX('16')}}</width>
+						<height>{{ScaleY('16')}}</height>
 						<aspectratio>keep</aspectratio>
 						<texture colordiffuse="button_focus">icons/pvr/premiere.png</texture>
 					</control>
 					<control type="image">
-						<left>6</left>
-						<top>35</top>
-						<width>16</width>
-						<height>16</height>
+						<left>{{ScaleX('6')}}</left>
+						<top>{{ScaleY('35')}}</top>
+						<width>{{ScaleX('16')}}</width>
+						<height>{{ScaleY('16')}}</height>
 						<texture>$VAR[PVRTimerIcon]</texture>
-						<animation effect="slide" start="0,0" end="19,0" condition="ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive">Conditional</animation>
+						<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('19,0')}}" condition="ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive">Conditional</animation>
 					</control>
 				</itemlayout>
-				<focusedlayout height="62" width="60">
+				<focusedlayout height="{{ScaleY('62')}}" width="{{ScaleX('60')}}">
 					<control type="image" id="2">
-						<top>2</top>
-						<left>2</left>
-						<width>54</width>
-						<height>54</height>
+						<top>{{ScaleY('2')}}</top>
+						<left>{{ScaleX('2')}}</left>
+						<width>{{ScaleX('54')}}</width>
+						<height>{{ScaleY('54')}}</height>
 						<texture colordiffuse="button_focus">lists/focus.png</texture>
 						<visible>Control.HasFocus($PARAM[control_id])</visible>
 					</control>
 					<control type="image" id="2">
-						<width>58</width>
-						<height>58</height>
-						<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+						<width>{{ScaleX('58')}}</width>
+						<height>{{ScaleY('58')}}</height>
+						<texture border="{{ScaleBorder('8')}}" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
 					</control>
 					<control type="image" id="2">
-						<width>58</width>
-						<height>58</height>
-						<top>0</top>
-						<texture border="3" fallback="windows/pvr/epg-genres/0.png">$INFO[ListItem.Property(GenreType),windows/pvr/epg-genres/,.png]</texture>
+						<width>{{ScaleX('58')}}</width>
+						<height>{{ScaleY('58')}}</height>
+						<top>{{ScaleY('0')}}</top>
+						<texture border="{{ScaleBorder('3')}}" fallback="windows/pvr/epg-genres/0.png">$INFO[ListItem.Property(GenreType),windows/pvr/epg-genres/,.png]</texture>
 						<visible>!Control.HasFocus($PARAM[control_id])</visible>
 					</control>
 					<control type="label" id="1">
-						<left>6</left>
-						<top>0</top>
-						<height>36</height>
+						<left>{{ScaleX('6')}}</left>
+						<top>{{ScaleY('0')}}</top>
+						<height>{{ScaleY('36')}}</height>
 						<aligny>center</aligny>
 						<font>font13</font>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
 						<visible>ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive</visible>
-						<left>6</left>
-						<top>35</top>
-						<width>16</width>
-						<height>16</height>
+						<left>{{ScaleX('6')}}</left>
+						<top>{{ScaleY('35')}}</top>
+						<width>{{ScaleX('16')}}</width>
+						<height>{{ScaleY('16')}}</height>
 						<aspectratio>keep</aspectratio>
 						<texture colordiffuse="button_focus">icons/pvr/premiere.png</texture>
 					</control>
 					<control type="image">
-						<left>6</left>
-						<top>35</top>
-						<width>16</width>
-						<height>16</height>
+						<left>{{ScaleX('6')}}</left>
+						<top>{{ScaleY('35')}}</top>
+						<width>{{ScaleX('16')}}</width>
+						<height>{{ScaleY('16')}}</height>
 						<texture>$VAR[PVRTimerIcon]</texture>
-						<animation effect="slide" start="0,0" end="19,0" condition="ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive">Conditional</animation>
+						<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('19,0')}}" condition="ListItem.IsNew | ListItem.IsPremiere | ListItem.IsFinale | ListItem.IsLive">Conditional</animation>
 					</control>
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
-				<right>0</right>
+				<right>{{ScaleX('0')}}</right>
 				<top>$PARAM[scrollbar_top]</top>
-				<width>12</width>
+				<width>{{ScaleX('12')}}</width>
 				<bottom>340</bottom>
 				<onleft>10</onleft>
 				<onright>10</onright>

@@ -5,8 +5,8 @@
 		<control type="image">
 			<centerleft>50%</centerleft>
 			<centertop>50%</centertop>
-			<width>256</width>
-			<height>256</height>
+			<width>{{ScaleX('256')}}</width>
+			<height>{{ScaleY('256')}}</height>
 			<texture>icons/settings/player.png</texture>
 			<visible>SlideShow.IsVideo</visible>
 			<visible>![Player.Playing + Player.HasVideo] | SlideShow.IsPaused</visible>

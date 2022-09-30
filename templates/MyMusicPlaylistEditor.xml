@@ -7,7 +7,7 @@
 		<include>DefaultBackground</include>
 		<control type="group">
 			<include>OpenClose_Left</include>
-			<left>302</left>
+			<left>{{ScaleX('302')}}</left>
 			<include content="FileManagerPanel">
 				<param name="list_id" value="50" />
 				<param name="scrollbar_id" value="60" />
@@ -23,8 +23,8 @@
 				<param name="width" value="360" />
 			</include>
 			<control type="grouplist" id="9000">
-				<left>0</left>
-				<top>160</top>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('160')}}</top>
 				<onright>50</onright>
 				<onleft>100</onleft>
 				<itemgap>-20</itemgap>
@@ -33,29 +33,29 @@
 					<include content="DefaultSettingButton">
 						<param name="height" value="120" />
 					</include>
-					<width>300</width>
+					<width>{{ScaleX('300')}}</width>
 					<label>$LOCALIZE[502]</label>
 				</control>
 				<control type="button" id="7">
 					<include content="DefaultSettingButton">
 						<param name="height" value="120" />
 					</include>
-					<width>300</width>
+					<width>{{ScaleX('300')}}</width>
 					<label>$LOCALIZE[190]</label>
 				</control>
 				<control type="button" id="8">
 					<include content="DefaultSettingButton">
 						<param name="height" value="120" />
 					</include>
-					<width>300</width>
+					<width>{{ScaleX('300')}}</width>
 					<label>$LOCALIZE[192]</label>
 				</control>
 			</control>
 		</control>
 		<control type="group">
 			<include>OpenClose_Right</include>
-			<width>845</width>
-			<right>0</right>
+			<width>{{ScaleX('845')}}</width>
+			<right>{{ScaleX('0')}}</right>
 			<include content="ContentPanel">
 				<param name="width" value="1100" />
 				<param name="left" value="-21" />
@@ -69,9 +69,9 @@
 				<param name="width" value="840" />
 			</include>
 			<control type="scrollbar" id="60">
-				<left>0</left>
-				<top>80</top>
-				<width>12</width>
+				<left>{{ScaleX('0')}}</left>
+				<top>{{ScaleY('80')}}</top>
+				<width>{{ScaleX('12')}}</width>
 				<bottom>80</bottom>
 				<onleft>50</onleft>
 				<onright>100</onright>
@@ -80,9 +80,9 @@
 				<orientation>vertical</orientation>
 			</control>
 			<control type="scrollbar" id="61">
-				<left>834</left>
-				<top>80</top>
-				<width>12</width>
+				<left>{{ScaleX('834')}}</left>
+				<top>{{ScaleY('80')}}</top>
+				<width>{{ScaleX('12')}}</width>
 				<bottom>80</bottom>
 				<onleft>100</onleft>
 				<onright>9000</onright>

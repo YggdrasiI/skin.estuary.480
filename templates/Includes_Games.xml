@@ -4,8 +4,8 @@
 		<control type="group">
 			<centertop>50%</centertop>
 			<centerleft>50%</centerleft>
-			<width>1820</width>
-			<height>870</height>
+			<width>{{ScaleX('1820')}}</width>
+			<height>{{ScaleY('870')}}</height>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1820" />
 				<param name="height" value="870" />
@@ -14,14 +14,14 @@
 			</include>
 			<control type="group">
 				<description>Controller list</description>
-				<top>90</top>
-				<left>30</left>
-				<width>410</width>
-				<height>580</height>
+				<top>{{ScaleY('90')}}</top>
+				<left>{{ScaleX('30')}}</left>
+				<width>{{ScaleX('410')}}</width>
+				<height>{{ScaleY('580')}}</height>
 				<control type="label">
 					<description>Controller profiles grouplist heading</description>
-					<height>25</height>
-					<right>20</right>
+					<height>{{ScaleY('25')}}</height>
+					<right>{{ScaleX('20')}}</right>
 					<font>font12</font>
 					<label>$LOCALIZE[35050]</label>
 					<align>center</align>
@@ -30,16 +30,16 @@
 				</control>
 				<control type="image">
 					<description>Controller profiles grouplist background</description>
-					<top>20</top>
+					<top>{{ScaleY('20')}}</top>
 					<bottom>-20</bottom>
-					<left>-20</left>
-					<right>0</right>
-					<texture border="40">buttons/dialogbutton-nofo.png</texture>
+					<left>{{ScaleX('-20')}}</left>
+					<right>{{ScaleX('0')}}</right>
+					<texture border="{{ScaleBorder('40')}}">buttons/dialogbutton-nofo.png</texture>
 				</control>
 				<control type="grouplist" id="3">
 					<description>Controller profiles grouplist</description>
-					<top>40</top>
-					<right>20</right>
+					<top>{{ScaleY('40')}}</top>
+					<right>{{ScaleX('20')}}</right>
 					<onleft>9001</onleft>
 					<onright>5</onright>
 					<onup>3</onup>
@@ -47,15 +47,15 @@
 					<pagecontrol>62</pagecontrol>
 				</control>
 				<control type="scrollbar" id="62">
-					<top>40</top>
-					<right>0</right>
-					<width>12</width>
+					<top>{{ScaleY('40')}}</top>
+					<right>{{ScaleX('0')}}</right>
+					<width>{{ScaleX('12')}}</width>
 					<orientation>vertical</orientation>
 				</control>
 				<control type="button" id="10">
 					<description>Default controller button</description>
-					<width>390</width>
-					<height>60</height>
+					<width>{{ScaleX('390')}}</width>
+					<height>{{ScaleY('60')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font25_title</font>
@@ -64,20 +64,20 @@
 				</control>
 			</control>
 			<control type="gamecontroller" id="31">
-				<top>130</top>
-				<left>470</left>
-				<width>540</width>
-				<height>540</height>
+				<top>{{ScaleY('130')}}</top>
+				<left>{{ScaleX('470')}}</left>
+				<width>{{ScaleX('540')}}</width>
+				<height>{{ScaleY('540')}}</height>
 			</control>
 			<control type="group">
 				<description>Feature list</description>
-				<top>90</top>
-				<left>1040</left>
-				<width>410</width>
-				<height>580</height>
+				<top>{{ScaleY('90')}}</top>
+				<left>{{ScaleX('1040')}}</left>
+				<width>{{ScaleX('410')}}</width>
+				<height>{{ScaleY('580')}}</height>
 				<control type="label">
 					<description>Feature list heading</description>
-					<height>25</height>
+					<height>{{ScaleY('25')}}</height>
 					<font>font12</font>
 					<label>$LOCALIZE[35059]</label>
 					<align>center</align>
@@ -85,16 +85,16 @@
 					<textcolor>button_focus</textcolor>
 				</control>
 				<control type="image">
-					<top>20</top>
+					<top>{{ScaleY('20')}}</top>
 					<bottom>-20</bottom>
-					<left>-20</left>
-					<right>0</right>
-					<texture border="40">buttons/dialogbutton-nofo.png</texture>
+					<left>{{ScaleX('-20')}}</left>
+					<right>{{ScaleX('0')}}</right>
+					<texture border="{{ScaleBorder('40')}}">buttons/dialogbutton-nofo.png</texture>
 				</control>
 				<control type="grouplist" id="5">
 					<description>Features grouplist</description>
-					<top>40</top>
-					<right>20</right>
+					<top>{{ScaleY('40')}}</top>
+					<right>{{ScaleX('20')}}</right>
 					<onleft>3</onleft>
 					<onright>9001</onright>
 					<onup>5</onup>
@@ -102,17 +102,17 @@
 					<pagecontrol>61</pagecontrol>
 				</control>
 				<control type="scrollbar" id="61">
-					<right>0</right>
-					<top>40</top>
-					<width>12</width>
+					<right>{{ScaleX('0')}}</right>
+					<top>{{ScaleY('40')}}</top>
+					<width>{{ScaleX('12')}}</width>
 					<orientation>vertical</orientation>
 				</control>
 				<control type="button" id="7">
 					<description>Default feature button</description>
-					<width>390</width>
-					<height>60</height>
-					<left>20</left>
-					<right>20</right>
+					<width>{{ScaleX('390')}}</width>
+					<height>{{ScaleY('60')}}</height>
+					<left>{{ScaleX('20')}}</left>
+					<right>{{ScaleX('20')}}</right>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font27</font>
@@ -121,8 +121,8 @@
 				</control>
 				<control type="label" id="8">
 					<description>Feature group title</description>
-					<width>390</width>
-					<height>40</height>
+					<width>{{ScaleX('390')}}</width>
+					<height>{{ScaleY('40')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font20_title</font>
@@ -131,14 +131,14 @@
 				</control>
 				<control type="image" id="9">
 					<description>Feature separator image</description>
-					<height>3</height>
+					<height>{{ScaleY('3')}}</height>
 					<texture colordiffuse="AAAAAAAA" border="3">dialogs/separator-grey.png</texture>
 				</control>
 			</control>
 			<control type="grouplist" id="9001">
-				<top>110</top>
-				<right>20</right>
-				<width>340</width>
+				<top>{{ScaleY('110')}}</top>
+				<right>{{ScaleX('20')}}</right>
+				<width>{{ScaleX('340')}}</width>
 				<onleft>5</onleft>
 				<onright>3</onright>
 				<itemgap>dialogbuttons_itemgap</itemgap>
@@ -176,22 +176,22 @@
 			<control type="group">
 				<description>Bottom controller description</description>
 				<bottom>30</bottom>
-				<left>30</left>
-				<right>30</right>
-				<height>140</height>
+				<left>{{ScaleX('30')}}</left>
+				<right>{{ScaleX('30')}}</right>
+				<height>{{ScaleY('140')}}</height>
 				<control type="image">
 					<description>Controller description background image</description>
-					<top>-20</top>
+					<top>{{ScaleY('-20')}}</top>
 					<bottom>-20</bottom>
-					<left>-20</left>
-					<right>-20</right>
-					<texture border="40">buttons/dialogbutton-nofo.png</texture>
+					<left>{{ScaleX('-20')}}</left>
+					<right>{{ScaleX('-20')}}</right>
+					<texture border="{{ScaleBorder('40')}}">buttons/dialogbutton-nofo.png</texture>
 				</control>
 				<control type="textbox" id="32">
-					<top>5</top>
+					<top>{{ScaleY('5')}}</top>
 					<bottom>5</bottom>
-					<left>10</left>
-					<right>10</right>
+					<left>{{ScaleX('10')}}</left>
+					<right>{{ScaleX('10')}}</right>
 					<description>Controller description</description>
 					<textcolor>grey</textcolor>
 				</control>
@@ -202,8 +202,8 @@
 		<control type="group">
 			<centertop>50%</centertop>
 			<centerleft>50%</centerleft>
-			<width>1820</width>
-			<height>830</height>
+			<width>{{ScaleX('1820')}}</width>
+			<height>{{ScaleY('830')}}</height>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="1820" />
 				<param name="height" value="830" />
@@ -212,21 +212,21 @@
 			</include>
 			<control type="group">
 				<description>Content area</description>
-				<top>100</top>
+				<top>{{ScaleY('100')}}</top>
 				<bottom>30</bottom>
-				<left>30</left>
-				<right>30</right>
+				<left>{{ScaleX('30')}}</left>
+				<right>{{ScaleX('30')}}</right>
 				<control type="group">
 					<description>Port list</description>
-					<width>1430</width>
-					<height>700</height>
+					<width>{{ScaleX('1430')}}</width>
+					<height>{{ScaleY('700')}}</height>
 					<control type="image">
 						<description>Port list background</description>
-						<top>-20</top>
+						<top>{{ScaleY('-20')}}</top>
 						<bottom>-20</bottom>
-						<left>-20</left>
-						<right>-20</right>
-						<texture border="40">buttons/dialogbutton-nofo.png</texture>
+						<left>{{ScaleX('-20')}}</left>
+						<right>{{ScaleX('-20')}}</right>
+						<texture border="{{ScaleBorder('40')}}">buttons/dialogbutton-nofo.png</texture>
 					</control>
 					<control type="list" id="3">
 						<description>Port item list</description>
@@ -236,60 +236,60 @@
 						<pagecontrol>62</pagecontrol>
 						<scrolltime tween="sine">200</scrolltime>
 						<orientation>vertical</orientation>
-						<itemlayout width="1440" height="100">
+						<itemlayout width="{{ScaleX('1440')}}" height="{{ScaleY('100')}}">
 							<control type="group">
 								<control type="label">
-									<top>20</top>
-									<left>20</left>
+									<top>{{ScaleY('20')}}</top>
+									<left>{{ScaleX('20')}}</left>
 									<label>$INFO[ListItem.Label]</label>
 									<font>font37</font>
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>left</align>
 								</control>
 								<control type="label">
-									<top>20</top>
-									<right>132</right>
+									<top>{{ScaleY('20')}}</top>
+									<right>{{ScaleX('132')}}</right>
 									<label>$INFO[ListItem.Label2]</label>
 									<font>font37</font>
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>right</align>
 								</control>
 								<control type="image">
-									<right>12</right>
-									<width>100</width>
+									<right>{{ScaleX('12')}}</right>
+									<width>{{ScaleX('100')}}</width>
 									<texture>$INFO[ListItem.Icon]</texture>
 								</control>
 							</control>
 						</itemlayout>
-						<focusedlayout width="1440" height="100">
+						<focusedlayout width="{{ScaleX('1440')}}" height="{{ScaleY('100')}}">
 							<control type="group">
 								<control type="image">
-									<top>-20</top>
+									<top>{{ScaleY('-20')}}</top>
 									<bottom>-20</bottom>
-									<left>-20</left>
-									<right>-20</right>
-									<texture border="40" colordiffuse="button_focus">buttons/dialogbutton-fo.png</texture>
+									<left>{{ScaleX('-20')}}</left>
+									<right>{{ScaleX('-20')}}</right>
+									<texture border="{{ScaleBorder('40')}}" colordiffuse="button_focus">buttons/dialogbutton-fo.png</texture>
 									<visible>Control.HasFocus(3)</visible>
 								</control>
 								<control type="label">
-									<top>20</top>
-									<left>20</left>
+									<top>{{ScaleY('20')}}</top>
+									<left>{{ScaleX('20')}}</left>
 									<label>$INFO[ListItem.Label]</label>
 									<font>font37</font>
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>left</align>
 								</control>
 								<control type="label">
-									<top>20</top>
-									<right>132</right>
+									<top>{{ScaleY('20')}}</top>
+									<right>{{ScaleX('132')}}</right>
 									<label>$INFO[ListItem.Label2]</label>
 									<font>font37</font>
 									<shadowcolor>text_shadow</shadowcolor>
 									<align>right</align>
 								</control>
 								<control type="image">
-									<right>12</right>
-									<width>100</width>
+									<right>{{ScaleX('12')}}</right>
+									<width>{{ScaleX('100')}}</width>
 									<texture>$INFO[ListItem.Icon]</texture>
 								</control>
 							</control>
@@ -297,14 +297,14 @@
 					</control>
 				</control>
 				<control type="scrollbar" id="62">
-					<left>1430</left>
-					<width>12</width>
+					<left>{{ScaleX('1430')}}</left>
+					<width>{{ScaleX('12')}}</width>
 					<orientation>vertical</orientation>
 				</control>
 				<control type="grouplist" id="9001">
-					<top>-20</top>
-					<right>-20</right>
-					<width>330</width>
+					<top>{{ScaleY('-20')}}</top>
+					<right>{{ScaleX('-20')}}</right>
+					<width>{{ScaleX('330')}}</width>
 					<onleft>3</onleft>
 					<itemgap>dialogbuttons_itemgap</itemgap>
 					<include content="DefaultDialogButton">

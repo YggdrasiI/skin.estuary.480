@@ -4,25 +4,25 @@
 		<control type="group">
 			<description>Poster Viewtype</description>
 			<centertop>50%</centertop>
-			<left>0</left>
-			<height>880</height>
+			<left>{{ScaleX('0')}}</left>
+			<height>{{ScaleY('880')}}</height>
 			<control type="group">
 				<visible>Control.IsVisible(53)</visible>
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<control type="image">
-					<left>0</left>
-					<top>760</top>
-					<width>100%</width>
-					<height>110</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('760')}}</top>
+					<width>{{ScaleX('100%')}}</width>
+					<height>{{ScaleY('110')}}</height>
 					<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
 				</control>
 				<control type="image">
-					<left>0</left>
-					<top>35</top>
-					<width>100%</width>
-					<height>190</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('35')}}</top>
+					<width>{{ScaleX('100%')}}</width>
+					<height>{{ScaleY('190')}}</height>
 					<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
 				</control>
 			</control>
@@ -30,25 +30,25 @@
 				<visible>Control.IsVisible(53)</visible>
 				<include>Visible_Right</include>
 				<include>OpenClose_Right</include>
-				<top>160</top>
+				<top>{{ScaleY('160')}}</top>
 				<control type="image">
-					<left>600</left>
-					<top>600</top>
-					<width>340</width>
-					<height>110</height>
+					<left>{{ScaleX('600')}}</left>
+					<top>{{ScaleY('600')}}</top>
+					<width>{{ScaleX('340')}}</width>
+					<height>{{ScaleY('110')}}</height>
 					<visible>Control.HasFocus(53)</visible>
 					<animation effect="fade" time="200">VisibleChange</animation>
 					<texture colordiffuse="button_focus">colors/grey.png</texture>
-					<animation effect="slide" start="0,0" end="-364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,1) | Integer.IsEqual(Container.Position,0)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="-364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,0)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,3) | Integer.IsEqual(Container.Position,4)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,4)">Conditional</animation>
+					<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-364,0')}}" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,1) | Integer.IsEqual(Container.Position,0)">Conditional</animation>
+					<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('-364,0')}}" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,0)">Conditional</animation>
+					<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('364,0')}}" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,3) | Integer.IsEqual(Container.Position,4)">Conditional</animation>
+					<animation effect="slide" start="{{ScaleBorder2('0,0')}}" end="{{ScaleBorder2('364,0')}}" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,4)">Conditional</animation>
 				</control>
 				<control type="fixedlist" id="53">
-					<left>-150</left>
-					<top>0</top>
-					<width>111%</width>
-					<height>695</height>
+					<left>{{ScaleX('-150')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('111%')}}</width>
+					<height>{{ScaleY('695')}}</height>
 					<focusposition>1</focusposition>
 					<movement>0</movement>
 					<pagecontrol>5199</pagecontrol>
@@ -61,12 +61,12 @@
 					<onright>53</onright>
 					<preloaditems>1</preloaditems>
 					<viewtype label="31100">icon</viewtype>
-					<itemlayout width="370">
+					<itemlayout width="{{ScaleX('370')}}">
 						<control type="image">
-							<left>0</left>
-							<top>90</top>
-							<width>370</width>
-							<height>480</height>
+							<left>{{ScaleX('0')}}</left>
+							<top>{{ScaleY('90')}}</top>
+							<width>{{ScaleX('370')}}</width>
+							<height>{{ScaleY('480')}}</height>
 							<texture>dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
@@ -74,20 +74,20 @@
 						</control>
 						<control type="image">
 							<depth>DepthContentPopout</depth>
-							<left>0</left>
-							<top>90</top>
-							<width>370</width>
-							<height>480</height>
+							<left>{{ScaleX('0')}}</left>
+							<top>{{ScaleY('90')}}</top>
+							<width>{{ScaleX('370')}}</width>
+							<height>{{ScaleY('480')}}</height>
 							<aspectratio aligny="center">keep</aspectratio>
 							<texture fallback="DefaultVideo.png" background="true">$VAR[ShiftThumbVar]</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="textbox">
-							<left>20</left>
-							<top>603</top>
-							<width>330</width>
-							<height>105</height>
+							<left>{{ScaleX('20')}}</left>
+							<top>{{ScaleY('603')}}</top>
+							<width>{{ScaleX('330')}}</width>
+							<height>{{ScaleY('105')}}</height>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -95,18 +95,18 @@
 						<control type="group">
 							<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
 							<control type="image">
-								<left>35</left>
-								<top>500</top>
-								<width>298</width>
-								<height>50</height>
+								<left>{{ScaleX('35')}}</left>
+								<top>{{ScaleY('500')}}</top>
+								<width>{{ScaleX('298')}}</width>
+								<height>{{ScaleY('50')}}</height>
 								<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
 								<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 							</control>
 							<control type="label">
-								<left>0</left>
-								<top>522</top>
-								<width>292</width>
-								<height>24</height>
+								<left>{{ScaleX('0')}}</left>
+								<top>{{ScaleY('522')}}</top>
+								<width>{{ScaleX('292')}}</width>
+								<height>{{ScaleY('24')}}</height>
 								<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
 								<font>font20_title</font>
 								<shadowcolor>text_shadow</shadowcolor>
@@ -114,46 +114,46 @@
 								<aligny>center</aligny>
 							</control>
 							<control type="image">
-								<left>302</left>
-								<top>522</top>
-								<width>24</width>
-								<height>24</height>
+								<left>{{ScaleX('302')}}</left>
+								<top>{{ScaleY('522')}}</top>
+								<width>{{ScaleX('24')}}</width>
+								<height>{{ScaleY('24')}}</height>
 								<texture>lists/played-total.png</texture>
 								<align>right</align>
 								<aligny>center</aligny>
 							</control>
 						</control>
 						<control type="image">
-							<left>35</left>
-							<top>518</top>
-							<width>32</width>
-							<height>32</height>
+							<left>{{ScaleX('35')}}</left>
+							<top>{{ScaleY('518')}}</top>
+							<width>{{ScaleX('32')}}</width>
+							<height>{{ScaleY('32')}}</height>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texture>$VAR[WallWatchedIconVar]</texture>
 						</control>
 						<control type="group">
-							<left>158</left>
-							<top>92</top>
+							<left>{{ScaleX('158')}}</left>
+							<top>{{ScaleY('92')}}</top>
 							<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 						</control>
 						<control type="progress">
-							<left>32</left>
-							<top>530</top>
-							<width>298</width>
-							<height>1</height>
+							<left>{{ScaleX('32')}}</left>
+							<top>{{ScaleY('530')}}</top>
+							<width>{{ScaleX('298')}}</width>
+							<height>{{ScaleY('1')}}</height>
 							<texturebg></texturebg>
 							<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
 							<info>ListItem.PercentPlayed</info>
 							<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
 						</control>
 					</itemlayout>
-					<focusedlayout width="370">
+					<focusedlayout width="{{ScaleX('370')}}">
 						<control type="image">
-							<left>0</left>
-							<top>90</top>
-							<width>370</width>
-							<height>480</height>
+							<left>{{ScaleX('0')}}</left>
+							<top>{{ScaleY('90')}}</top>
+							<width>{{ScaleX('370')}}</width>
+							<height>{{ScaleY('480')}}</height>
 							<texture>dialogs/dialog-bg-nobo.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
@@ -161,20 +161,20 @@
 						</control>
 						<control type="image">
 							<depth>DepthContentPopout</depth>
-							<left>0</left>
-							<top>90</top>
-							<width>370</width>
-							<height>480</height>
+							<left>{{ScaleX('0')}}</left>
+							<top>{{ScaleY('90')}}</top>
+							<width>{{ScaleX('370')}}</width>
+							<height>{{ScaleY('480')}}</height>
 							<aspectratio aligny="center">keep</aspectratio>
 							<texture fallback="DefaultVideo.png" background="true">$VAR[ShiftThumbVar]</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="textbox">
-							<left>20</left>
-							<top>603</top>
-							<width>330</width>
-							<height>105</height>
+							<left>{{ScaleX('20')}}</left>
+							<top>{{ScaleY('603')}}</top>
+							<width>{{ScaleX('330')}}</width>
+							<height>{{ScaleY('105')}}</height>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -183,18 +183,18 @@
 						<control type="group">
 							<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
 							<control type="image">
-								<left>35</left>
-								<top>500</top>
-								<width>298</width>
-								<height>50</height>
+								<left>{{ScaleX('35')}}</left>
+								<top>{{ScaleY('500')}}</top>
+								<width>{{ScaleX('298')}}</width>
+								<height>{{ScaleY('50')}}</height>
 								<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
 								<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 							</control>
 							<control type="label">
-								<left>0</left>
-								<top>522</top>
-								<width>292</width>
-								<height>24</height>
+								<left>{{ScaleX('0')}}</left>
+								<top>{{ScaleY('522')}}</top>
+								<width>{{ScaleX('292')}}</width>
+								<height>{{ScaleY('24')}}</height>
 								<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
 								<font>font20_title</font>
 								<shadowcolor>text_shadow</shadowcolor>
@@ -202,34 +202,34 @@
 								<aligny>center</aligny>
 							</control>
 							<control type="image">
-								<left>302</left>
-								<top>522</top>
-								<width>24</width>
-								<height>24</height>
+								<left>{{ScaleX('302')}}</left>
+								<top>{{ScaleY('522')}}</top>
+								<width>{{ScaleX('24')}}</width>
+								<height>{{ScaleY('24')}}</height>
 								<texture>lists/played-total.png</texture>
 								<align>right</align>
 								<aligny>center</aligny>
 							</control>
 						</control>
 						<control type="image">
-							<left>35</left>
-							<top>518</top>
-							<width>32</width>
-							<height>32</height>
+							<left>{{ScaleX('35')}}</left>
+							<top>{{ScaleY('518')}}</top>
+							<width>{{ScaleX('32')}}</width>
+							<height>{{ScaleY('32')}}</height>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texture>$VAR[WallWatchedIconVar]</texture>
 						</control>
 						<control type="group">
-							<left>158</left>
-							<top>92</top>
+							<left>{{ScaleX('158')}}</left>
+							<top>{{ScaleY('92')}}</top>
 							<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 						</control>
 						<control type="progress">
-							<left>32</left>
-							<top>530</top>
-							<width>298</width>
-							<height>1</height>
+							<left>{{ScaleX('32')}}</left>
+							<top>{{ScaleY('530')}}</top>
+							<width>{{ScaleX('298')}}</width>
+							<height>{{ScaleY('1')}}</height>
 							<texturebg></texturebg>
 							<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
 							<info>ListItem.PercentPlayed</info>
@@ -243,43 +243,43 @@
 				<include>Visible_Right</include>
 				<include>OpenClose_Right</include>
 				<control type="group">
-					<width>50%</width>
+					<width>{{ScaleX('50%')}}</width>
 					<include content="ShiftTextbox">
 						<param name="textbox_id" value="53200" />
 						<param name="textbox_content" value="$VAR[ShiftLeftTextBoxVar]" />
 					</include>
 				</control>
 				<control type="group">
-					<left>50%</left>
-					<width>50%</width>
+					<left>{{ScaleX('50%')}}</left>
+					<width>{{ScaleX('50%')}}</width>
 					<include content="ShiftTextbox">
 						<param name="textbox_id" value="53300" />
 						<param name="textbox_content" value="$VAR[ShiftRightTextBoxVar]" />
 					</include>
 				</control>
 				<control type="panel">
-					<left>20</left>
-					<top>48</top>
-					<width>1880</width>
-					<height>180</height>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('48')}}</top>
+					<width>{{ScaleX('1880')}}</width>
+					<height>{{ScaleY('180')}}</height>
 					<orientation>horizontal</orientation>
 					<visible>ListItem.IsCollection</visible>
 					<animation effect="fade" time="200">VisibleChange</animation>
-					<focusedlayout height="40" width="628">
+					<focusedlayout height="{{ScaleY('40')}}" width="{{ScaleX('628')}}">
 						<control type="label">
-							<textoffsetx>10</textoffsetx>
-							<height>40</height>
-							<width>628</width>
+							<textoffsetx>{{ScaleX('10')}}</textoffsetx>
+							<height>{{ScaleY('40')}}</height>
+							<width>{{ScaleX('628')}}</width>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Year,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Title]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</focusedlayout>
-					<itemlayout height="40" width="628">
+					<itemlayout height="{{ScaleY('40')}}" width="{{ScaleX('628')}}">
 						<control type="label">
-							<textoffsetx>10</textoffsetx>
-							<height>40</height>
-							<width>628</width>
+							<textoffsetx>{{ScaleX('10')}}</textoffsetx>
+							<height>{{ScaleY('40')}}</height>
+							<width>{{ScaleX('628')}}</width>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Year,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Title]</label>
 							<shadowcolor>text_shadow</shadowcolor>
@@ -295,10 +295,10 @@
 			<animation effect="fade" time="200" start="0" end="100" condition="!String.IsEmpty(Control.GetLabel($PARAM[textbox_id]))">Conditional</animation>
 			<animation effect="fade" time="200" start="100" end="0" condition="String.IsEmpty(Control.GetLabel($PARAM[textbox_id]))">Conditional</animation>
 			<control type="textbox" id="$PARAM[textbox_id]">
-				<left>30</left>
-				<top>45</top>
-				<right>30</right>
-				<height>163</height>
+				<left>{{ScaleX('30')}}</left>
+				<top>{{ScaleY('45')}}</top>
+				<right>{{ScaleX('30')}}</right>
+				<height>{{ScaleY('163')}}</height>
 				<label>$PARAM[textbox_content]</label>
 				<shadowcolor>text_shadow</shadowcolor>
 			</control>

@@ -6,9 +6,9 @@
 	<controls>
 		<control type="button">
 			<description>background close area</description>
-			<left>0</left>
-			<top>0</top>
-			<width>100%</width>
+			<left>{{ScaleX('0')}}</left>
+			<top>{{ScaleY('0')}}</top>
+			<width>{{ScaleX('100%')}}</width>
 			<bottom>280</bottom>
 			<texturefocus />
 			<texturenofocus />
@@ -16,29 +16,29 @@
 		</control>
 		<control type="group">
 			<bottom>0</bottom>
-			<height>150</height>
+			<height>{{ScaleY('150')}}</height>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<control type="group" id="200">
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>100%</width>
-					<height>100%</height>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('0')}}</top>
+					<width>{{ScaleX('100%')}}</width>
+					<height>{{ScaleY('100%')}}</height>
 					<texture>dialogs/dialog-bg-nobo.png</texture>
 				</control>
 				<control type="group">
-					<left>20</left>
-					<width>600</width>
+					<left>{{ScaleX('20')}}</left>
+					<width>{{ScaleX('600')}}</width>
 					<control type="label">
-						<top>12</top>
-						<height>20</height>
+						<top>{{ScaleY('12')}}</top>
+						<height>{{ScaleY('20')}}</height>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[19325]</label>
 					</control>
 					<control type="grouplist" id="201">
-						<top>54</top>
-						<height>135</height>
+						<top>{{ScaleY('54')}}</top>
+						<height>{{ScaleY('135')}}</height>
 						<align>center</align>
 						<itemgap>20</itemgap>
 						<scrolltime tween="sine">200</scrolltime>
@@ -61,7 +61,7 @@
 							<include content="OSDButton">
 								<param name="texture" value="osd/fullscreen/buttons/play.png"/>
 							</include>
-							<animation effect="rotate" start="0" end="-90" center="auto" condition="true">Conditional</animation>
+							<animation effect="rotate" start="0" end="-90" center="{{ScaleBorder2('auto')}}" condition="true">Conditional</animation>
 							<onclick>PVR.EpgGridControl(CurrentProgramme)</onclick>
 						</control>
 						<control type="radiobutton" id="603">
@@ -85,27 +85,27 @@
 					</control>
 				</control>
 				<control type="textbox">
-					<left>620</left>
-					<top>54</top>
+					<left>{{ScaleX('620')}}</left>
+					<top>{{ScaleY('54')}}</top>
 					<align>center</align>
 					<aligny>center</aligny>
-					<width>630</width>
-					<height>76</height>
+					<width>{{ScaleX('630')}}</width>
+					<height>{{ScaleY('76')}}</height>
 					<label>$VAR[PVRGuideControlsHelpTextVar]</label>
 				</control>
 				<control type="group">
-					<right>370</right>
-					<width>300</width>
+					<right>{{ScaleX('370')}}</right>
+					<width>{{ScaleX('300')}}</width>
 					<control type="label">
-						<top>12</top>
-						<height>20</height>
+						<top>{{ScaleY('12')}}</top>
+						<height>{{ScaleY('20')}}</height>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[19148]</label>
 					</control>
 					<control type="grouplist" id="202">
-						<top>54</top>
-						<height>135</height>
+						<top>{{ScaleY('54')}}</top>
+						<height>{{ScaleY('135')}}</height>
 						<align>center</align>
 						<itemgap>20</itemgap>
 						<scrolltime tween="sine">200</scrolltime>
@@ -122,7 +122,7 @@
 							<include content="OSDButton">
 								<param name="texture" value="osd/fullscreen/buttons/play.png"/>
 							</include>
-							<animation effect="rotate" start="0" end="-90" center="auto" condition="true">Conditional</animation>
+							<animation effect="rotate" start="0" end="-90" center="{{ScaleBorder2('auto')}}" condition="true">Conditional</animation>
 							<onclick>PVR.EpgGridControl(PlayingChannel)</onclick>
 							<visible>PVR.IsPlayingTV | PVR.IsPlayingRadio | PVR.IsPlayingEpgTag</visible>
 						</control>
@@ -135,18 +135,18 @@
 					</control>
 				</control>
 				<control type="group">
-					<right>20</right>
-					<width>300</width>
+					<right>{{ScaleX('20')}}</right>
+					<width>{{ScaleX('300')}}</width>
 					<control type="label">
-						<top>12</top>
-						<height>20</height>
+						<top>{{ScaleY('12')}}</top>
+						<height>{{ScaleY('20')}}</height>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[19141]</label>
 					</control>
 					<control type="grouplist" id="203">
-						<top>54</top>
-						<height>135</height>
+						<top>{{ScaleY('54')}}</top>
+						<height>{{ScaleY('135')}}</height>
 						<align>center</align>
 						<itemgap>20</itemgap>
 						<scrolltime tween="sine">200</scrolltime>
@@ -157,7 +157,7 @@
 							<include content="OSDButton">
 								<param name="texture" value="osd/fullscreen/buttons/play.png"/>
 							</include>
-							<animation effect="rotate" start="0" end="180" center="auto" condition="true">Conditional</animation>
+							<animation effect="rotate" start="0" end="180" center="{{ScaleBorder2('auto')}}" condition="true">Conditional</animation>
 							<onclick>PVR.EpgGridControl(PreviousGroup)</onclick>
 						</control>
 						<control type="radiobutton" id="70044">

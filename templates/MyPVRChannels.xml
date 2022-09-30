@@ -11,9 +11,9 @@
 			<control type="group">
 				<include>OpenClose_Left</include>
 				<control type="fixedlist" id="50">
-					<left>0</left>
-					<top>list_top_offset</top>
-					<right>918</right>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('list_top_offset')}}</top>
+					<right>{{ScaleX('918')}}</right>
 					<bottom>list_bottom_offset</bottom>
 					<onleft>9000</onleft>
 					<onright>73</onright>
@@ -32,9 +32,9 @@
 					</include>
 				</control>
 				<control type="fixedlist" id="51">
-					<left>0</left>
-					<top>list_top_offset</top>
-					<right>920</right>
+					<left>{{ScaleX('0')}}</left>
+					<top>{{ScaleY('list_top_offset')}}</top>
+					<right>{{ScaleX('920')}}</right>
 					<bottom>list_bottom_offset</bottom>
 					<movement>4</movement>
 					<focusposition>4</focusposition>
@@ -45,37 +45,37 @@
 					<ondown>51</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>73</pagecontrol>
-					<itemlayout height="70" infoupdate="5000">
+					<itemlayout height="{{ScaleY('70')}}" infoupdate="5000">
 						<control type="progress">
-							<right>10</right>
-							<top>30</top>
-							<width>50</width>
-							<height>12</height>
+							<right>{{ScaleX('10')}}</right>
+							<top>{{ScaleY('30')}}</top>
+							<width>{{ScaleX('50')}}</width>
+							<height>{{ScaleY('12')}}</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
 							<visible>ListItem.HasEpg + !ListItem.IsRecording</visible>
 							<info>ListItem.Progress</info>
 						</control>
 						<control type="image">
-							<right>15</right>
-							<top>9</top>
-							<width>40</width>
-							<height>40</height>
+							<right>{{ScaleX('15')}}</right>
+							<top>{{ScaleY('9')}}</top>
+							<width>{{ScaleX('40')}}</width>
+							<height>{{ScaleY('40')}}</height>
 							<texture>$VAR[PVRStatusImageVar]</texture>
 						</control>
 						<control type="label">
-							<left>105</left>
-							<top>0</top>
+							<left>{{ScaleX('105')}}</left>
+							<top>{{ScaleY('0')}}</top>
 							<bottom>0</bottom>
-							<right>90</right>
+							<right>{{ScaleX('90')}}</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="label">
-							<left>320</left>
-							<top>0</top>
+							<left>{{ScaleX('320')}}</left>
+							<top>{{ScaleY('0')}}</top>
 							<bottom>0</bottom>
-							<right>90</right>
+							<right>{{ScaleX('90')}}</right>
 							<aligny>center</aligny>
 							<align>right</align>
 							<label>$INFO[ListItem.Title]</label>
@@ -83,10 +83,10 @@
 							<textcolor>grey</textcolor>
 						</control>
 						<control type="label">
-							<left>10</left>
-							<top>0</top>
+							<left>{{ScaleX('10')}}</left>
+							<top>{{ScaleY('0')}}</top>
 							<bottom>0</bottom>
-							<width>82</width>
+							<width>{{ScaleX('82')}}</width>
 							<align>center</align>
 							<aligny>center</aligny>
 							<font>font32_title</font>
@@ -95,54 +95,54 @@
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</itemlayout>
-					<focusedlayout height="70" infoupdate="5000">
+					<focusedlayout height="{{ScaleY('70')}}" infoupdate="5000">
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<right>0</right>
-							<height>70</height>
+							<left>{{ScaleX('0')}}</left>
+							<top>{{ScaleY('0')}}</top>
+							<right>{{ScaleX('0')}}</right>
+							<height>{{ScaleY('70')}}</height>
 							<texture colordiffuse="button_focus">lists/focus.png</texture>
 							<visible>Control.HasFocus(51)</visible>
 						</control>
 						<control type="progress">
-							<right>10</right>
-							<top>30</top>
-							<width>50</width>
-							<height>12</height>
+							<right>{{ScaleX('10')}}</right>
+							<top>{{ScaleY('30')}}</top>
+							<width>{{ScaleX('50')}}</width>
+							<height>{{ScaleY('12')}}</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
 							<midtexture border="3">progress/texturebg_white.png</midtexture>
 							<visible>ListItem.HasEpg + !ListItem.IsRecording</visible>
 							<info>ListItem.Progress</info>
 						</control>
 						<control type="image">
-							<right>15</right>
-							<top>9</top>
-							<width>40</width>
-							<height>40</height>
+							<right>{{ScaleX('15')}}</right>
+							<top>{{ScaleY('9')}}</top>
+							<width>{{ScaleX('40')}}</width>
+							<height>{{ScaleY('40')}}</height>
 							<texture>$VAR[PVRStatusImageVar]</texture>
 						</control>
 						<control type="label">
-							<left>105</left>
-							<top>0</top>
+							<left>{{ScaleX('105')}}</left>
+							<top>{{ScaleY('0')}}</top>
 							<bottom>0</bottom>
-							<right>90</right>
+							<right>{{ScaleX('90')}}</right>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<left>320</left>
-							<top>0</top>
+							<left>{{ScaleX('320')}}</left>
+							<top>{{ScaleY('0')}}</top>
 							<bottom>0</bottom>
-							<right>90</right>
+							<right>{{ScaleX('90')}}</right>
 							<aligny>center</aligny>
 							<align>right</align>
 							<label>$INFO[ListItem.Title]</label>
 						</control>
 						<control type="label">
-							<left>10</left>
-							<top>0</top>
+							<left>{{ScaleX('10')}}</left>
+							<top>{{ScaleY('0')}}</top>
 							<bottom>0</bottom>
-							<width>82</width>
+							<width>{{ScaleX('82')}}</width>
 							<align>center</align>
 							<aligny>center</aligny>
 							<font>font32_title</font>
@@ -155,8 +155,8 @@
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Right</include>
-				<width>870</width>
-				<right>0</right>
+				<width>{{ScaleX('870')}}</width>
+				<right>{{ScaleX('0')}}</right>
 				<include content="ContentPanel">
 					<param name="left" value="-72" />
 					<param name="width" value="970" />
@@ -164,9 +164,9 @@
 					<param name="flipx" value="true" />
 				</include>
 				<control type="scrollbar" id="73">
-					<left>-50</left>
-					<top>list_top_offset</top>
-					<width>12</width>
+					<left>{{ScaleX('-50')}}</left>
+					<top>{{ScaleY('list_top_offset')}}</top>
+					<width>{{ScaleX('12')}}</width>
 					<bottom>list_bottom_offset</bottom>
 					<onleft>50</onleft>
 					<onright>50</onright>
@@ -182,11 +182,11 @@
 				<param name="info_visible" value="true" />
 			</include>
 			<control type="label">
-				<right>20</right>
+				<right>{{ScaleX('20')}}</right>
 				<include>OpenClose_Right</include>
 				<bottom>10</bottom>
-				<width>850</width>
-				<height>60</height>
+				<width>{{ScaleX('850')}}</width>
+				<height>{{ScaleY('60')}}</height>
 				<label>$VAR[PVRNextProgrammeLabel]</label>
 				<shadowcolor>black</shadowcolor>
 				<align>right</align>

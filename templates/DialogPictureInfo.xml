@@ -7,39 +7,39 @@
 	<controls>
 		<control type="group">
 			<centertop>50%</centertop>
-			<height>1080</height>
+			<height>{{ScaleY('1080')}}</height>
 			<centerleft>50%</centerleft>
-			<width>1920</width>
+			<width>{{ScaleX('1920')}}</width>
 			<control type="group">
 				<visible>!Window.IsActive(Slideshow)</visible>
 				<include>OpenClose_Left</include>
-				<top>160</top>
+				<top>{{ScaleY('160')}}</top>
 				<control type="image">
-					<left>70</left>
-					<width>1280</width>
-					<height>820</height>
-					<texture border="21">dialogs/dialog-bg.png</texture>
+					<left>{{ScaleX('70')}}</left>
+					<width>{{ScaleX('1280')}}</width>
+					<height>{{ScaleY('820')}}</height>
+					<texture border="{{ScaleBorder('21')}}">dialogs/dialog-bg.png</texture>
 				</control>
 				<control type="image">
-					<left>120</left>
-					<top>50</top>
-					<width>1180</width>
-					<height>720</height>
+					<left>{{ScaleX('120')}}</left>
+					<top>{{ScaleY('50')}}</top>
+					<width>{{ScaleX('1180')}}</width>
+					<height>{{ScaleY('720')}}</height>
 					<aspectratio aligny="center">keep</aspectratio>
 					<bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
 					<bordersize>4</bordersize>
-					<texture border="4" background="true" fallback="colors/black.png">$INFO[ListItem.FolderPath]</texture>
+					<texture border="{{ScaleBorder('4')}}" background="true" fallback="colors/black.png">$INFO[ListItem.FolderPath]</texture>
 				</control>
 			</control>
 			<control type="group">
 				<include>OpenClose_Right</include>
-				<top>160</top>
+				<top>{{ScaleY('160')}}</top>
 				<control type="image">
 					<description>background image</description>
-					<right>70</right>
-					<width>510</width>
-					<height>820</height>
-					<texture border="22">dialogs/dialog-bg.png</texture>
+					<right>{{ScaleX('70')}}</right>
+					<width>{{ScaleX('510')}}</width>
+					<height>{{ScaleY('820')}}</height>
+					<texture border="{{ScaleBorder('22')}}">dialogs/dialog-bg.png</texture>
 				</control>
 				<include content="UpDownArrows">
 					<param name="container_id" value="5" />
@@ -49,17 +49,17 @@
 				</include>
 				<control type="group" id="9000">
 					<control type="scrollbar" id="60">
-						<left>1840</left>
-						<top>20</top>
-						<width>12</width>
-						<height>780</height>
+						<left>{{ScaleX('1840')}}</left>
+						<top>{{ScaleY('20')}}</top>
+						<width>{{ScaleX('12')}}</width>
+						<height>{{ScaleY('780')}}</height>
 						<orientation>vertical</orientation>
 					</control>
 					<control type="list" id="5">
-						<right>70</right>
-						<top>30</top>
-						<width>480</width>
-						<height>750</height>
+						<right>{{ScaleX('70')}}</right>
+						<top>{{ScaleY('30')}}</top>
+						<width>{{ScaleX('480')}}</width>
+						<height>{{ScaleY('750')}}</height>
 						<orientation>vertical</orientation>
 						<onleft>Dialog.Close(all,true)</onleft>
 						<onleft>Action(left)</onleft>
@@ -70,11 +70,11 @@
 						<onup>5</onup>
 						<ondown>5</ondown>
 						<pagecontrol>60</pagecontrol>
-						<focusedlayout height="50">
+						<focusedlayout height="{{ScaleY('50')}}">
 							<control type="label">
-								<left>10</left>
-								<height>50</height>
-								<width>430</width>
+								<left>{{ScaleX('10')}}</left>
+								<height>{{ScaleY('50')}}</height>
+								<width>{{ScaleX('430')}}</width>
 								<aligny>center</aligny>
 								<font>font12</font>
 								<label>$INFO[ListItem.Label]</label>
@@ -82,9 +82,9 @@
 								<shadowcolor>text_shadow</shadowcolor>
 							</control>
 							<control type="label">
-								<left>10</left>
-								<height>50</height>
-								<width>430</width>
+								<left>{{ScaleX('10')}}</left>
+								<height>{{ScaleY('50')}}</height>
+								<width>{{ScaleX('430')}}</width>
 								<align>right</align>
 								<font>font12</font>
 								<aligny>center</aligny>
@@ -92,11 +92,11 @@
 								<shadowcolor>text_shadow</shadowcolor>
 							</control>
 						</focusedlayout>
-						<itemlayout height="50">
+						<itemlayout height="{{ScaleY('50')}}">
 							<control type="label">
-								<left>10</left>
-								<height>50</height>
-								<width>430</width>
+								<left>{{ScaleX('10')}}</left>
+								<height>{{ScaleY('50')}}</height>
+								<width>{{ScaleX('430')}}</width>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Label]</label>
 								<font>font12</font>
@@ -104,9 +104,9 @@
 								<shadowcolor>text_shadow</shadowcolor>
 							</control>
 							<control type="label">
-								<left>10</left>
-								<height>50</height>
-								<width>430</width>
+								<left>{{ScaleX('10')}}</left>
+								<height>{{ScaleY('50')}}</height>
+								<width>{{ScaleX('430')}}</width>
 								<align>right</align>
 								<font>font12</font>
 								<aligny>center</aligny>

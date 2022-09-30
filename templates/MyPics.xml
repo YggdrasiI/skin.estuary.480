@@ -12,7 +12,7 @@
 			<include>View_52_IconWall</include>
 			<include>View_53_Shift</include>
 			<control type="group">
-				<left>50</left>
+				<left>{{ScaleX('50')}}</left>
 				<include>View_54_InfoWall</include>
 		</control>
 			<include>View_55_WideList</include>
@@ -27,10 +27,10 @@
 					<param name="width" value="656" />
 				</include>
 				<control type="textbox">
-					<left>40</left>
-					<top>360</top>
-					<width>529</width>
-					<height>413</height>
+					<left>{{ScaleX('40')}}</left>
+					<top>{{ScaleY('360')}}</top>
+					<width>{{ScaleX('529')}}</width>
+					<height>{{ScaleY('413')}}</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font27</font>
@@ -39,10 +39,10 @@
 					<visible>!ListItem.IsParentFolder + ListItem.IsFolder</visible>
 				</control>
 				<control type="grouplist">
-					<left>20</left>
-					<top>152</top>
-					<width>570</width>
-					<height>760</height>
+					<left>{{ScaleX('20')}}</left>
+					<top>{{ScaleY('152')}}</top>
+					<width>{{ScaleX('570')}}</width>
+					<height>{{ScaleY('760')}}</height>
 					<orientation>vertical</orientation>
 					<include content="PicsInfoLine">
 						<param name="label" value="$LOCALIZE[21820]"/>
@@ -206,7 +206,7 @@
 			<control type="group">
 				<include>MediaMenuCommon</include>
 				<control type="grouplist" id="9000">
-					<top>50</top>
+					<top>{{ScaleY('50')}}</top>
 					<include>MediaMenuListCommon</include>
 					<control type="label" id="203">
 						<description>Actions</description>
